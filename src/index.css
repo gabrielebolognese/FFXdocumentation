@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0A0F1E;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='10' cy='10' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  code {
+    font-family: 'Fira Code', 'Courier New', monospace;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0F1E;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1E2D45;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a3f5f;
+  }
+
+  a {
+    color: #FACC15;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  a:hover {
+    color: #fde047;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: #FFFFFF;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  ul, ol {
+    padding-left: 1.25rem;
+  }
+
+  strong {
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+
+  pre {
+    background-color: #162033;
+    border: 1px solid #1E2D45;
+    border-radius: 6px;
+    padding: 0.75rem;
+    overflow-x: auto;
+    font-size: 11px;
+  }
+
+  kbd {
+    font-family: inherit;
+    font-size: 10px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scroll-mt-32 {
+    scroll-margin-top: 8rem;
+  }
+}
+
+.prose {
+  max-width: 65ch;
+}
+
+.prose p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 13px;
+}
+
+.prose a {
+  color: #FACC15;
+  font-weight: 400;
+}
+
+.prose a:hover {
+  color: #fde047;
+}
+
+.prose strong {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.prose code {
+  color: #FACC15;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.prose pre code {
+  color: inherit;
+}
+
+.prose h2 {
+  margin-top: 1.75em;
+  margin-bottom: 0.875em;
+  font-size: 1.625em;
+  font-weight: 600;
+}
+
+.prose h3 {
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  font-size: 1.375em;
+  font-weight: 500;
+}
+
+.prose ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.prose li {
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
+}
