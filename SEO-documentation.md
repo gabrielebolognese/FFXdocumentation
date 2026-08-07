@@ -365,16 +365,44 @@ Fixes P0-1, P0-2, P0-3, P1-1, P1-2, P1-4.
 > out of the sitemap — and they re-enter it on their own the moment the marker is gone.
 > Nothing needs to be un-done as pages get written.
 >
-> **Progress: 1 of 3 sub-tasks complete.** Punctuation repaired; the 86 placeholder pages and
-> 57 empty tutorials remain.
+> **Progress: punctuation repaired, 21 of 86 placeholder pages written.**
+> The remaining 65 are blocked on a product question, not on effort — see below.
 
 Fixes P1-5, P1-6, P2-2. Do this **before** M3 — pushing crawlers at 79 empty pages actively hurts.
 
-- [ ] **Decide the 22 3D stubs**: fill them in, or `noindex` + exclude from the sitemap until they have content. Given the 3D feature is genuinely differentiating (and the blog announces GLB support), filling them is the better investment — but shipping them empty is worse than either.
-- [ ] **Decide the 57 tutorial placeholders**: at minimum add a written step-by-step to each — the text is the ranking asset, the video is the conversion asset. Every one of these targets a real long-tail query ("how to animate rotation in FlashFX"). If they can't be written now, `noindex` them and keep only the 3 with videos in the sitemap.
-- [x] **Em-dash corruption repaired** — 812 fixes across 107 files via `scripts/fix-punctuation.mjs`, more than the 617 first estimated because a third signature (`{',text'}`) only surfaced when the built HTML was re-scanned. Zero residual in source or in all 336 prerendered files. See P2-2.
-- [ ] Give the 60 tutorial pages individual meta descriptions instead of the `Learn ${title} in FlashFX` template.
-- [ ] Remove or scope the "work in progress" header banner (`Header.tsx:55`).
+- [x] **All 21 remaining 3D placeholder pages written** from `3D_DOCUMENTATION.md`, which maps 1:1 onto the page tree — transcription, not authorship. Architecture, full API reference, geometry/material parameter tables, performance, troubleshooting and extension guides. They entered the sitemap automatically (208 → 229 URLs) because the generator keys off the placeholder marker.
+- [x] **Em-dash corruption repaired** — 812 fixes across 107 files. See P2-2.
+- [ ] **57 tutorial placeholders** — still title-plus-"Video coming soon". Writable: the titles map onto `02_Manipulating_Shapes.md` and `05_Animate_Mode.md`, which carry procedural detail down to menu paths and shortcuts. Not yet attempted.
+- [ ] ⛔ **65 placeholder pages are BLOCKED — they describe a different product.** See below.
+
+### ⛔ The blocker: 65 pages document Rive, not FlashFX
+
+Mapping every placeholder against the source material surfaced something the earlier passes missed. The `.md` source files cover exactly the topics that are **already written**. The 65 remaining placeholders are a disjoint set, and they are recognisably **Rive's feature list**:
+
+| Cluster | Pages | Topics |
+|---|---|---|
+| `editor/constraints/*` | 9 | IK, distance, follow-path, rotation, scale, transform, translation constraints |
+| `editor/shapes/*` | 8 | Bones, bone tips, joysticks, solos, trim path, meshes, clipping |
+| `editor/layouts/*` | 7 | N-slicing, layout parameters, scrolling, styles |
+| `editor/state-machines/*` | 6 | States, transitions, inputs, layers, listeners |
+| `editor/interface-overview/*` | 5 | Stage, Hierarchy, Inspector — Rive's panel names, not FlashFX's |
+| `editor/fundamentals/*` | 15 | Artboards, components, freeze/origin, transform spaces, design-vs-animate mode |
+| `editor/exporting`, `events`, `data-binding`, `share-links` | 9 | Incl. one page literally named **`FramerAndRive`** |
+| Top-level | 6 | FeatureSupport, CaseStudies, Experts, CommunityOverview, Workspaces, S3Bucket |
+
+Three independent signals confirm the provenance:
+
+1. **The dead `/features/api/*` nav paths** found in P1-1 — `artboards`, `mat2d`, `vec2d`, `renderer`, `paint`, `path`, `gradient`, `datavalue` — are the **Rive runtime API surface**, verbatim.
+2. **Five placeholders duplicate already-written FlashFX pages under Rive's names**: `fundamentals/EditVertices` vs the written `shapes/VertexEditing`; `FillAndStroke` vs `FillTypes`; `Groups` vs `GroupsComposition`; `PenToolOverview` vs `PenTool`; `ShapesAndPathsOverview` vs `ShapePrimitives`.
+3. **`share-links/FramerAndRive.tsx`** names the product outright.
+
+**Why this stops the work rather than slowing it.** Writing these means inventing FlashFX features from a competitor's documentation — does FlashFX have IK constraints? bones? state machines? N-slicing? Nothing in this repo says so. Publishing 65 pages of invented behaviour would be worse than the placeholders: wrong documentation destroys user trust, generates support load, and is precisely what Google's helpful-content systems demote. It would actively undo the SEO work in M1–M5.
+
+**What unblocks it, in order of preference:**
+
+1. **Confirm which of these features FlashFX actually has**, and supply source material for those — same form as the existing `.md` files. Those pages then get written the same way the 3D pages just were.
+2. **For features FlashFX does not have**, the pages should be removed from `navigation.ts` and their routes dropped. *(The files themselves stay — per the standing constraint above, placeholders are never deleted.)*
+3. **Leave as-is.** Safe by default: they are already excluded from the sitemap and still prerender, so they cost nothing in SEO terms. They just earn nothing either.
 
 **Acceptance:** no page in the sitemap contains "Content will appear here" or "Video coming soon"; zero `</strong>,` occurrences remain; every tutorial has a distinct description.
 
@@ -502,7 +530,7 @@ Ranking is won here once M1–M5 remove the obstacles.
 |---|---|---|---|
 | M0 Baseline & verification | 0.5 d | **Do first** | ⬜ Blocked on deploy + GSC access |
 | M1 Indexability | 1 d | **Critical** | ✅ **Complete — 2026-08-07** |
-| M2 Content cleanup | 5–8 d | **Critical** | 🟡 **In progress** — punctuation done; 86 pages to write |
+| M2 Content cleanup | — | **Critical** | 🟡 Punctuation + 21 pages done; **65 blocked on product input** |
 | M3 Orphan recovery | 1 d | High | ⬜ Gated on M2 |
 | M4 Structured data | 1–2 d | High | ✅ **Complete — 2026-08-07** |
 | M5 Performance & prerender | 3–5 d | High | ✅ **Complete — 2026-08-07** (images deferred) |
