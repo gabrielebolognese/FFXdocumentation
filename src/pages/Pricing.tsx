@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Check, Minus, Zap, Users, Star } from 'lucide-react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -242,7 +243,7 @@ export default function Pricing() {
               </thead>
               <tbody>
                 {sections.map((section, si) => (
-                  <>
+                  <Fragment key={`section-group-${si}`}>
                     <tr key={`section-${si}`} className="border-t border-white/6">
                       <td colSpan={4} className="px-5 py-3 bg-white/[0.025]">
                         <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-white/35">
@@ -269,7 +270,7 @@ export default function Pricing() {
                         </td>
                       </tr>
                     ))}
-                  </>
+                  </Fragment>
                 ))}
 
                 <tr className="border-t border-white/10 bg-white/[0.02]">

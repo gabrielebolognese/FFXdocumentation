@@ -14,36 +14,27 @@
  *
  *  - `<lastmod>` is emitted ONLY for blog posts, where a real publication date
  *    exists in src/data/blogPosts.ts. Every source file in src/pages/ carries an
- *    identical filesystem mtime (the tree was copied, not versioned), so a
- *    file-derived lastmod would be fiction. Google treats a consistently
- *    inaccurate lastmod as a reason to stop trusting the field, so omitting it
- *    is strictly better than guessing.
+ *    identical filesystem mtime, so a file-derived lastmod would be fiction, and
+ *    Google devalues a lastmod it learns to distrust.
  *
- *  - Placeholder pages are EXCLUDED. Google's guidance is that a sitemap
- *    contains canonical URLs you want indexed; submitting 86 pages that read
- *    "Content will appear here" invites a thin-content assessment across the
- *    whole site. Excluded URLs are still crawlable — this is a prioritisation
- *    signal, not a block. They re-enter the sitemap automatically as soon as
- *    the placeholder text is removed, so M2 needs no change here.
+ *  - Placeholder pages are excluded. They are still prerendered (a URL a user
+ *    can reach must return real HTML) but submitting 127 empty pages would
+ *    invite a thin-content assessment. They re-enter automatically once the
+ *    placeholder text is removed, so M2 needs no change here.
  *
- *  - Output is a sitemap index plus one sitemap per section. At 336 URLs a
- *    single file would be well within the 50,000 limit, but Search Console
- *    reports index coverage per submitted sitemap — segmenting turns "how much
- *    of the site is indexed?" into "which section is failing?", which is the
- *    exact question this site needs answered.
+ *  - Output is a sitemap index plus one sitemap per section. At this scale a
+ *    single file would be well inside the 50,000 limit, but Search Console
+ *    reports coverage per submitted sitemap — segmenting turns "how much of the
+ *    site is indexed?" into "which section is failing?".
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
-import { join, dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
+import { ROOT, collectUrls } from './lib/routes.mjs';
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PUBLIC_DIR = join(ROOT, 'public');
 
 const BASE_URL = (process.env.SITE_URL || 'https://documentation.flashfx.app').replace(/\/$/, '');
-
-/** Marker rendered by scaffolded pages that have no content yet. */
-const PLACEHOLDER_MARKER = 'Content will appear here';
 
 /**
  * Sections, in sitemap-index order. `match` decides which section a URL lands
@@ -58,129 +49,14 @@ const SECTIONS = [
   { id: 'core', file: 'sitemap-core.xml', match: () => true },
 ];
 
-// ---------------------------------------------------------------------------
-// Parse the route table
-// ---------------------------------------------------------------------------
+// URL collection and placeholder classification live in scripts/lib/routes.mjs,
+// shared with the prerenderer so the sitemap can never advertise a URL that was
+// not prerendered, or omit one that was.
+const { urls, routes } = collectUrls();
 
-const appSource = readFileSync(join(ROOT, 'src', 'App.tsx'), 'utf8');
-
-/** component name -> source file path, from App.tsx's import statements. */
-function parseImports(source) {
-  const map = new Map();
-  const re = /^import\s+(\w+)\s+from\s+'(\.\/[^']+)'/gm;
-  let m;
-  while ((m = re.exec(source)) !== null) {
-    const [, name, rel] = m;
-    if (!rel.startsWith('./pages/')) continue;
-    const base = join(ROOT, 'src', rel.slice(2));
-    const file = ['.tsx', '.ts', '/index.tsx'].map((ext) => base + ext).find(existsSync);
-    if (file) map.set(name, file);
-  }
-  return map;
-}
-
-/** route path -> component name, from App.tsx's <Route> elements. */
-function parseRoutes(source) {
-  const routes = [];
-  const re = /<Route\s+path="([^"]+)"\s+element=\{<(\w+)\s*\/>\}/g;
-  let m;
-  while ((m = re.exec(source)) !== null) {
-    routes.push({ path: m[1], component: m[2] });
-  }
-  return routes;
-}
-
-const imports = parseImports(appSource);
-const routes = parseRoutes(appSource);
-
-// ---------------------------------------------------------------------------
-// Content-driven data sources
-// ---------------------------------------------------------------------------
-
-/** Blog slugs + publication dates — the only trustworthy lastmod on the site. */
-function parseBlogPosts() {
-  const src = readFileSync(join(ROOT, 'src', 'data', 'blogPosts.ts'), 'utf8');
-  const posts = [];
-  const re = /slug:\s*'([^']+)'[\s\S]*?date:\s*'([^']+)'/g;
-  let m;
-  while ((m = re.exec(src)) !== null) {
-    const [, slug, dateText] = m;
-    const parsed = new Date(`${dateText} UTC`);
-    posts.push({
-      slug,
-      lastmod: Number.isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10),
-    });
-  }
-  return posts;
-}
-
-/**
- * Tutorial routes that actually have content. Today that means "has a video".
- * When M2 adds written steps to TutorialDetail.tsx, widen this to read whatever
- * structure holds the prose — the rest of the generator needs no change.
- */
-function parseTutorialsWithContent() {
-  const src = readFileSync(join(ROOT, 'src', 'pages', 'TutorialDetail.tsx'), 'utf8');
-  const videoBlock = src.match(/const tutorialVideos[^=]*=\s*\{([\s\S]*?)\n\};/);
-  if (!videoBlock) return new Set();
-  const paths = [...videoBlock[1].matchAll(/'(\/tutorials\/[^']+)'/g)].map((m) => m[1]);
-  return new Set(paths);
-}
-
-const blogPosts = parseBlogPosts();
-const tutorialsWithContent = parseTutorialsWithContent();
-
-// ---------------------------------------------------------------------------
-// Classify every route
-// ---------------------------------------------------------------------------
-
-const placeholderCache = new Map();
-function isPlaceholder(file) {
-  if (!file) return false;
-  if (!placeholderCache.has(file)) {
-    placeholderCache.set(file, readFileSync(file, 'utf8').includes(PLACEHOLDER_MARKER));
-  }
-  return placeholderCache.get(file);
-}
-
-const included = [];
-const excluded = [];
-
-function include(path, lastmod = null) {
-  included.push({ path, lastmod });
-}
-function exclude(path, reason) {
-  excluded.push({ path, reason });
-}
-
-for (const { path, component } of routes) {
-  // Catch-all: renders <Home />. Never a canonical URL.
-  if (path === '*') {
-    exclude(path, 'catch-all route');
-    continue;
-  }
-
-  // Dynamic blog route: expand to the real post URLs, with real dates.
-  if (path === '/blog/:slug') {
-    for (const post of blogPosts) include(`/blog/${post.slug}`, post.lastmod);
-    continue;
-  }
-
-  // Tutorials: only those with content. The other 57 render a title over
-  // "Video coming soon" and would be 57 near-duplicate empty pages.
-  if (path.startsWith('/tutorials/') && !tutorialsWithContent.has(path)) {
-    exclude(path, 'tutorial placeholder (no video, no written steps)');
-    continue;
-  }
-
-  // Scaffolded pages that were never written.
-  if (isPlaceholder(imports.get(component))) {
-    exclude(path, 'placeholder page ("Content will appear here")');
-    continue;
-  }
-
-  include(path);
-}
+const included = urls.filter((u) => u.inSitemap).map((u) => ({ path: u.path, lastmod: u.lastmod }));
+const excluded = urls.filter((u) => !u.inSitemap).map((u) => ({ path: u.path, reason: u.reason }));
+excluded.push({ path: '*', reason: 'catch-all route' });
 
 included.sort((a, b) => a.path.localeCompare(b.path));
 

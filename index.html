@@ -2,14 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/android-chrome-512x512.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+    <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--
-      Defaults only. react-helmet-async (src/components/SEO.tsx) overrides the
-      title, description, canonical and social tags per route once React mounts.
-      These values are what a non-rendering crawler sees, so they describe the
-      site rather than any one page.
+      Inter, moved out of src/index.css. A CSS @import forced the browser to
+      fetch and parse the app stylesheet before it could even discover the font
+      request — an extra round-trip ahead of first paint. Declaring it here lets
+      the preload scanner start both connections immediately.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
+
+    <!--app-head-start-->
+    <!--
+      Defaults only, and only for `npm run dev`. The production build replaces
+      everything between the app-head markers with that route's real tags, so
+      these must never be emitted alongside the per-page ones — two <title>
+      elements on a page is worse than a generic one.
     -->
     <title>FlashFX Documentation</title>
     <meta
@@ -35,9 +51,10 @@
       content="Official documentation for FlashFX, the browser-based motion and animation editor."
     />
     <meta name="twitter:image" content="https://documentation.flashfx.app/android-chrome-512x512.png" />
+    <!--app-head-end-->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

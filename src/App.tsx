@@ -222,11 +222,13 @@ import LiteCircle from './pages/lite/objects/Circle';
 import LiteLine from './pages/lite/objects/Line';
 import LiteObjectText from './pages/lite/objects/Text';
 
-function App() {
+/**
+ * The route table on its own, with no router around it, so the client entry
+ * can wrap it in BrowserRouter and the prerenderer (scripts/prerender.mjs via
+ * src/entry-server.tsx) can wrap the same tree in StaticRouter.
+ */
+export function AppRoutes() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <SidebarStateProvider>
           <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/editor" element={<Editor />} />
@@ -576,6 +578,15 @@ function App() {
 
           <Route path="*" element={<NotFound />} />
           </Routes>
+  );
+}
+
+function App() {
+  return (
+    <HelmetProvider>
+      <BrowserRouter>
+        <SidebarStateProvider>
+          <AppRoutes />
         </SidebarStateProvider>
       </BrowserRouter>
     </HelmetProvider>
