@@ -1,7 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/geometryfactory</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/gizmocontroller</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/materialsystem</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/model-import</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/properties-panel</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/scenemanager</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/shape-library</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/texture-system</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/threedengine</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/api/threedshapeelement</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/architecture/canvas-integration</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/architecture/dirty-flag-render-loop</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/architecture/mode-system</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/architecture/per-shape-renderer</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/architecture/scene-serialization</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/file-structure</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/guides/extending</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/guides/keyboard-shortcuts</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/guides/performance</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/guides/troubleshooting</loc>
+  </url>
+  <url>
     <loc>https://documentation.flashfx.app/editor/3d/overview</loc>
+  </url>
+  <url>
+    <loc>https://documentation.flashfx.app/editor/3d/technology-stack</loc>
   </url>
   <url>
     <loc>https://documentation.flashfx.app/editor/animate/animating-colors</loc>
