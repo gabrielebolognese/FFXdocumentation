@@ -30,9 +30,9 @@ export default function TextTransform() {
           <Section title="Text Path Alignment">
             <p>When text is placed on a path, the following alignment properties become available:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Path Offset</strong>,how far along the path the text starts (0 = path start)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Character Spacing on Path</strong>,adjusts letter spacing specifically for curved path placement</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Flip on Path</strong>,mirrors the text to the opposite side of the path</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Path Offset</strong> — how far along the path the text starts (0 = path start)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Character Spacing on Path</strong> — adjusts letter spacing specifically for curved path placement</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Flip on Path</strong> — mirrors the text to the opposite side of the path</li>
             </ul>
           </Section>
         </div>

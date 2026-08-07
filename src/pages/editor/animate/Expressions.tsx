@@ -30,7 +30,7 @@ export default function Expressions() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span>Select "Link to Property"</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span>In the picker, select the source property</li>
             </ol>
-            <p>The driven property now mirrors the source property's value. The link is live and animatable,if the source is keyframed, the driven property follows.</p>
+            <p>The driven property now mirrors the source property's value. The link is live and animatable — if the source is keyframed, the driven property follows.</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Offset:</strong> A constant offset value can be added to the link. Useful for keeping elements at a fixed offset from each other.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Scale Factor:</strong> A multiplier can be applied. Useful for parallax relationships between layers.</li>
@@ -50,7 +50,7 @@ export default function Expressions() {
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">width</code>
                   {', '}
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">height</code>
-                  {',canvas dimensions'}
+                  {' — canvas dimensions'}
                 </span>
               </li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">value</code>,the property's current keyframed value (expressions can modify keyframed values rather than replace them)</li>

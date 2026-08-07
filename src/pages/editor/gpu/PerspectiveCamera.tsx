@@ -28,7 +28,7 @@ export default function PerspectiveCamera() {
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>High focal length (e.g., 2000px) = narrow field of view, compressed perspective, telephoto appearance</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Low focal length (e.g., 200px) = wide field of view, exaggerated perspective, fisheye-like appearance</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Default: 800px,a natural-looking perspective comparable to a 50mm lens</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Default: 800px — a natural-looking perspective comparable to a 50mm lens</li>
             </ul>
             <p>Focal length to Field of View conversion: FOV = 2 x arctan(canvas_height / (2 x focal_length))</p>
             <p><strong className="text-white">Camera Position:</strong> The virtual camera is positioned at the center of the canvas by default. Camera X / Y moves the camera horizontally and vertically, panning the perspective view without actually moving elements.</p>
@@ -43,12 +43,12 @@ export default function PerspectiveCamera() {
           <Section id="simulating-camera-movement" title="Simulating Camera Movement">
             <p>To simulate a moving camera, parent all scene elements to a Null Object and animate the null:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Dolly (push/pull)</strong>,animate null's Scale uniformly (scale up = moving toward scene, scale down = moving away)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Truck (strafe)</strong>,animate null's X position</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pedestal (vertical)</strong>,animate null's Y position</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pan</strong>,animate null's Z rotation (2D)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Tilt</strong>,animate null's X rotation (3D)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Roll</strong>,animate null's Z rotation in 3D mode</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Dolly (push/pull)</strong> — animate null's Scale uniformly (scale up = moving toward scene, scale down = moving away)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Truck (strafe)</strong> — animate null's X position</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pedestal (vertical)</strong> — animate null's Y position</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pan</strong> — animate null's Z rotation (2D)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Tilt</strong> — animate null's X rotation (3D)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Roll</strong> — animate null's Z rotation in 3D mode</li>
             </ul>
             <p>This technique avoids actually moving individual scene elements and keeps the "camera" logic centralized in one control.</p>
           </Section>

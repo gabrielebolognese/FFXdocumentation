@@ -24,14 +24,14 @@ export default function ThreeDTransform() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="overview" title="Overview">
-            <p>FlashFX supports pseudo-3D transforms,extending the standard 2D transform system with rotation around the X and Y axes (3D rotation), perspective projection, and Z-depth positioning. This enables:</p>
+            <p>FlashFX supports pseudo-3D transforms — extending the standard 2D transform system with rotation around the X and Y axes (3D rotation), perspective projection, and Z-depth positioning. This enables:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>3D card flip effects</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Perspective receding planes</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Multi-layer parallax depth</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>3D text and shape arrangements</li>
             </ul>
-            <p>FlashFX is <strong className="text-white">not a 3D engine</strong>,there is no true 3D scene graph, no polygon meshes, no surface normals for lighting, and no global illumination. All 3D in FlashFX is applied as CSS-style 3D transforms to flat 2D elements.</p>
+            <p>FlashFX is <strong className="text-white">not a 3D engine</strong> — there is no true 3D scene graph, no polygon meshes, no surface normals for lighting, and no global illumination. All 3D in FlashFX is applied as CSS-style 3D transforms to flat 2D elements.</p>
           </Section>
 
           <Section id="enabling-3d-on-an-element" title="Enabling 3D on an Element">
@@ -43,18 +43,18 @@ export default function ThreeDTransform() {
           </Section>
 
           <Section id="3d-transform-properties" title="3D Transform Properties">
-            <p><strong className="text-white">Rotation X (Pitch)</strong>,Rotation around the horizontal axis. Tilts the element toward or away from the viewer:</p>
+            <p><strong className="text-white">Rotation X (Pitch)</strong> — Rotation around the horizontal axis. Tilts the element toward or away from the viewer:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Positive values tilt the top away (looking down at the top edge)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Negative values tilt the bottom away (looking up at the bottom edge)</li>
             </ul>
-            <p><strong className="text-white">Rotation Y (Yaw)</strong>,Rotation around the vertical axis. Rotates the element like a revolving door:</p>
+            <p><strong className="text-white">Rotation Y (Yaw)</strong> — Rotation around the vertical axis. Rotates the element like a revolving door:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Positive values rotate the right side away</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Negative values rotate the left side away</li>
             </ul>
-            <p><strong className="text-white">Rotation Z (Roll)</strong>,Standard 2D rotation around the depth axis. Identical to the 2D rotation property.</p>
-            <p><strong className="text-white">Z Position (Depth)</strong>,Moves the element along the Z axis,toward or away from the viewer:</p>
+            <p><strong className="text-white">Rotation Z (Roll)</strong> — Standard 2D rotation around the depth axis. Identical to the 2D rotation property.</p>
+            <p><strong className="text-white">Z Position (Depth)</strong> — Moves the element along the Z axis — toward or away from the viewer:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Positive values move closer to the viewer (appears larger with perspective enabled)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Negative values move further from the viewer (appears smaller with perspective)</li>

@@ -104,9 +104,9 @@ export default function WorkspaceModes() {
             </p>
             <p className="mt-4">Keyboard shortcuts:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ctrl/Cmd + 1</strong>,Design mode</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ctrl/Cmd + 2</strong>,Animate mode</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ctrl/Cmd + 3</strong>,Advanced mode</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ctrl/Cmd + 1</strong> — Design mode</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ctrl/Cmd + 2</strong> — Animate mode</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ctrl/Cmd + 3</strong> — Advanced mode</li>
             </ul>
             <p className="mt-4">
               Switching modes does not affect your project data. All elements, keyframes, and settings are preserved. Only the interface layout changes.
@@ -132,9 +132,9 @@ export default function WorkspaceModes() {
           <Section id="recommended-workflow" title="Recommended Workflow">
             <p>Most users follow this workflow pattern:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start in Design mode</strong>,Create all visual elements, set up the composition</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Switch to Animate mode</strong>,Add keyframes, adjust timing, preview motion</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Use Advanced mode</strong>,For final polish and complex multi-layer edits</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start in Design mode</strong> — Create all visual elements, set up the composition</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Switch to Animate mode</strong> — Add keyframes, adjust timing, preview motion</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Use Advanced mode</strong> — For final polish and complex multi-layer edits</li>
             </ul>
           </Section>
         </div>

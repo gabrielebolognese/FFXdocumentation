@@ -23,19 +23,19 @@ export default function AnimatingColors() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="solid-color-interpolation" title="Solid Color Interpolation">
-            <p>When a solid fill color is keyframed at two different values, FlashFX interpolates between them through <strong className="text-white">LAB color space</strong> by default. LAB interpolation produces perceptually uniform transitions,the brightness appears consistent throughout the transition, which avoids the muddy midpoints that can occur with RGB-space interpolation.</p>
-            <p><strong className="text-white">Alternative: RGB interpolation</strong>,selectable via the color track context menu. RGB interpolation passes through the RGB midpoint, which can produce unintended hue shifts in the middle of the transition.</p>
+            <p>When a solid fill color is keyframed at two different values, FlashFX interpolates between them through <strong className="text-white">LAB color space</strong> by default. LAB interpolation produces perceptually uniform transitions — the brightness appears consistent throughout the transition, which avoids the muddy midpoints that can occur with RGB-space interpolation.</p>
+            <p><strong className="text-white">Alternative: RGB interpolation</strong> — selectable via the color track context menu. RGB interpolation passes through the RGB midpoint, which can produce unintended hue shifts in the middle of the transition.</p>
           </Section>
 
           <Section id="gradient-keyframes" title="Gradient Keyframes">
             <p>Gradients can be keyframed in several ways:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Stop Color</strong>,the color of a specific gradient stop changes over time</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Stop Position</strong>,a stop moves along the gradient ramp over time</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Gradient Angle</strong>,the direction of the gradient rotates over time</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Center Position (radial)</strong>,the gradient's center point moves over time</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Stop Color</strong> — the color of a specific gradient stop changes over time</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Stop Position</strong> — a stop moves along the gradient ramp over time</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Gradient Angle</strong> — the direction of the gradient rotates over time</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Center Position (radial)</strong> — the gradient's center point moves over time</li>
             </ul>
-            <p>Animating gradient stop positions creates color band animation effects,color zones sweep across the element.</p>
+            <p>Animating gradient stop positions creates color band animation effects — color zones sweep across the element.</p>
           </Section>
 
           <Section id="color-flicker-flash-effects" title="Color Flicker / Flash Effects">

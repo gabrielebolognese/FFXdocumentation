@@ -5,7 +5,7 @@ const tableOfContents = [
   { id: 'export-rendering', label: 'Export Rendering' },
   { id: 'anti-aliasing-in-export', label: 'Anti-Aliasing in Export' },
   { id: 'export-quality-and-3d', label: 'Export Quality and 3D' },
-  { id: 'known-export-limitation-transparency-and-3d', label: 'Known Export Limitation,Transparency and 3D' },
+  { id: 'known-export-limitation-transparency-and-3d', label: 'Known Export Limitation — Transparency and 3D' },
 ];
 
 export default function ThreeDExporting() {
@@ -42,14 +42,14 @@ export default function ThreeDExporting() {
 
           <Section id="export-quality-and-3d" title="Export Quality and 3D">
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Maximum Quality</strong>,applies the highest anti-aliasing and renders each frame at full resolution with no resampling</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">High Quality</strong>,applies MSAA but uses slight texture filtering for performance</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Medium / Low</strong>,reduce texture quality; noticeable on high-frequency texture fills on 3D elements</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Maximum Quality</strong> — applies the highest anti-aliasing and renders each frame at full resolution with no resampling</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">High Quality</strong> — applies MSAA but uses slight texture filtering for performance</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Medium / Low</strong> — reduce texture quality; noticeable on high-frequency texture fills on 3D elements</li>
             </ul>
             <p>For 3D compositions, always export at <strong className="text-white">High</strong> or <strong className="text-white">Maximum</strong> quality. The visual difference is most apparent on angled edges and texture-filled 3D planes.</p>
           </Section>
 
-          <Section id="known-export-limitation-transparency-and-3d" title="Known Export Limitation,Transparency and 3D">
+          <Section id="known-export-limitation-transparency-and-3d" title="Known Export Limitation — Transparency and 3D">
             <p>Exporting transparent backgrounds with 3D elements that use non-Normal blend modes may produce composite errors at element boundaries in some configurations. For transparent 3D exports:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Set all non-Normal blend mode 3D elements to Normal mode during export</li>

@@ -42,10 +42,10 @@ export default function TextStyles() {
           <Section title="5.2 Text Rendering">
             <p><strong className="text-white">Antialiasing Mode:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Default</strong>,browser-managed antialiasing</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Crisp</strong>,optimized for screen legibility at small sizes; reduces blurring at pixel boundaries</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Smooth</strong>,maximum smoothness, best for large display type</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Geometric Precision</strong>,disables browser kerning hinting for consistent cross-browser rendering</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Default</strong> — browser-managed antialiasing</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Crisp</strong> — optimized for screen legibility at small sizes; reduces blurring at pixel boundaries</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Smooth</strong> — maximum smoothness, best for large display type</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Geometric Precision</strong> — disables browser kerning hinting for consistent cross-browser rendering</li>
             </ul>
             <p><strong className="text-white">Subpixel Rendering:</strong> On high-DPI displays, enables subpixel color channel antialiasing for sharper text at small sizes (browser-dependent support).</p>
           </Section>
@@ -59,11 +59,11 @@ export default function TextStyles() {
             <p>A gradient fill mapped across the text string.</p>
             <p><strong className="text-white">Gradient Mapping Mode:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Per Character</strong>,the gradient is applied independently to each character. Each character shows the full gradient range.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Per Word</strong>,the gradient is applied independently to each word.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Across Text</strong>,the gradient spans the full width or height of the entire text element. Individual characters show only the portion of the gradient at their position.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Per Character</strong> — the gradient is applied independently to each character. Each character shows the full gradient range.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Per Word</strong> — the gradient is applied independently to each word.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Across Text</strong> — the gradient spans the full width or height of the entire text element. Individual characters show only the portion of the gradient at their position.</li>
             </ul>
-            <p>Across Text mode is the most visually impactful for display text,long gradients sweep across headings smoothly, with each character showing a slightly different point in the gradient.</p>
+            <p>Across Text mode is the most visually impactful for display text — long gradients sweep across headings smoothly, with each character showing a slightly different point in the gradient.</p>
           </Section>
 
           <Section title="6.3 Texture and Pattern Fills">
@@ -71,7 +71,7 @@ export default function TextStyles() {
           </Section>
 
           <Section title="6.4 Multi-Layer Text Fills">
-            <p>The full material stack is supported for text. Multiple fill layers can be combined,for example: a solid white fill as the base layer, a gradient overlay layer in Screen blend mode for a shimmering color effect, and a noise texture in Multiply blend mode for a grungy print texture.</p>
+            <p>The full material stack is supported for text. Multiple fill layers can be combined — for example: a solid white fill as the base layer, a gradient overlay layer in Screen blend mode for a shimmering color effect, and a noise texture in Multiply blend mode for a grungy print texture.</p>
           </Section>
 
           <Section title="7. Text Stroke">
@@ -81,15 +81,15 @@ export default function TextStyles() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Heavy stroke weights on thin fonts produce a "fat face" typography effect. Use intentionally and test at export size.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Stroke color, gradient stroke, and dashed stroke are all available on text.</li>
             </ul>
-            <p><strong className="text-white">Multiple Strokes:</strong> Like shapes, text can have multiple stroke layers applied. A common technique is applying two strokes,a thin bright inner stroke and a thick dark outer stroke,to achieve a hand-lettered outlined effect.</p>
+            <p><strong className="text-white">Multiple Strokes:</strong> Like shapes, text can have multiple stroke layers applied. A common technique is applying two strokes — a thin bright inner stroke and a thick dark outer stroke — to achieve a hand-lettered outlined effect.</p>
           </Section>
 
           <Section title="8. Text Shadow & Glow">
             <p>Text shadow and glow work identically to shape shadow and glow (see Document 02, Section 9).</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Drop shadows on small text at large blur radii can reduce legibility,keep blur under 50% of the font size for readable text</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Drop shadows on small text at large blur radii can reduce legibility — keep blur under 50% of the font size for readable text</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Inner shadows on display typography create an engraved or debossed effect</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Outer glow at low opacity is commonly used for subtle text lift from the background,a glow matching the background color creates a text halo that optically separates text from complex backgrounds</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Outer glow at low opacity is commonly used for subtle text lift from the background — a glow matching the background color creates a text halo that optically separates text from complex backgrounds</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Multiple shadows are supported; a common technique is combining a tight dark drop shadow with a larger diffuse colored glow to produce neon or luminous text effects</li>
             </ul>
           </Section>
@@ -102,7 +102,7 @@ export default function TextStyles() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Background corner radius can be set to round the per-character backgrounds</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Background color, opacity, and blend mode are configurable</li>
             </ul>
-            <p>This feature enables highlight text effects,colored boxes behind individual words or characters,which are common in social media caption animations and subtitle styling.</p>
+            <p>This feature enables highlight text effects — colored boxes behind individual words or characters — which are common in social media caption animations and subtitle styling.</p>
           </Section>
 
           <Section title="9.2 Full Text Block Background">

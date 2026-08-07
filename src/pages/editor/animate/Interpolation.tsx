@@ -7,7 +7,7 @@ const tableOfContents = [
   { id: 'animating-along-the-path', label: 'Animating Along the Path' },
   { id: 'orient-to-path', label: 'Orient to Path' },
   { id: 'motion-path-editing', label: 'Motion Path Editing' },
-  { id: 'animating-shapes-morph-deform', label: 'Animating Shapes,Morph & Deform' },
+  { id: 'animating-shapes-morph-deform', label: 'Animating Shapes — Morph & Deform' },
   { id: 'vertex-level-animation', label: 'Vertex-Level Animation' },
   { id: 'shape-morph-between-keyframes', label: 'Shape Morph Between Keyframes' },
   { id: 'deformation-tools', label: 'Deformation Tools' },
@@ -64,7 +64,7 @@ export default function Interpolation() {
           <Section id="orient-to-path" title="Orient to Path">
             <p><strong className="text-white">Orient to Path:</strong> When enabled, the element automatically rotates to face the direction the path is heading at its current position. The element's forward axis is aligned to the path tangent.</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Rotation Offset:</strong> A fixed rotation value added on top of the path tangent direction,used to compensate when the element's natural "forward" direction doesn\'t match the path direction</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Rotation Offset:</strong> A fixed rotation value added on top of the path tangent direction — used to compensate when the element's natural "forward" direction doesn\'t match the path direction</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Smoothing:</strong> The orient-to-path rotation can be smoothed over a number of frames to avoid abrupt orientation changes on sharp corners</li>
             </ul>
           </Section>
@@ -74,12 +74,12 @@ export default function Interpolation() {
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Add or remove path points to refine the trajectory</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Adjust bezier handles to control the curvature of path segments</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>The element follows the updated path immediately,no keyframe changes required</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>The element follows the updated path immediately — no keyframe changes required</li>
             </ul>
             <p><strong className="text-white">Detaching from path:</strong> Click Detach from Path to convert the motion path animation back to independent Position X and Position Y keyframes. The keyframes are calculated by sampling the element's world position at each existing Path Progress keyframe and writing them as explicit position values.</p>
           </Section>
 
-          <Section id="animating-shapes-morph-deform" title="Animating Shapes,Morph & Deform">
+          <Section id="animating-shapes-morph-deform" title="Animating Shapes — Morph & Deform">
             <p>Shape morphing allows the vertex positions of a path to be animated over time, transforming one shape into another. This is one of the most expressive animation capabilities in FlashFX.</p>
           </Section>
 
@@ -102,7 +102,7 @@ export default function Interpolation() {
             </ul>
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-2">Morph Requires Matching Vertex Count</h4>
-              <p>Morphing only works cleanly between shapes with the same number of vertices. If the vertex count changes between keyframes, FlashFX will attempt to match vertices by index,which may produce unexpected results. For best results, plan morph animations with a fixed vertex count from the start.</p>
+              <p>Morphing only works cleanly between shapes with the same number of vertices. If the vertex count changes between keyframes, FlashFX will attempt to match vertices by index — which may produce unexpected results. For best results, plan morph animations with a fixed vertex count from the start.</p>
             </div>
           </Section>
 
@@ -125,7 +125,7 @@ export default function Interpolation() {
           </Section>
 
           <Section id="spatial-path-display" title="Spatial Path Display">
-            <p>The spatial path appears as a dotted or dashed line connecting the positions at each keyframe. Dots along the path indicate where the element is at each frame,denser dots indicate slower movement; sparser dots indicate faster movement.</p>
+            <p>The spatial path appears as a dotted or dashed line connecting the positions at each keyframe. Dots along the path indicate where the element is at each frame — denser dots indicate slower movement; sparser dots indicate faster movement.</p>
             <p>Toggle spatial path display: <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+M</code> or via View {'>'} Show Motion Paths.</p>
           </Section>
 
@@ -138,7 +138,7 @@ export default function Interpolation() {
                 ['Auto Bezier', 'FlashFX automatically calculates smooth bezier handles to create a flowing curved path through all position keyframes.'],
                 ['Continuous Bezier', 'Handles are auto-calculated but can be manually adjusted. The incoming and outgoing handles remain linked (smooth).'],
                 ['Manual Bezier', 'Fully manual bezier handles. Drag the spatial path handles directly on the canvas to adjust the curve shape.'],
-                ['Hold', 'No interpolation,the element jumps instantly to each position at each keyframe.'],
+                ['Hold', 'No interpolation — the element jumps instantly to each position at each keyframe.'],
               ]}
             />
           </Section>
@@ -148,13 +148,13 @@ export default function Interpolation() {
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Bezier handles appear on the canvas at the keyframe position</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Drag the handles to adjust the entry and exit curve of the trajectory at that point</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Hold <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Alt</code> while dragging a handle to break the link between the incoming and outgoing handles,allowing sharp corners in the trajectory</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Hold <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Alt</code> while dragging a handle to break the link between the incoming and outgoing handles — allowing sharp corners in the trajectory</li>
             </ul>
           </Section>
 
           <Section id="roving-keyframes" title="Roving Keyframes on Motion Paths">
             <p>Roving keyframes (◇ open diamond type) are specifically designed for motion path animation. A roving keyframe's time position is automatically adjusted by FlashFX to maintain a constant velocity along the path, regardless of how the path curves. This removes the need to manually tune keyframe timing to eliminate speed bumps at corners.</p>
-            <p>To use roving keyframes: right-click any intermediate position keyframe on a motion path and select <strong className="text-white">Rove Across Time</strong>. The first and last keyframes of a sequence cannot be set to roving,they anchor the start and end of the motion.</p>
+            <p>To use roving keyframes: right-click any intermediate position keyframe on a motion path and select <strong className="text-white">Rove Across Time</strong>. The first and last keyframes of a sequence cannot be set to roving — they anchor the start and end of the motion.</p>
           </Section>
 
         </div>

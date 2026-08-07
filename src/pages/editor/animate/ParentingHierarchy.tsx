@@ -42,9 +42,9 @@ export default function ParentingHierarchy() {
             <p>Null objects are displayed as a small crosshair on the canvas in design mode but are invisible in export.</p>
             <p><strong className="text-white">Use cases for nulls:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shared pivot</strong>,parent multiple elements to a null and rotate/scale the null to affect all children from a single control point</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Camera simulation</strong>,parent all scene elements to a null and animate the null's position/scale to simulate a virtual camera moving through the scene</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Rigging anchor</strong>,create complex multi-joint animation rigs without exposing visible pivot geometry</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shared pivot</strong> — parent multiple elements to a null and rotate/scale the null to affect all children from a single control point</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Camera simulation</strong> — parent all scene elements to a null and animate the null's position/scale to simulate a virtual camera moving through the scene</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Rigging anchor</strong> — create complex multi-joint animation rigs without exposing visible pivot geometry</li>
             </ul>
           </Section>
 

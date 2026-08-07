@@ -23,7 +23,7 @@ export default function SearchFiltering() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="layer-search" title="Layer Search">
-            <p>The timeline track list has a search box at the top. Typing in the search box filters the visible layers to only those whose names contain the search string. All other layers are temporarily hidden from the timeline view (not hidden from the canvas,only from the timeline UI).</p>
+            <p>The timeline track list has a search box at the top. Typing in the search box filters the visible layers to only those whose names contain the search string. All other layers are temporarily hidden from the timeline view (not hidden from the canvas — only from the timeline UI).</p>
             <p><strong className="text-white">Search is case-insensitive</strong> and matches any substring of the layer name.</p>
             <p>
               <strong className="text-white">Clear search:</strong>
@@ -34,7 +34,7 @@ export default function SearchFiltering() {
           </Section>
 
           <Section id="track-type-filters" title="Track Type Filters">
-            <p>Filter buttons at the top of the timeline let you show only specific types of property tracks across all layers. This is useful when reviewing a specific type of animation across many layers,for example, checking all opacity keyframes simultaneously to ensure fade timing is consistent.</p>
+            <p>Filter buttons at the top of the timeline let you show only specific types of property tracks across all layers. This is useful when reviewing a specific type of animation across many layers — for example, checking all opacity keyframes simultaneously to ensure fade timing is consistent.</p>
             <Table
               headers={['Button', 'Shows Only']}
               rows={[

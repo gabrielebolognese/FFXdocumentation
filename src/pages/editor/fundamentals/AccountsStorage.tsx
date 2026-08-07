@@ -82,19 +82,19 @@ export default function AccountsStorage() {
               With a free or paid account, projects are automatically saved to cloud storage:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Auto-save</strong>,Changes sync to the cloud every 30 seconds</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Conflict resolution</strong>,If a project is edited on multiple devices, you're prompted to choose which version to keep</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Version history</strong>,Revert to previous saves (Pro and Team accounts only)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Offline mode</strong>,Projects are cached locally; changes sync when connection is restored</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Auto-save</strong> — Changes sync to the cloud every 30 seconds</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Conflict resolution</strong> — If a project is edited on multiple devices, you're prompted to choose which version to keep</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Version history</strong> — Revert to previous saves (Pro and Team accounts only)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Offline mode</strong> — Projects are cached locally; changes sync when connection is restored</li>
             </ul>
           </Section>
 
           <Section id="storage-limits" title="Storage Limits">
             <p>Monitor storage usage in Account Settings → Storage:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Free accounts</strong>,100MB total (approximately 50-100 projects)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Pro accounts</strong>,5GB total (approximately 2500-5000 projects)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Team accounts</strong>,Unlimited (fair use policy applies)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Free accounts</strong> — 100MB total (approximately 50-100 projects)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Pro accounts</strong> — 5GB total (approximately 2500-5000 projects)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Team accounts</strong> — Unlimited (fair use policy applies)</li>
             </ul>
             <p className="mt-4">
               Storage is measured by compressed project file size. Images and media assets contribute most to storage use.
@@ -104,10 +104,10 @@ export default function AccountsStorage() {
           <Section id="managing-storage" title="Managing Storage">
             <p>If you approach your storage limit:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete unused projects</strong>,Move to trash, then empty trash to free space</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Download and archive</strong>,Export projects to local .flashfx files</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Optimize assets</strong>,Compress images before importing</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Upgrade account</strong>,Increase storage quota with Pro or Team plan</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete unused projects</strong> — Move to trash, then empty trash to free space</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Download and archive</strong> — Export projects to local .flashfx files</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Optimize assets</strong> — Compress images before importing</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Upgrade account</strong> — Increase storage quota with Pro or Team plan</li>
             </ul>
           </Section>
 
@@ -143,9 +143,9 @@ export default function AccountsStorage() {
               Save projects to your device as .flashfx files:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Download project</strong>,File → Download → Project File (.flashfx)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Import project</strong>,File → Open → Upload .flashfx file</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Backup all projects</strong>,Account Settings → Download All Projects (exports a .zip archive)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Download project</strong> — File → Download → Project File (.flashfx)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Import project</strong> — File → Open → Upload .flashfx file</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Backup all projects</strong> — Account Settings → Download All Projects (exports a .zip archive)</li>
             </ul>
             <p className="mt-4">
               Project files include all assets, settings, and animation data. They are portable and can be opened in any FlashFX instance.
@@ -154,10 +154,10 @@ export default function AccountsStorage() {
 
           <Section id="account-security" title="Account Security">
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Two-factor authentication</strong>,Enable in Account Settings → Security</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Password changes</strong>,Account Settings → Change Password</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Active sessions</strong>,View and revoke device access in Security settings</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Email notifications</strong>,Receive alerts for suspicious login attempts</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Two-factor authentication</strong> — Enable in Account Settings → Security</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Password changes</strong> — Account Settings → Change Password</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Active sessions</strong> — View and revoke device access in Security settings</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Email notifications</strong> — Receive alerts for suspicious login attempts</li>
             </ul>
           </Section>
 

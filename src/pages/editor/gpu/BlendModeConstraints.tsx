@@ -24,19 +24,19 @@ export default function BlendModeConstraints() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="the-framebuffer-access-problem" title="The Framebuffer Access Problem">
-            <p>In native applications, implementing blend modes is straightforward,the GPU can read any previously rendered pixel directly to compute the blend result.</p>
+            <p>In native applications, implementing blend modes is straightforward — the GPU can read any previously rendered pixel directly to compute the blend result.</p>
             <p>In WebGL, the framebuffer (the current rendering target) is <strong className="text-white">write-only by default</strong>. Reading from it requires copying it to a readable texture, which is slow.</p>
           </Section>
 
           <Section id="how-flashfx-handles-blend-modes" title="How FlashFX Handles Blend Modes">
             <p>For elements using non-Normal blend modes, FlashFX uses one of two strategies:</p>
-            <p><strong className="text-white">Strategy A,Shader Compositing (preferred):</strong> The already-rendered background is copied to an offscreen texture before drawing the blend mode element. The element's shader reads from this texture and computes the blend in the same draw call.</p>
+            <p><strong className="text-white">Strategy A — Shader Compositing (preferred):</strong> The already-rendered background is copied to an offscreen texture before drawing the blend mode element. The element's shader reads from this texture and computes the blend in the same draw call.</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Adds one texture copy per blend mode layer</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>The copy is performed at canvas resolution (large canvases = expensive copy)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Multiple consecutive non-Normal blend layers each add a separate copy</li>
             </ul>
-            <p><strong className="text-white">Strategy B,Isolated Pass:</strong> The element is rendered to an offscreen buffer, then composited onto the background using a blend mode shader. Used for complex blend modes or groups with blend modes.</p>
+            <p><strong className="text-white">Strategy B — Isolated Pass:</strong> The element is rendered to an offscreen buffer, then composited onto the background using a blend mode shader. Used for complex blend modes or groups with blend modes.</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Requires a full offscreen buffer at the element's bounding box dimensions</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>More memory-intensive but avoids the full-canvas texture copy</li>

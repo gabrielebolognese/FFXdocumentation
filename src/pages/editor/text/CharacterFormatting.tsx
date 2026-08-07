@@ -21,9 +21,9 @@ export default function CharacterFormatting() {
           <Section title="Font Family">
             <p>The typeface applied to selected characters. FlashFX provides access to:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">System fonts</strong>,fonts installed on the local operating system and accessible to the browser</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Google Fonts</strong>,the full Google Fonts library, loaded on demand (requires internet connection on first use)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Uploaded fonts</strong>,custom font files (OTF, TTF, WOFF, WOFF2) uploaded by the user to their account</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">System fonts</strong> — fonts installed on the local operating system and accessible to the browser</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Google Fonts</strong> — the full Google Fonts library, loaded on demand (requires internet connection on first use)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Uploaded fonts</strong> — custom font files (OTF, TTF, WOFF, WOFF2) uploaded by the user to their account</li>
             </ul>
             <p><strong className="text-white">Font Search:</strong> The font family dropdown includes a search field. Type any portion of a font name to filter results.</p>
             <p><strong className="text-white">Font Preview:</strong> Each font in the dropdown previews with a short text sample in that typeface.</p>

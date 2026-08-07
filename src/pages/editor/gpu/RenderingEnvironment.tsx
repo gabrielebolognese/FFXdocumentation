@@ -27,9 +27,9 @@ export default function RenderingEnvironment() {
           <Section id="what-this-means" title="What This Means">
             <p>Unlike desktop applications (After Effects, Cinema 4D, DaVinci Resolve) that communicate directly with the GPU via operating system drivers, FlashFX works through:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">1.</span><strong className="text-white">WebGL 2.0</strong>,the primary GPU API for compositing, shader effects, and 3D transforms</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span><strong className="text-white">Canvas 2D API</strong>,used for certain 2D compositing operations not exposed efficiently in WebGL</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span><strong className="text-white">CSS Compositing</strong>,used for UI-level effects but not for canvas content rendering</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">1.</span><strong className="text-white">WebGL 2.0</strong> — the primary GPU API for compositing, shader effects, and 3D transforms</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span><strong className="text-white">Canvas 2D API</strong> — used for certain 2D compositing operations not exposed efficiently in WebGL</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span><strong className="text-white">CSS Compositing</strong> — used for UI-level effects but not for canvas content rendering</li>
             </ul>
             <p>This creates a set of fundamental constraints that do not exist in desktop applications:</p>
             <ul className="space-y-1 text-sm">
@@ -42,7 +42,7 @@ export default function RenderingEnvironment() {
           </Section>
 
           <Section id="why-this-matters" title="Why This Matters">
-            <p><strong className="text-white">Memory:</strong> GPU memory (VRAM) allocated to the browser tab is shared with all other browser graphics operations. The browser does not expose a way to query total available VRAM precisely,FlashFX uses heuristics to estimate available memory.</p>
+            <p><strong className="text-white">Memory:</strong> GPU memory (VRAM) allocated to the browser tab is shared with all other browser graphics operations. The browser does not expose a way to query total available VRAM precisely — FlashFX uses heuristics to estimate available memory.</p>
             <p><strong className="text-white">Framebuffer access:</strong> Operations that require reading back pixels from the GPU (certain blend modes, displacement maps, some filter compositing) are significantly more expensive in WebGL than in native applications because the GPU must pause, copy data, and transfer it to accessible memory.</p>
             <p><strong className="text-white">Shader limits:</strong> WebGL imposes maximum sizes on shader programs (the GPU instructions used to compute effects). Very complex filter stacks may exceed these limits and must be broken into multiple rendering passes.</p>
           </Section>

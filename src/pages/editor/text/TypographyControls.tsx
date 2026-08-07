@@ -36,10 +36,10 @@ export default function TypographyControls() {
           <Section title="Text Rendering">
             <p><strong className="text-white">Antialiasing Mode:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Default</strong>,browser-managed antialiasing</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Crisp</strong>,optimized for screen legibility at small sizes; reduces blurring at pixel boundaries</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Smooth</strong>,maximum smoothness, best for large display type</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Geometric Precision</strong>,disables browser kerning hinting for consistent cross-browser rendering</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Default</strong> — browser-managed antialiasing</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Crisp</strong> — optimized for screen legibility at small sizes; reduces blurring at pixel boundaries</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Smooth</strong> — maximum smoothness, best for large display type</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Geometric Precision</strong> — disables browser kerning hinting for consistent cross-browser rendering</li>
             </ul>
             <p><strong className="text-white">Subpixel Rendering:</strong> On high-DPI displays, enables subpixel color channel antialiasing for sharper text at small sizes (browser-dependent support).</p>
           </Section>

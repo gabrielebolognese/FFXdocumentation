@@ -22,7 +22,7 @@ export default function ThreeDOverview() {
 
         <div id="overview" className="scroll-mt-32 space-y-4">
           <p className="text-sm text-white leading-relaxed">
-            The 3D feature system enables users to embed live, interactive Three.js viewports directly into the 2D design canvas. Each 3D shape behaves like any other canvas element,it can be repositioned, resized, layered, have its opacity adjusted, and participate in the animation timeline,but internally it contains a fully independent Three.js scene where users can place, transform, and material-paint 3D primitives or imported models.
+            The 3D feature system enables users to embed live, interactive Three.js viewports directly into the 2D design canvas. Each 3D shape behaves like any other canvas element — it can be repositioned, resized, layered, have its opacity adjusted, and participate in the animation timeline — but internally it contains a fully independent Three.js scene where users can place, transform, and material-paint 3D primitives or imported models.
           </p>
         </div>
 
@@ -40,11 +40,11 @@ export default function ThreeDOverview() {
           <ul className="space-y-3 text-white text-sm ml-6">
             <li className="flex gap-2.5">
               <span className="text-yellow-accent mt-0.5">•</span>
-              <span><strong>Single shared Three.js scene</strong>,rejected because it creates stacking and z-order conflicts between shapes, and because deletion of one shape would require surgical extraction from a shared scene graph. A bug where shapes would disappear when another was deselected drove the switch to isolation.</span>
+              <span><strong>Single shared Three.js scene</strong> — rejected because it creates stacking and z-order conflicts between shapes, and because deletion of one shape would require surgical extraction from a shared scene graph. A bug where shapes would disappear when another was deselected drove the switch to isolation.</span>
             </li>
             <li className="flex gap-2.5">
               <span className="text-yellow-accent mt-0.5">•</span>
-              <span><strong>Offline render-to-texture</strong>,rejected because it cannot provide real-time orbit interaction. The user needs to orbit, zoom, and pan inside each shape independently while editing.</span>
+              <span><strong>Offline render-to-texture</strong> — rejected because it cannot provide real-time orbit interaction. The user needs to orbit, zoom, and pan inside each shape independently while editing.</span>
             </li>
           </ul>
 

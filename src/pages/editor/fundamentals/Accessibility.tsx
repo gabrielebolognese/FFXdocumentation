@@ -83,11 +83,11 @@ export default function Accessibility() {
               FlashFX can be fully operated without a mouse:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Tab</strong>,Move focus to next interactive element</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Shift + Tab</strong>,Move focus to previous element</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Enter</strong>,Activate focused button or control</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Arrow keys</strong>,Navigate within panels, adjust sliders, nudge elements</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Escape</strong>,Cancel operation or close dialog</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Tab</strong> — Move focus to next interactive element</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Shift + Tab</strong> — Move focus to previous element</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Enter</strong> — Activate focused button or control</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Arrow keys</strong> — Navigate within panels, adjust sliders, nudge elements</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Escape</strong> — Cancel operation or close dialog</li>
             </ul>
 
             <p className="mt-6"><strong className="text-white">Focus Indicators</strong></p>
@@ -172,9 +172,9 @@ export default function Accessibility() {
               FlashFX respects operating system accessibility settings:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Prefers reduced motion</strong>,Automatically enabled if OS setting is on</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">High contrast</strong>,Syncs with Windows High Contrast themes</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">System theme</strong>,Respects dark/light mode preference</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Prefers reduced motion</strong> — Automatically enabled if OS setting is on</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">High contrast</strong> — Syncs with Windows High Contrast themes</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">System theme</strong> — Respects dark/light mode preference</li>
             </ul>
           </Section>
 

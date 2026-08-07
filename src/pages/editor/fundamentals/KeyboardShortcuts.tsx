@@ -33,7 +33,7 @@ export default function KeyboardShortcuts() {
           <span className="inline-block text-yellow-accent text-[10px] font-medium mb-2 uppercase tracking-wider">
             Fundamentals & Settings
           </span>
-          <h1 className="text-4xl font-bold text-white mb-6">Keyboard Shortcuts,Master Reference</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Keyboard Shortcuts — Master Reference</h1>
         </div>
 
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">

@@ -43,16 +43,16 @@ export default function Fonts() {
             <p><strong className="text-white">Path Spacing:</strong> Adjusts the letter spacing specifically for path-bound text. On tight curves, increasing path spacing prevents characters from overlapping.</p>
             <p><strong className="text-white">Path Alignment:</strong> Controls the character baseline relationship to the path:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Baseline on path</strong>,the text baseline sits directly on the path</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Centered on path</strong>,characters are centered on the path (baseline sits slightly above/below depending on character height)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ascent on path</strong>,the top of characters sits on the path</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Baseline on path</strong> — the text baseline sits directly on the path</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Centered on path</strong> — characters are centered on the path (baseline sits slightly above/below depending on character height)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ascent on path</strong> — the top of characters sits on the path</li>
             </ul>
 
             <p><strong className="text-white">13.3 Path Text Animation</strong></p>
-            <p>All text animation modes (Block, Line, Word, Character) work for path text. In Character mode, individual characters slide along the path as their position offset is animated,each character orbits along the curve rather than moving in a straight line.</p>
+            <p>All text animation modes (Block, Line, Word, Character) work for path text. In Character mode, individual characters slide along the path as their position offset is animated — each character orbits along the curve rather than moving in a straight line.</p>
 
             <p><strong className="text-white">13.4 Detaching from Path</strong></p>
-            <p>Text → Detach from Path,converts path text back to standard text at its current visual position. The path is no longer linked to the text.</p>
+            <p>Text → Detach from Path — converts path text back to standard text at its current visual position. The path is no longer linked to the text.</p>
           </Section>
 
           <Section title="14. Converting Text to Outlines">

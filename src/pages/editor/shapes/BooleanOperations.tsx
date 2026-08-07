@@ -11,7 +11,7 @@ export default function BooleanOperations() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Boolean Operations | FlashFX Documentation"
-        description="Learn how to use boolean operations in FlashFX,unite, subtract, intersect, exclude, and divide shapes."
+        description="Learn how to use boolean operations in FlashFX — unite, subtract, intersect, exclude, and divide shapes."
         keywords="FlashFX, boolean operations, unite, subtract, intersect, paths"
       />
 

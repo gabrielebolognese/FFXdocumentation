@@ -24,7 +24,7 @@ export default function CroppingMaskingPage() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="non-destructive-crop" title="Non-Destructive Crop">
-            <p>The crop tool in FlashFX is non-destructive. The original image data is not modified,cropping only adjusts which portion of the image is visible within the element bounds.</p>
+            <p>The crop tool in FlashFX is non-destructive. The original image data is not modified — cropping only adjusts which portion of the image is visible within the element bounds.</p>
             <p><strong className="text-white">Entering Crop Mode:</strong> Double-click an image element while the Selection tool is active, or click the "Crop" button in the Properties Panel.</p>
             <p>In Crop mode:</p>
             <ul className="space-y-1 text-sm">
@@ -55,7 +55,7 @@ export default function CroppingMaskingPage() {
                   {' and drag inside the image to pan the content within the cropped frame'}
                 </span>
               </li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>The image can be panned freely,content can be repositioned without changing the crop frame dimensions</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>The image can be panned freely — content can be repositioned without changing the crop frame dimensions</li>
             </ul>
           </Section>
 
@@ -67,7 +67,7 @@ export default function CroppingMaskingPage() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span>Select both the image and the shape</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span>Layer -&gt; Create Clip Path</li>
             </ol>
-            <p>The image is now clipped to the shape's outline. The clipping shape can still be edited (moved, scaled, vertex-edited) while the clip is active,double-click the clip group to enter it.</p>
+            <p>The image is now clipped to the shape's outline. The clipping shape can still be edited (moved, scaled, vertex-edited) while the clip is active — double-click the clip group to enter it.</p>
             <p><strong className="text-white">Common uses:</strong></p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Circle/oval image crops (profile photo style)</li>
@@ -79,9 +79,9 @@ export default function CroppingMaskingPage() {
           <Section id="alpha-mask-luminance-mask" title="Alpha Mask (Luminance Mask)">
             <p>A gradient or painted mask shape controls the transparency of the image based on luminosity. For images, common uses include:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Gradient fade-out</strong>,a black-to-white gradient mask fades the image to transparency along one edge, blending it with the background</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Soft vignette</strong>,a radial gradient mask (white at center, black at edges) creates a soft vignette effect by fading the image edges to transparent</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shape reveal</strong>,a solid white shape in a black field shows the image only within the shape, with sharp or softly blurred edges depending on whether the mask shape has blur applied</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Gradient fade-out</strong> — a black-to-white gradient mask fades the image to transparency along one edge, blending it with the background</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Soft vignette</strong> — a radial gradient mask (white at center, black at edges) creates a soft vignette effect by fading the image edges to transparent</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shape reveal</strong> — a solid white shape in a black field shows the image only within the shape, with sharp or softly blurred edges depending on whether the mask shape has blur applied</li>
             </ul>
           </Section>
 

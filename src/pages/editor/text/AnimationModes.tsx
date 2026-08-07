@@ -25,10 +25,10 @@ export default function AnimationModes() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Position, rotation, scale, opacity, and all fill properties can be keyframed</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Any animation applied affects the entire text block simultaneously</li>
             </ul>
-            <p><strong className="text-white">Use for:</strong> Most basic text animations,fades, slides, scale entries and exits.</p>
+            <p><strong className="text-white">Use for:</strong> Most basic text animations — fades, slides, scale entries and exits.</p>
           </Section>
           <Section title="Line Mode">
-            <p>The text is divided into individual lines (determined by line breaks,both hard returns and soft wraps). Each line is an independently animatable unit.</p>
+            <p>The text is divided into individual lines (determined by line breaks — both hard returns and soft wraps). Each line is an independently animatable unit.</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>The timeline shows a track for each line</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Properties animatable per line: position, rotation, scale, opacity, fill color, blur</li>

@@ -25,17 +25,17 @@ export default function TextFill() {
             <p>A gradient fill mapped across the text string.</p>
             <p><strong className="text-white">Gradient Mapping Mode:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Per Character</strong>,the gradient is applied independently to each character. Each character shows the full gradient range.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Per Word</strong>,the gradient is applied independently to each word.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Across Text</strong>,the gradient spans the full width or height of the entire text element. Individual characters show only the portion of the gradient at their position.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Per Character</strong> — the gradient is applied independently to each character. Each character shows the full gradient range.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Per Word</strong> — the gradient is applied independently to each word.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Across Text</strong> — the gradient spans the full width or height of the entire text element. Individual characters show only the portion of the gradient at their position.</li>
             </ul>
-            <p>Across Text mode is the most visually impactful for display text,long gradients sweep across headings smoothly, with each character showing a slightly different point in the gradient.</p>
+            <p>Across Text mode is the most visually impactful for display text — long gradients sweep across headings smoothly, with each character showing a slightly different point in the gradient.</p>
           </Section>
           <Section title="Texture and Pattern Fills">
             <p>All texture and pattern fill types available for shapes are equally available for text fills. A noise texture applied as a text fill creates a grungy, printed-on appearance. A halftone pattern fill creates a graphic arts dot-matrix effect.</p>
           </Section>
           <Section title="Multi-Layer Text Fills">
-            <p>The full material stack is supported for text. Multiple fill layers can be combined,for example: a solid white fill as the base layer, a gradient overlay layer in Screen blend mode for a shimmering color effect, and a noise texture in Multiply blend mode for a grungy print texture.</p>
+            <p>The full material stack is supported for text. Multiple fill layers can be combined — for example: a solid white fill as the base layer, a gradient overlay layer in Screen blend mode for a shimmering color effect, and a noise texture in Multiply blend mode for a grungy print texture.</p>
           </Section>
         </div>
       </div>

@@ -31,10 +31,10 @@ export default function KeyframeSystem() {
             <p>A keyframe records the value of a specific property at a specific point in time. The animation engine interpolates between keyframes to produce smooth motion between recorded states.</p>
             <p>A keyframe is defined by:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Time</strong>,which frame it is on</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Property</strong>,which property it controls (X position, opacity, blur radius, etc.)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Value</strong>,the property value at this moment</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Easing</strong>,the interpolation curve on the way out of this keyframe toward the next</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Time</strong> — which frame it is on</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Property</strong> — which property it controls (X position, opacity, blur radius, etc.)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Value</strong> — the property value at this moment</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Easing</strong> — the interpolation curve on the way out of this keyframe toward the next</li>
             </ul>
           </Section>
 
@@ -112,7 +112,7 @@ export default function KeyframeSystem() {
                 <span>
                   {'Paste: '}
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+V</code>
-                  {',pastes at the current playhead position'}
+                  {' — pastes at the current playhead position'}
                 </span>
               </li>
               <li className="flex gap-3">
@@ -120,7 +120,7 @@ export default function KeyframeSystem() {
                 <span>
                   {'Paste in Place: '}
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+V</code>
-                  {',pastes at the same time positions as the source'}
+                  {' — pastes at the same time positions as the source'}
                 </span>
               </li>
             </ul>

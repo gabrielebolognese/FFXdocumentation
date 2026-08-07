@@ -24,7 +24,7 @@ export default function WhatIsFlashFX() {
 
         <div className="prose prose-invert max-w-none space-y-6 text-white/80 leading-relaxed">
           <p className="text-base">
-            FlashFX is a professional, web-native motion graphics and animation design platform built to run entirely inside a modern web browser. It is designed to serve the full motion design workflow,from initial vector composition through animation authoring to publication-ready export,without any installation, plugin, or native application dependency.
+            FlashFX is a professional, web-native motion graphics and animation design platform built to run entirely inside a modern web browser. It is designed to serve the full motion design workflow — from initial vector composition through animation authoring to publication-ready export — without any installation, plugin, or native application dependency.
           </p>
 
           <p>The platform is structured around three disciplines:</p>
@@ -33,19 +33,19 @@ export default function WhatIsFlashFX() {
             <li className="flex gap-3">
               <span className="text-yellow-accent mt-1">•</span>
               <div>
-                <strong className="text-white">Vector Design</strong>,a complete drawing, shaping, and compositing environment with a material system capable of producing complex layered surfaces.
+                <strong className="text-white">Vector Design</strong> — a complete drawing, shaping, and compositing environment with a material system capable of producing complex layered surfaces.
               </div>
             </li>
             <li className="flex gap-3">
               <span className="text-yellow-accent mt-1">•</span>
               <div>
-                <strong className="text-white">Animation</strong>,a keyframe-based animation engine with per-property tracks, custom easing curves, and a multi-sequence compositor for long-form productions.
+                <strong className="text-white">Animation</strong> — a keyframe-based animation engine with per-property tracks, custom easing curves, and a multi-sequence compositor for long-form productions.
               </div>
             </li>
             <li className="flex gap-3">
               <span className="text-yellow-accent mt-1">•</span>
               <div>
-                <strong className="text-white">Export</strong>,a deterministic, frame-accurate renderer that outputs to MP4, WebM, PNG Sequence, GIF, and static PNG directly from the browser.
+                <strong className="text-white">Export</strong> — a deterministic, frame-accurate renderer that outputs to MP4, WebM, PNG Sequence, GIF, and static PNG directly from the browser.
               </div>
             </li>
           </ul>

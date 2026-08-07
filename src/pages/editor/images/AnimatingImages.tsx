@@ -41,7 +41,7 @@ export default function AnimatingImages() {
                 ['Opacity', 'Fade in/out'],
                 ['Crop Frame', 'Animate the crop position or size (reveal/conceal without moving the image)'],
                 ['Blend Mode', 'Switches are discrete (jump cuts); not smoothly interpolated'],
-                ['Filter Parameters', 'Any filter value,blur radius, color grade, distortion strength'],
+                ['Filter Parameters', 'Any filter value — blur radius, color grade, distortion strength'],
                 ['Warp Control Points', 'Individual mesh points of the Warp filter'],
               ]}
             />
@@ -49,14 +49,14 @@ export default function AnimatingImages() {
             <p><strong className="text-white">11.2 Position and Scale Animation</strong></p>
             <p>Images are commonly animated with:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ken Burns Effect</strong>,slow pan and zoom, achieved by animating position and scale simultaneously with slow ease</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Impact Zoom</strong>,sudden scale increase on a beat, using a short strong Ease Out keyframe</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Parallax</strong>,layered images with different scale/position animation speeds create a depth illusion</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Ken Burns Effect</strong> — slow pan and zoom, achieved by animating position and scale simultaneously with slow ease</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Impact Zoom</strong> — sudden scale increase on a beat, using a short strong Ease Out keyframe</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Parallax</strong> — layered images with different scale/position animation speeds create a depth illusion</li>
             </ul>
 
             <p><strong className="text-white">11.3 Opacity and Blend Mode Transitions</strong></p>
             <p>Fading an image from transparent to opaque: create a keyframe with Opacity = 0% at the start frame, a keyframe with Opacity = 100% at the desired reveal frame, and set easing to Ease In-Out.</p>
-            <p>Blend mode transitions are not smoothly interpolated,the mode switches instantaneously at the keyframe. To simulate a blend mode fade, animate the image opacity from 0 to 100% while the blend mode is already set.</p>
+            <p>Blend mode transitions are not smoothly interpolated — the mode switches instantaneously at the keyframe. To simulate a blend mode fade, animate the image opacity from 0 to 100% while the blend mode is already set.</p>
           </Section>
 
           <Section id="ai-generated-images-dall-e" title="12. AI-Generated Images (DALL-E)">
@@ -86,7 +86,7 @@ export default function AnimatingImages() {
             </ul>
 
             <p><strong className="text-white">12.4 After Generation</strong></p>
-            <p>The generated image is placed on the canvas as a standard image element. It behaves identically to an imported image in every way,all filters, blend modes, animations, and mask operations apply.</p>
+            <p>The generated image is placed on the canvas as a standard image element. It behaves identically to an imported image in every way — all filters, blend modes, animations, and mask operations apply.</p>
             <p><strong className="text-white">Editing the prompt and regenerating:</strong> The generation prompt is stored with the image element. Right-click the element and select "Regenerate" to open the generator with the previous prompt pre-loaded for refinement.</p>
 
             <p><strong className="text-white">12.5 Google Image Search Integration</strong></p>
@@ -111,7 +111,7 @@ export default function AnimatingImages() {
             <p><strong className="text-white">Linking</strong> (planned feature): Link an image asset by file path rather than embedding it. Changes to the source file on disk are reflected in the project. Suitable for large assets in production workflows where file size management is critical.</p>
 
             <p><strong className="text-white">13.4 Removing Unused Assets</strong></p>
-            <p>File → Remove Unused Assets,scans the project and removes any images in the Asset Library that are not referenced on any canvas. Reduces .flashfx file size.</p>
+            <p>File → Remove Unused Assets — scans the project and removes any images in the Asset Library that are not referenced on any canvas. Reduces .flashfx file size.</p>
           </Section>
 
           <Section id="performance-guidelines-for-images" title="14. Performance Guidelines for Images">
@@ -143,7 +143,7 @@ export default function AnimatingImages() {
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Animating position and rotation on images is low-cost.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Animating blur radius, warp mesh points, or distortion effects is high-cost. Each animated frame requires a full filter recalculation.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>For animations with multiple simultaneous image elements, disable filter stacks on non-hero images during editing preview,use the filter visibility toggle, and re-enable before export.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>For animations with multiple simultaneous image elements, disable filter stacks on non-hero images during editing preview — use the filter visibility toggle, and re-enable before export.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Consider working at 720p canvas resolution during animation authoring and scaling up to 1080p or 4K at export.</li>
             </ul>
           </Section>

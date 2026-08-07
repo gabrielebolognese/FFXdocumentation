@@ -37,9 +37,9 @@ export default function SnappingSystem() {
 
           <Section id="enabling-and-disabling-snapping" title="Enabling and Disabling Snapping">
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle snapping</strong>,View → Snap to Grid/Guides (or click the snap icon in the toolbar)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Temporary disable</strong>,Hold Ctrl/Cmd while dragging to bypass snapping</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Keyboard shortcut</strong>,Ctrl/Cmd + Shift + ; (toggles snap on/off)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle snapping</strong> — View → Snap to Grid/Guides (or click the snap icon in the toolbar)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Temporary disable</strong> — Hold Ctrl/Cmd while dragging to bypass snapping</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Keyboard shortcut</strong> — Ctrl/Cmd + Shift + ; (toggles snap on/off)</li>
             </ul>
             <p className="mt-4">
               When snapping is enabled, a magnet icon appears highlighted in the toolbar. When disabled, the icon is gray.
@@ -64,11 +64,11 @@ export default function SnappingSystem() {
           <Section id="snap-modes" title="Snap Modes">
             <p>Configure which snap targets are active in Edit → Preferences → Snapping:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Grid</strong>,Align to grid intersections</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Guides</strong>,Align to user-created guides</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Canvas</strong>,Align to canvas edges and center</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Objects</strong>,Align to other element edges and centers</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Pixels</strong>,Force whole-pixel positioning (prevents subpixel blur)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Grid</strong> — Align to grid intersections</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Guides</strong> — Align to user-created guides</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Canvas</strong> — Align to canvas edges and center</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Objects</strong> — Align to other element edges and centers</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Snap to Pixels</strong> — Force whole-pixel positioning (prevents subpixel blur)</li>
             </ul>
           </Section>
 
@@ -78,9 +78,9 @@ export default function SnappingSystem() {
             </p>
             <p className="mt-4">Adjustable in preferences:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Low tolerance</strong>,2-4 pixels (requires very close alignment)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Medium tolerance</strong>,6-8 pixels (default, balanced)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">High tolerance</strong>,10-16 pixels (snaps more aggressively)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Low tolerance</strong> — 2-4 pixels (requires very close alignment)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Medium tolerance</strong> — 6-8 pixels (default, balanced)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">High tolerance</strong> — 10-16 pixels (snaps more aggressively)</li>
             </ul>
             <p className="mt-4">
               Higher tolerance values make snapping "stickier" but can interfere with fine positioning. Lower values require more precision but give greater control.
@@ -111,10 +111,10 @@ export default function SnappingSystem() {
             </p>
             <p className="mt-4">Smart guide indicators:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Edge alignment</strong>,Magenta line when edges align</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center alignment</strong>,Magenta line with center marker</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Equal spacing</strong>,Dimension annotations showing distances</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Size matching</strong>,Dimension annotations when element sizes match</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Edge alignment</strong> — Magenta line when edges align</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center alignment</strong> — Magenta line with center marker</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Equal spacing</strong> — Dimension annotations showing distances</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Size matching</strong> — Dimension annotations when element sizes match</li>
             </ul>
           </Section>
 

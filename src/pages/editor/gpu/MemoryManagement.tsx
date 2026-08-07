@@ -49,9 +49,9 @@ export default function MemoryManagement() {
           <Section id="texture-compression" title="Texture Compression">
             <p>FlashFX uses <strong className="text-white">compressed texture formats</strong> where supported by the device's GPU:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">BC (DXT) compression</strong>,supported on all desktop GPUs; reduces texture size by approximately 75%</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">ETC2 compression</strong>,supported on mobile GPUs and some desktop GPUs</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">ASTC compression</strong>,supported on modern mobile and Apple Silicon GPUs; best quality/size ratio</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">BC (DXT) compression</strong> — supported on all desktop GPUs; reduces texture size by approximately 75%</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">ETC2 compression</strong> — supported on mobile GPUs and some desktop GPUs</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">ASTC compression</strong> — supported on modern mobile and Apple Silicon GPUs; best quality/size ratio</li>
             </ul>
             <p>When a compressed format is available, FlashFX uploads textures in compressed form, significantly reducing VRAM usage and texture transfer time. The compression happens during the import/upload process and may take a brief moment for large images.</p>
           </Section>

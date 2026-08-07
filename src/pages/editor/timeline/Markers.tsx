@@ -33,10 +33,10 @@ export default function Markers() {
             </p>
             <p>A dialog prompts for:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Label</strong>,short name for the marker (shown in the ruler)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color</strong>,the color of the marker line</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Comment</strong>,longer note text (visible when hovering over the marker or in the Markers panel)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Duration</strong>,optionally assign a time range to the marker (creates a marker region rather than a single-point marker)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Label</strong> — short name for the marker (shown in the ruler)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color</strong> — the color of the marker line</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Comment</strong> — longer note text (visible when hovering over the marker or in the Markers panel)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Duration</strong> — optionally assign a time range to the marker (creates a marker region rather than a single-point marker)</li>
             </ul>
           </Section>
 
@@ -51,14 +51,14 @@ export default function Markers() {
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+Right Arrow</code>
-                  {',jump to next marker'}
+                  {' — jump to next marker'}
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+Left Arrow</code>
-                  {',jump to previous marker'}
+                  {' — jump to previous marker'}
                 </span>
               </li>
             </ul>

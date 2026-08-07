@@ -23,7 +23,7 @@ export default function MultiProperty() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="animating-multiple-properties" title="Animating Multiple Properties Simultaneously">
-            <p>Any number of properties can be keyframed at any point in time. When Record Mode is active, any property change creates a keyframe on that property at the current time,multiple properties can be changed before the playhead moves, and all changes are captured.</p>
+            <p>Any number of properties can be keyframed at any point in time. When Record Mode is active, any property change creates a keyframe on that property at the current time — multiple properties can be changed before the playhead moves, and all changes are captured.</p>
             <p><strong className="text-white">Example workflow:</strong></p>
             <ol className="space-y-1 text-sm list-none">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">1.</span>Set playhead to frame 0</li>
@@ -51,7 +51,7 @@ export default function MultiProperty() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Animating the group's position moves all members together as a unit</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Animating individual member positions within the group moves them relative to the group</li>
             </ul>
-            <p>This is intentional and powerful,use group-level animation for "macro" moves (e.g., the whole element flies in), and member-level animation for "micro" moves (e.g., individual parts animate internally while the group moves).</p>
+            <p>This is intentional and powerful — use group-level animation for "macro" moves (e.g., the whole element flies in), and member-level animation for "micro" moves (e.g., individual parts animate internally while the group moves).</p>
           </Section>
 
         </div>

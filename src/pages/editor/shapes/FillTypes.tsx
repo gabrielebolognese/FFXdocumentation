@@ -16,7 +16,7 @@ export default function FillTypes() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Fill Types | FlashFX Documentation"
-        description="Learn about all fill types available in FlashFX,solid color, gradients, textures, and patterns."
+        description="Learn about all fill types available in FlashFX — solid color, gradients, textures, and patterns."
         keywords="FlashFX, fill types, gradient, texture, pattern, solid color"
       />
 
@@ -48,9 +48,9 @@ export default function FillTypes() {
               <h4 className="text-base font-semibold text-white mb-3">Color Stops</h4>
               <p className="mb-3">The gradient bar displays the current gradient. Click anywhere on the bar to add a new color stop. Each stop has:</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color</strong>,the color at this point in the gradient</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Position</strong>,expressed as a percentage (0% = start, 100% = end)</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Opacity</strong>,the alpha at this stop, independent of the color's alpha</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color</strong> — the color at this point in the gradient</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Position</strong> — expressed as a percentage (0% = start, 100% = end)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Opacity</strong> — the alpha at this stop, independent of the color's alpha</li>
               </ul>
             </div>
 
@@ -65,9 +65,9 @@ export default function FillTypes() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Gradient Repeat Mode</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">None</strong>,gradient transitions once from start to end</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Repeat</strong>,the gradient tiles beyond its start/end points</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reflect</strong>,the gradient tiles alternately mirrored</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">None</strong> — gradient transitions once from start to end</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Repeat</strong> — the gradient tiles beyond its start/end points</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reflect</strong> — the gradient tiles alternately mirrored</li>
               </ul>
             </div>
           </Section>
@@ -78,7 +78,7 @@ export default function FillTypes() {
             <ul className="space-y-2 text-sm mt-4">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center Point:</strong> X/Y position of the gradient origin within the element's bounding box (expressed as percentages: 50%/50% = center). Animatable.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius X / Radius Y:</strong> The horizontal and vertical extent of the gradient. When equal, the gradient is circular; when different, it is elliptical. Animatable.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Stops:</strong> Same as linear gradient,any number of stops with independent colors and positions.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Stops:</strong> Same as linear gradient — any number of stops with independent colors and positions.</li>
             </ul>
           </Section>
 
@@ -118,11 +118,11 @@ export default function FillTypes() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Texture Parameters</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Scale</strong>,size of the texture pattern (smaller values = finer texture)</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Opacity</strong>,overall transparency</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Mode</strong>,Monochrome, Color-Tinted, or Full Color</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Seed</strong>,randomization seed. Changing the seed produces a different random variation of the same texture type</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Blend Mode</strong>,how the texture layer composites with layers beneath it in the material stack</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Scale</strong> — size of the texture pattern (smaller values = finer texture)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Opacity</strong> — overall transparency</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Mode</strong> — Monochrome, Color-Tinted, or Full Color</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Seed</strong> — randomization seed. Changing the seed produces a different random variation of the same texture type</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Blend Mode</strong> — how the texture layer composites with layers beneath it in the material stack</li>
               </ul>
               <p className="mt-3 text-xs text-white/50">Texture fills are procedural and do not add to the project's file size like imported image textures would.</p>
             </div>
@@ -146,13 +146,13 @@ export default function FillTypes() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Pattern Parameters</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Size</strong>,spacing between pattern elements</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Stroke Weight</strong> (for line patterns),thickness of lines</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dot Radius</strong> (for dot patterns),radius of each dot</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Foreground Color</strong>,color of the pattern elements</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background Color</strong>,color of the space between elements (can be fully transparent)</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Rotation</strong>,rotates the entire pattern, independent of shape rotation</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Offset X / Offset Y</strong>,shifts the pattern within the shape bounds</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Size</strong> — spacing between pattern elements</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Stroke Weight</strong> (for line patterns) — thickness of lines</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dot Radius</strong> (for dot patterns) — radius of each dot</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Foreground Color</strong> — color of the pattern elements</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background Color</strong> — color of the space between elements (can be fully transparent)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Rotation</strong> — rotates the entire pattern, independent of shape rotation</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Offset X / Offset Y</strong> — shifts the pattern within the shape bounds</li>
               </ul>
             </div>
           </Section>

@@ -95,7 +95,7 @@ export default function SuggestionPortal() {
           <div className="space-y-1">
             <h2 className="text-2xl font-semibold text-white">Make a Suggestion</h2>
             <p className="text-xs text-white/60 leading-relaxed">
-              Spotted something wrong, missing, or unclear in the docs? Let us know,every suggestion helps us improve.
+              Spotted something wrong, missing, or unclear in the docs? Let us know — every suggestion helps us improve.
             </p>
           </div>
         </div>

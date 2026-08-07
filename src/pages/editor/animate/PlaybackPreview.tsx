@@ -41,7 +41,7 @@ export default function PlaybackPreview() {
           </Section>
 
           <Section id="preview-quality" title="Preview Quality">
-            <p>Preview Quality affects only the real-time playback display,not the final export.</p>
+            <p>Preview Quality affects only the real-time playback display — not the final export.</p>
             <Table
               headers={['Setting', 'Canvas Resolution', 'When to Use']}
               rows={[

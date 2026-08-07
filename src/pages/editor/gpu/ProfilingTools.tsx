@@ -25,14 +25,14 @@ export default function ProfilingTools() {
           <Section id="the-performance-panel" title="The Performance Panel">
             <p>View -&gt; Performance opens the Performance panel, which shows:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Current FPS</strong>,frames per second of the live canvas render</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Target FPS</strong>,the project's frame rate setting</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">GPU memory used</strong>,estimated current GPU texture memory usage</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">GPU memory budget</strong>,estimated available budget</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">CPU usage</strong>,estimated browser tab CPU load</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Draw calls</strong>,number of WebGL draw calls per frame</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Batch count</strong>,number of rendering batches (fewer = better)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Offscreen buffer count</strong>,number of active intermediate render passes</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Current FPS</strong> — frames per second of the live canvas render</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Target FPS</strong> — the project's frame rate setting</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">GPU memory used</strong> — estimated current GPU texture memory usage</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">GPU memory budget</strong> — estimated available budget</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">CPU usage</strong> — estimated browser tab CPU load</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Draw calls</strong> — number of WebGL draw calls per frame</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Batch count</strong> — number of rendering batches (fewer = better)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Offscreen buffer count</strong> — number of active intermediate render passes</li>
             </ul>
           </Section>
 

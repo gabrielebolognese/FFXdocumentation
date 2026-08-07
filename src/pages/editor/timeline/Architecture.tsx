@@ -23,7 +23,7 @@ export default function Architecture() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="overview" title="Overview">
-            <p>The timeline is the command center of the FlashFX animation workflow. It provides a temporal view of the entire composition,every element, every animated property, every keyframe,organized across a horizontal time axis.</p>
+            <p>The timeline is the command center of the FlashFX animation workflow. It provides a temporal view of the entire composition — every element, every animated property, every keyframe — organized across a horizontal time axis.</p>
             <p>The timeline is divided into two vertical sections:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Track List (left):</strong> Lists all elements in the current sequence. Each element has a row. Rows can be expanded to show individual property tracks. The track list mirrors and stays synchronized with the Layer Panel.</li>
@@ -33,8 +33,8 @@ export default function Architecture() {
 
           <Section id="timeline-vs-sequence-compositor" title="Timeline vs. Sequence Compositor">
             <p>FlashFX has two temporal editing environments:</p>
-            <p><strong className="text-white">The Timeline</strong> operates within a single sequence. It shows and controls the keyframe animation of elements within that sequence,the micro-level, per-property, per-frame control layer.</p>
-            <p><strong className="text-white">The Sequence Compositor</strong> operates at the sequence-assembly level. It arranges multiple named sequences in order to form a longer production,the macro-level, scene-by-scene assembly layer.</p>
+            <p><strong className="text-white">The Timeline</strong> operates within a single sequence. It shows and controls the keyframe animation of elements within that sequence — the micro-level, per-property, per-frame control layer.</p>
+            <p><strong className="text-white">The Sequence Compositor</strong> operates at the sequence-assembly level. It arranges multiple named sequences in order to form a longer production — the macro-level, scene-by-scene assembly layer.</p>
             <p>The two environments are accessed in the same panel. Toggle between them via the tabs at the top of the panel: "Timeline" and "Compositor."</p>
           </Section>
 

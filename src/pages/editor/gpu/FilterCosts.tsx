@@ -28,7 +28,7 @@ export default function FilterCosts() {
               rows={[
                 ['Color adjustment (brightness, contrast, curves, etc.)', 'Very low', 'Single-pass fragment shader'],
                 ['Hue rotation, saturation', 'Very low', 'Single-pass fragment shader'],
-                ['Gaussian blur (small radius)', 'Low', 'Separable kernel,two passes'],
+                ['Gaussian blur (small radius)', 'Low', 'Separable kernel — two passes'],
                 ['Gaussian blur (large radius, >30px)', 'Medium', 'Multi-pass accumulation'],
                 ['Motion blur', 'Medium', 'Multi-sample accumulation'],
                 ['Radial / zoom blur', 'Medium-High', 'Many samples from center'],
@@ -47,7 +47,7 @@ export default function FilterCosts() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>At 1080p: Gaussian blur radius 50px costs approximately 1ms per frame</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>At 4K: The same blur costs approximately 4ms per frame (4x resolution = 4x area)</li>
             </ul>
-            <p>For export at 4K, filter computation time is multiplied significantly. This is expected,export is slower than realtime, and the export renderer is not limited by realtime performance requirements.</p>
+            <p>For export at 4K, filter computation time is multiplied significantly. This is expected — export is slower than realtime, and the export renderer is not limited by realtime performance requirements.</p>
           </Section>
 
           <Section id="animated-filters" title="Animated Filters">

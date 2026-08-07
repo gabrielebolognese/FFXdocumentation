@@ -52,7 +52,7 @@ export default function PerformanceGuidelines() {
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Low cost:</strong> Animating position and rotation on images is low-cost. The renderer uses cached image data and only recalculates compositing.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">High cost:</strong> Animating blur radius, warp mesh points, or distortion effects is high-cost. Each animated frame requires a full filter recalculation.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>For animations with multiple simultaneous image elements, disable filter stacks on non-hero images during editing preview,use the filter visibility toggle, then re-enable before export.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>For animations with multiple simultaneous image elements, disable filter stacks on non-hero images during editing preview — use the filter visibility toggle, then re-enable before export.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Consider working at 720p canvas resolution during animation authoring and scaling up to 1080p or 4K at export time.</li>
             </ul>
           </Section>

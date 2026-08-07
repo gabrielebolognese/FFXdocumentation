@@ -11,7 +11,7 @@ const tableOfContents = [
   { id: 'manipulating-bezier-handles', label: 'Manipulating Bezier Handles' },
   { id: 'moving-keyframe-values', label: 'Moving Keyframe Values in the Graph Editor' },
   { id: 'viewing-multiple-tracks', label: 'Viewing Multiple Tracks' },
-  { id: 'easing-presets-reference', label: 'Easing Presets,Full Reference' },
+  { id: 'easing-presets-reference', label: 'Easing Presets — Full Reference' },
   { id: 'standard-presets', label: 'Standard Presets' },
   { id: 'motion-presets', label: 'Motion Presets' },
   { id: 'cinematic-presets', label: 'Cinematic Presets' },
@@ -38,8 +38,8 @@ export default function Keys() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="easing-interpolation" title="Easing & Interpolation">
-            <p>Easing controls the rate of change between two keyframes. Without easing, all animation would be mechanical and linear,values would change at a perfectly constant rate, which reads as robotic. Easing introduces acceleration and deceleration, making motion feel natural and physically grounded.</p>
-            <p>In FlashFX, easing is defined per-keyframe on the <strong className="text-white">outgoing</strong> side,the curve applied as the value leaves this keyframe toward the next. The incoming side of the destination keyframe can also have its own curve applied, and the two curves are composed.</p>
+            <p>Easing controls the rate of change between two keyframes. Without easing, all animation would be mechanical and linear — values would change at a perfectly constant rate, which reads as robotic. Easing introduces acceleration and deceleration, making motion feel natural and physically grounded.</p>
+            <p>In FlashFX, easing is defined per-keyframe on the <strong className="text-white">outgoing</strong> side — the curve applied as the value leaves this keyframe toward the next. The incoming side of the destination keyframe can also have its own curve applied, and the two curves are composed.</p>
           </Section>
 
           <Section id="interpolation-types" title="Interpolation Types">
@@ -87,7 +87,7 @@ export default function Keys() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Vertical axis:</strong> Property value (pixels, degrees, percentage, etc., depending on the property)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Curve:</strong> The interpolated path between keyframe values</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Keyframe dots:</strong> Square or round points on the curve at keyframe positions</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Bezier handles:</strong> Two tangent handles extending from each keyframe dot,the left handle controls the incoming curve shape, the right handle controls the outgoing curve shape</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Bezier handles:</strong> Two tangent handles extending from each keyframe dot — the left handle controls the incoming curve shape, the right handle controls the outgoing curve shape</li>
             </ul>
           </Section>
 
@@ -95,7 +95,7 @@ export default function Keys() {
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Drag a handle:</strong> Changes the slope and magnitude of the curve segment adjacent to the keyframe</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Linked handles (default):</strong> Dragging one handle moves the other symmetrically, keeping the curve smooth through the keyframe</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Breaking handles:</strong> Hold <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Alt</code> and drag a handle to break the link,the two handles become independent, creating a sharp corner at the keyframe</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Breaking handles:</strong> Hold <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Alt</code> and drag a handle to break the link — the two handles become independent, creating a sharp corner at the keyframe</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Re-linking handles:</strong> Hold <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Alt</code> and click on a broken handle to relink it to the other side</li>
             </ul>
           </Section>
@@ -113,7 +113,7 @@ export default function Keys() {
             <p><strong className="text-white">Normalize view:</strong> When property tracks have very different value ranges (e.g., Position X in hundreds of pixels vs. Opacity in 0–1), use the Normalize button to scale all curves to a uniform 0–1 display range for easier comparison of curve shapes.</p>
           </Section>
 
-          <Section id="easing-presets-reference" title="Easing Presets,Full Reference">
+          <Section id="easing-presets-reference" title="Easing Presets — Full Reference">
             <p>FlashFX ships with a library of named easing presets. Presets can be applied to selected keyframes from the right-click context menu, the Properties Panel, or the Easing Preset panel (accessible from the timeline toolbar).</p>
             <p>All presets are defined as cubic bezier curves with four control point values: <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">P1x, P1y, P2x, P2y</code>,compatible with CSS <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">cubic-bezier()</code> notation.</p>
           </Section>
@@ -123,7 +123,7 @@ export default function Keys() {
               headers={['Preset Name', 'Cubic Bezier Values', 'Character']}
               rows={[
                 ['Linear', '0, 0, 1, 1', 'Constant velocity'],
-                ['Ease', '0.25, 0.1, 0.25, 1', "Browser default ease,slight ease-in, moderate ease-out"],
+                ['Ease', '0.25, 0.1, 0.25, 1', "Browser default ease — slight ease-in, moderate ease-out"],
                 ['Ease In', '0.42, 0, 1, 1', 'Slow start, fast end'],
                 ['Ease Out', '0, 0, 0.58, 1', 'Fast start, slow end'],
                 ['Ease In-Out', '0.42, 0, 0.58, 1', 'Symmetric S-curve'],
@@ -135,7 +135,7 @@ export default function Keys() {
             <Table
               headers={['Preset Name', 'Cubic Bezier Values', 'Character']}
               rows={[
-                ['Smooth', '0.4, 0, 0.2, 1', 'Material Design standard ease,clean and minimal'],
+                ['Smooth', '0.4, 0, 0.2, 1', 'Material Design standard ease — clean and minimal'],
                 ['Snappy', '0.2, 0, 0, 1', 'Fast initial burst, sharp deceleration'],
                 ['Overshoot', '0.34, 1.56, 0.64, 1', 'Overshoots the target slightly, then settles back'],
                 ['Anticipate', '0.36, 0, 0.66, -0.56', 'Pulls back before moving forward (cartoon-style anticipation)'],
@@ -150,11 +150,11 @@ export default function Keys() {
             <Table
               headers={['Preset Name', 'Cubic Bezier Values', 'Character']}
               rows={[
-                ['Film Ease', '0.25, 0.46, 0.45, 0.94', 'Film-style ease,slightly weighted toward the end'],
+                ['Film Ease', '0.25, 0.46, 0.45, 0.94', 'Film-style ease — slightly weighted toward the end'],
                 ['Heavy In', '0.895, 0.03, 0.685, 0.22', 'Very slow start, like a heavy object beginning to move'],
                 ['Heavy Out', '0.165, 0.84, 0.44, 1', 'Fast deceleration, like a heavy object coming to rest'],
-                ['Expo In', '0.95, 0.05, 0.795, 0.035', 'Exponential acceleration,near-still start'],
-                ['Expo Out', '0.19, 1, 0.22, 1', 'Exponential deceleration,near-still end'],
+                ['Expo In', '0.95, 0.05, 0.795, 0.035', 'Exponential acceleration — near-still start'],
+                ['Expo Out', '0.19, 1, 0.22, 1', 'Exponential deceleration — near-still end'],
                 ['Expo In-Out', '1, 0, 0, 1', 'Sharp S-curve with near-still start and end'],
                 ['Circ In', '0.6, 0.04, 0.98, 0.335', 'Circular arc easing in'],
                 ['Circ Out', '0.075, 0.82, 0.165, 1', 'Circular arc easing out'],
@@ -167,7 +167,7 @@ export default function Keys() {
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">1.</span>Define a custom curve in the graph editor or via the four bezier value inputs</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span>Click <strong className="text-white">Save as Preset</strong> in the easing panel</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span>Give it a name,it appears in the Custom section of the preset library</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span>Give it a name — it appears in the Custom section of the preset library</li>
             </ul>
             <p>Custom presets are stored per-account and available across all projects.</p>
           </Section>

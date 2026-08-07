@@ -37,7 +37,7 @@ export default function AnimatingDrawOrder() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="parenting-hierarchy-animation" title="Parenting & Hierarchy Animation">
-            <p>Parenting creates a transform dependency between elements: a child element inherits the transform of its parent. When the parent moves, rotates, or scales, the child moves with it,while still retaining its own independent transform on top of the parent's.</p>
+            <p>Parenting creates a transform dependency between elements: a child element inherits the transform of its parent. When the parent moves, rotates, or scales, the child moves with it — while still retaining its own independent transform on top of the parent's.</p>
           </Section>
 
           <Section id="how-parenting-works" title="How Parenting Works">
@@ -61,16 +61,16 @@ export default function AnimatingDrawOrder() {
             <p>A <strong className="text-white">Null Object</strong> (also called a control point or dummy) is an invisible element with no visual rendering. It exists solely to provide a transform that other elements can be parented to.</p>
             <p><strong className="text-white">Common uses:</strong></p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Group controller:</strong> Multiple elements parented to a single null can all be moved, rotated, or scaled simultaneously by animating the null,without requiring a visual group container</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Group controller:</strong> Multiple elements parented to a single null can all be moved, rotated, or scaled simultaneously by animating the null — without requiring a visual group container</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Pivot relocation:</strong> Parent an element to a null placed at a custom pivot point to achieve rotation around an off-center axis</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Layered control:</strong> A hierarchy of nulls,a root null controls global position, a mid-level null controls rotation, leaf nulls control individual elements,provides multiple levels of independent control without coupling transforms</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Layered control:</strong> A hierarchy of nulls — a root null controls global position, a mid-level null controls rotation, leaf nulls control individual elements — provides multiple levels of independent control without coupling transforms</li>
             </ul>
             <p>Create a null object: <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+N</code> or via Object {'>'} New Null Object.</p>
           </Section>
 
           <Section id="parenting-and-animation" title="Parenting and Animation">
-            <p>Parenting works in both Design and Animate modes. In Animate mode, the parent's keyframed transforms are inherited by the child at runtime. The child's own animation tracks record values in local space,relative to whatever the parent is doing at that time.</p>
-            <p><strong className="text-white">Breaking parenting:</strong> To detach a child from its parent while preserving its world-space animation, use <strong className="text-white">Detach and Bake</strong>. This samples the child's world position at every frame and writes explicit keyframes on the child\'s own position track,after which the parent relationship is removed. This is useful for finalizing a rig after animation is complete.</p>
+            <p>Parenting works in both Design and Animate modes. In Animate mode, the parent's keyframed transforms are inherited by the child at runtime. The child's own animation tracks record values in local space — relative to whatever the parent is doing at that time.</p>
+            <p><strong className="text-white">Breaking parenting:</strong> To detach a child from its parent while preserving its world-space animation, use <strong className="text-white">Detach and Bake</strong>. This samples the child's world position at every frame and writes explicit keyframes on the child\'s own position track — after which the parent relationship is removed. This is useful for finalizing a rig after animation is complete.</p>
           </Section>
 
           <Section id="expressions-value-linking" title="Expressions & Value Linking">
@@ -156,7 +156,7 @@ export default function AnimatingDrawOrder() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span>Right-click the target property (the driven) and select <strong className="text-white">Paste as Link</strong></li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span>The target property now mirrors the driver's value exactly</li>
             </ul>
-            <p><strong className="text-white">Remapped links:</strong> After linking, an optional input/output range remapping can be applied,for example, linking an element's opacity (0–100%) to drive a blur radius (0–20px) so that as the element fades in from 0% to 100% opacity, its blur reduces from 20 to 0.</p>
+            <p><strong className="text-white">Remapped links:</strong> After linking, an optional input/output range remapping can be applied — for example, linking an element's opacity (0–100%) to drive a blur radius (0–20px) so that as the element fades in from 0% to 100% opacity, its blur reduces from 20 to 0.</p>
           </Section>
 
           <Section id="enabling-and-disabling-expressions" title="Enabling and Disabling Expressions">

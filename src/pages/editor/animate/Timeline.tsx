@@ -57,7 +57,7 @@ export default function Timeline() {
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Click the triangle/arrow next to an element name to expand or collapse its track group</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Alt+click</code> the triangle to expand or collapse all tracks for all elements simultaneously</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>The collapsed view shows all keyframes for an element as a single combined row,useful for seeing the overall animation structure at a glance</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>The collapsed view shows all keyframes for an element as a single combined row — useful for seeing the overall animation structure at a glance</li>
             </ul>
           </Section>
 
@@ -119,7 +119,7 @@ export default function Timeline() {
                 ['Go to End', 'End', 'Jumps the playhead to the last frame (or work area Out point)'],
                 ['Previous Keyframe', 'J', 'Jumps to the nearest keyframe earlier than the current position on any selected track'],
                 ['Next Keyframe', '; (semicolon)', 'Jumps to the nearest keyframe later than the current position on any selected track'],
-                ['Loop Toggle', 'Ctrl+L', 'Toggles looping,playback restarts from In point when it reaches the Out point'],
+                ['Loop Toggle', 'Ctrl+L', 'Toggles looping — playback restarts from In point when it reaches the Out point'],
               ]}
             />
           </Section>
@@ -127,10 +127,10 @@ export default function Timeline() {
           <Section id="playback-speed" title="Playback Speed">
             <p>The playback speed multiplier is shown in the transport bar. Click to change:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">0.25×</strong>,quarter speed, useful for reviewing fast motion or easing curves</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">0.5×</strong>,half speed</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">1×</strong>,real time (default)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">2×</strong>,double speed</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">0.25×</strong> — quarter speed, useful for reviewing fast motion or easing curves</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">0.5×</strong> — half speed</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">1×</strong> — real time (default)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">2×</strong> — double speed</li>
             </ul>
             <p>Playback speed does not affect export. It only controls how fast the editor plays back for review purposes.</p>
           </Section>
@@ -151,7 +151,7 @@ export default function Timeline() {
           <Section id="scrubbing" title="Scrubbing">
             <p>Dragging the playhead handle manually through the timeline is called <strong className="text-white">scrubbing</strong>. The canvas updates in real time as you drag, allowing frame-accurate review of motion.</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Fast scrub:</strong> Drag the playhead at normal speed,the canvas updates as fast as the hardware allows</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Fast scrub:</strong> Drag the playhead at normal speed — the canvas updates as fast as the hardware allows</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Precise scrub:</strong> Hold <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Shift</code> while dragging to reduce the playhead's movement speed for frame-by-frame precision</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Clicking anywhere in the timeline ruler (not on a track) also jumps the playhead to that position</li>
             </ul>

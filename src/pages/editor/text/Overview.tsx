@@ -22,7 +22,7 @@ export default function TextOverview() {
 
           <Section title="1.1 The Text Tool">
             <p>Activate the Text tool with <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">T</code> or click the Text tool in the toolbar.</p>
-            <p><strong className="text-white">Point Text:</strong> Click once on the canvas to place a text element at a single point. The text box expands horizontally as you type. Point text never wraps automatically,it extends on one line unless you press <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Enter</code> for a manual line break.</p>
+            <p><strong className="text-white">Point Text:</strong> Click once on the canvas to place a text element at a single point. The text box expands horizontally as you type. Point text never wraps automatically — it extends on one line unless you press <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Enter</code> for a manual line break.</p>
             <p><strong className="text-white">Area Text:</strong> Click and drag to define a rectangular text frame before typing. Text inside this frame wraps automatically when it reaches the right edge. The frame dimensions are adjustable.</p>
           </Section>
 
@@ -84,7 +84,7 @@ export default function TextOverview() {
           </Section>
 
           <Section title="2.3 Fixed Frame">
-            <p>Both width and height are fixed. If text overflows the defined frame, it is clipped. An overflow indicator (a small + symbol at the bottom-right of the frame) appears when the text content is larger than the frame. Text is not automatically scaled down,content that overflows is hidden.</p>
+            <p>Both width and height are fixed. If text overflows the defined frame, it is clipped. An overflow indicator (a small + symbol at the bottom-right of the frame) appears when the text content is larger than the frame. Text is not automatically scaled down — content that overflows is hidden.</p>
           </Section>
 
           <Section title="2.4 Converting Between Modes">

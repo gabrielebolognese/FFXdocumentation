@@ -13,14 +13,14 @@ export default function KeyframeOperations() {
   return (
     <Layout tableOfContents={tableOfContents}>
       <SEO
-        title="Keyframe Operations,Advanced | FlashFX Documentation"
+        title="Keyframe Operations — Advanced | FlashFX Documentation"
         description="Advanced keyframe alignment, time stretching, reversing, bulk interpolation editing, and hold keyframes in FlashFX."
         keywords="FlashFX, keyframe alignment, time stretch, reverse keyframes, hold keyframe, bulk easing"
       />
       <div className="max-w-4xl space-y-8">
         <div>
           <span className="inline-block text-yellow-accent text-[10px] font-medium mb-2 uppercase tracking-wider">Timeline and Composition</span>
-          <h1 className="text-4xl font-bold text-white mb-6">Keyframe Operations,Advanced</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Keyframe Operations — Advanced</h1>
         </div>
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
@@ -47,12 +47,12 @@ export default function KeyframeOperations() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Or enter absolute start and end frame numbers</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Or enter a duration in frames or seconds</li>
             </ul>
-            <p>The keyframe positions are redistributed proportionally within the specified time range. Values are not changed,only timing is affected.</p>
+            <p>The keyframe positions are redistributed proportionally within the specified time range. Values are not changed — only timing is affected.</p>
           </Section>
 
           <Section id="reversing-keyframes" title="Reversing Keyframes">
             <p>Select a range of keyframes on one or more tracks and use Timeline -&gt; Reverse Selected Keyframes.</p>
-            <p>The keyframes are reordered so that the animation plays backward,what was the end state becomes the start state, and vice versa. Timing is mirrored around the center of the selection.</p>
+            <p>The keyframes are reordered so that the animation plays backward — what was the end state becomes the start state, and vice versa. Timing is mirrored around the center of the selection.</p>
           </Section>
 
           <Section id="keyframe-interpolation-bulk-edit" title="Keyframe Interpolation Bulk Edit">
@@ -62,28 +62,28 @@ export default function KeyframeOperations() {
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+F9</code>
-                  {',set all to Linear interpolation'}
+                  {' — set all to Linear interpolation'}
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+F9</code>
-                  {',set all to Ease In'}
+                  {' — set all to Ease In'}
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Shift+F9</code>
-                  {',set all to Ease Out'}
+                  {' — set all to Ease Out'}
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">F9</code>
-                  {',set all to Ease In-Out'}
+                  {' — set all to Ease In-Out'}
                 </span>
               </li>
             </ul>
@@ -93,9 +93,9 @@ export default function KeyframeOperations() {
           <Section id="hold-keyframes" title="Hold Keyframes">
             <p>Hold keyframes maintain the value at the keyframe until the next keyframe, with no interpolation. Uses:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Discrete state changes</strong>,a shape is in state A, then at frame 30 it instantly becomes state B</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Blink effects</strong>,alternating between opacity 0 and 100 with hold keyframes creates a hard blink</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Step animations</strong>,property value counts up or down in whole steps</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Discrete state changes</strong> — a shape is in state A, then at frame 30 it instantly becomes state B</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Blink effects</strong> — alternating between opacity 0 and 100 with hold keyframes creates a hard blink</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Step animations</strong> — property value counts up or down in whole steps</li>
             </ul>
             <p>Converting to hold: Right-click any keyframe -&gt; "Toggle Hold Keyframe."</p>
             <p>To convert a range: Select all keyframes in a range across one or more tracks -&gt; Right-click -&gt; "Convert to Hold."</p>

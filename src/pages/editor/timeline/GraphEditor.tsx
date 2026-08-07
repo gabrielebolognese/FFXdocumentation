@@ -12,14 +12,14 @@ export default function GraphEditor() {
   return (
     <Layout tableOfContents={tableOfContents}>
       <SEO
-        title="The Graph Editor,Advanced | FlashFX Documentation"
+        title="The Graph Editor — Advanced | FlashFX Documentation"
         description="Value graph vs. speed graph, multi-track editing, snapping, and graph overlay in FlashFX."
         keywords="FlashFX, graph editor, value graph, speed graph, velocity curve, graph overlay"
       />
       <div className="max-w-4xl space-y-8">
         <div>
           <span className="inline-block text-yellow-accent text-[10px] font-medium mb-2 uppercase tracking-wider">Timeline and Composition</span>
-          <h1 className="text-4xl font-bold text-white mb-6">The Graph Editor,Advanced</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">The Graph Editor — Advanced</h1>
         </div>
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
@@ -27,7 +27,7 @@ export default function GraphEditor() {
             <p>The graph editor has two modes, toggled with the buttons at the top of the panel:</p>
             <p><strong className="text-white">Value Graph:</strong> Shows the property value over time. The Y axis is the actual value (pixels, degrees, opacity percentage). The bezier curve handles control the shape of the value change. This is the standard mode.</p>
             <p><strong className="text-white">Speed Graph:</strong> Shows the rate of change (velocity) over time. The Y axis is how fast the value is changing at each moment. A peak in the speed graph means the animation is moving quickly; a valley means it is moving slowly or stopped.</p>
-            <p>Use the Speed Graph when working on smooth, physically accurate motion,it is easier to ensure velocity starts at zero (smooth takeoff), peaks cleanly, and returns to zero (smooth landing) by looking directly at the velocity profile rather than inferring it from the value curve.</p>
+            <p>Use the Speed Graph when working on smooth, physically accurate motion — it is easier to ensure velocity starts at zero (smooth takeoff), peaks cleanly, and returns to zero (smooth landing) by looking directly at the velocity profile rather than inferring it from the value curve.</p>
           </Section>
 
           <Section id="multiple-track-graph-editing" title="Multiple Track Graph Editing">
@@ -51,7 +51,7 @@ export default function GraphEditor() {
                 </span>
               </li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Snap to other keyframe values:</strong> A yellow indicator line appears when a handle aligns with another keyframe's value, making it easy to create "match cut" animations where an element reaches the exact same state as another.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Snap to zero velocity:</strong> A specific snap target for the Speed Graph,handles snap to the horizontal axis, ensuring zero velocity at that moment. Critical for achieving convincingly smooth physics-based animation.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Snap to zero velocity:</strong> A specific snap target for the Speed Graph — handles snap to the horizontal axis, ensuring zero velocity at that moment. Critical for achieving convincingly smooth physics-based animation.</li>
             </ul>
           </Section>
 

@@ -53,7 +53,7 @@ export default function AIGeneratedImages() {
           </Section>
 
           <Section id="after-generation" title="After Generation">
-            <p>The generated image is placed on the canvas as a standard image element. It behaves identically to an imported image in every way,all filters, blend modes, animations, and mask operations apply.</p>
+            <p>The generated image is placed on the canvas as a standard image element. It behaves identically to an imported image in every way — all filters, blend modes, animations, and mask operations apply.</p>
             <p><strong className="text-white">Editing the prompt and regenerating:</strong> The generation prompt is stored with the image element. Right-click the element and select "Regenerate" to open the generator with the previous prompt pre-loaded for refinement.</p>
           </Section>
 

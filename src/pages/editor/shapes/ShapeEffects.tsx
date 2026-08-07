@@ -12,7 +12,7 @@ export default function ShapeEffects() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Shape-Level Effects | FlashFX Documentation"
-        description="Learn about shape-level effects in FlashFX,blur, clip paths, and alpha masks."
+        description="Learn about shape-level effects in FlashFX — blur, clip paths, and alpha masks."
         keywords="FlashFX, shape effects, blur, clip path, mask, alpha mask"
       />
 
@@ -41,8 +41,8 @@ export default function ShapeEffects() {
               <h4 className="text-base font-semibold text-white mb-3">Directional / Motion Blur</h4>
               <p>Blur along a specific axis.</p>
               <ul className="space-y-2 text-sm mt-3">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong>,the direction of the blur (0° = horizontal)</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Distance</strong>,how far the blur extends along the angle direction</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong> — the direction of the blur (0° = horizontal)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Distance</strong> — how far the blur extends along the angle direction</li>
               </ul>
             </div>
 
@@ -50,8 +50,8 @@ export default function ShapeEffects() {
               <h4 className="text-base font-semibold text-white mb-3">Radial Blur</h4>
               <p>Blur that radiates outward from a center point, simulating zoom or radial spin.</p>
               <ul className="space-y-2 text-sm mt-3">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong>,the origin of the radial effect</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong>,how far the blur extends</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong> — the origin of the radial effect</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong> — how far the blur extends</li>
               </ul>
             </div>
 
@@ -78,7 +78,7 @@ export default function ShapeEffects() {
           </Section>
 
           <Section id="alpha-mask" title="Alpha Mask">
-            <p>Distinct from a clip path,an alpha mask uses the luminosity or alpha of one layer to control the transparency of another, enabling feathered edges, soft transitions, and gradient-driven reveals.</p>
+            <p>Distinct from a clip path — an alpha mask uses the luminosity or alpha of one layer to control the transparency of another, enabling feathered edges, soft transitions, and gradient-driven reveals.</p>
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Setting up an Alpha Mask</h4>
@@ -92,8 +92,8 @@ export default function ShapeEffects() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Mask Modes</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Alpha mode</strong>,the mask layer's alpha channel directly controls the target\'s transparency.</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Luminance mode</strong>,the mask layer's brightness controls the target\'s transparency. White = fully visible, black = fully transparent, grays = proportional transparency.</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Alpha mode</strong> — the mask layer's alpha channel directly controls the target\'s transparency.</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Luminance mode</strong> — the mask layer's brightness controls the target\'s transparency. White = fully visible, black = fully transparent, grays = proportional transparency.</li>
               </ul>
             </div>
           </Section>

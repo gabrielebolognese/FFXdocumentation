@@ -27,7 +27,7 @@ export default function PenTool() {
 
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
           <p className="text-base leading-relaxed">
-            The Pen tool (<Kbd>B</Kbd>) creates custom bezier paths,arbitrary closed or open shapes defined by user-placed anchor points and their associated control handles.
+            The Pen tool (<Kbd>B</Kbd>) creates custom bezier paths — arbitrary closed or open shapes defined by user-placed anchor points and their associated control handles.
           </p>
 
           <Section id="anchor-points" title="Anchor Points">
@@ -36,7 +36,7 @@ export default function PenTool() {
             <h3 className="text-lg font-semibold text-white mt-6 mb-3">Creating Anchor Points:</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Click on the canvas to place a <strong className="text-white">corner point</strong> (no curve at this anchor)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Click and drag to place a <strong className="text-white">smooth point</strong> (curved path at this anchor,the drag direction sets the initial handle direction)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Click and drag to place a <strong className="text-white">smooth point</strong> (curved path at this anchor — the drag direction sets the initial handle direction)</li>
             </ul>
 
             <h3 className="text-lg font-semibold text-white mt-6 mb-3">Anchor Point Types:</h3>
@@ -78,7 +78,7 @@ export default function PenTool() {
             <ul className="space-y-2 text-sm mt-4">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Click on the first anchor point while drawing to close the path</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Press <Kbd>Escape</Kbd> to finish the path without closing it (leaving it open)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Open paths can be given a fill,the fill is applied as if a straight line connected the two open endpoints</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Open paths can be given a fill — the fill is applied as if a straight line connected the two open endpoints</li>
             </ul>
           </Section>
 

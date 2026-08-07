@@ -19,7 +19,7 @@ export default function MarketplaceOverview() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Marketplace Overview"
-        description="Complete overview of the FlashFX Marketplace,a digital distribution platform for motion graphics and video production assets."
+        description="Complete overview of the FlashFX Marketplace — a digital distribution platform for motion graphics and video production assets."
         keywords="FlashFX, marketplace, assets, templates, 3D, motion graphics, creator dashboard"
       />
 
@@ -554,7 +554,7 @@ export default function MarketplaceOverview() {
             </table>
           </div>
 
-          <h3 className="text-2xl font-semibold text-white mt-6">10.2 Extended Fields,Projects</h3>
+          <h3 className="text-2xl font-semibold text-white mt-6">10.2 Extended Fields — Projects</h3>
 
           <div className="overflow-x-auto">
             <table className="min-w-full border-collapse">

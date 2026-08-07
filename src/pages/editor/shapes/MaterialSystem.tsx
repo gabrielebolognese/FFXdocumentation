@@ -10,7 +10,7 @@ export default function MaterialSystem() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="The Material System | FlashFX Documentation"
-        description="Learn about the FlashFX material system,the fill and appearance engine for all vector shapes."
+        description="Learn about the FlashFX material system — the fill and appearance engine for all vector shapes."
         keywords="FlashFX, material system, fill layers, opacity, blend mode"
       />
 
@@ -24,7 +24,7 @@ export default function MaterialSystem() {
 
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
           <p className="text-base leading-relaxed">
-            The material system is the fill and appearance engine for all vector shapes. Rather than a single flat fill color, each shape can have a <strong className="text-white">material stack</strong>,an ordered list of fill layers that are composited together to produce the final surface appearance.
+            The material system is the fill and appearance engine for all vector shapes. Rather than a single flat fill color, each shape can have a <strong className="text-white">material stack</strong> — an ordered list of fill layers that are composited together to produce the final surface appearance.
           </p>
 
           <Section id="material-stack" title="The Material Stack">

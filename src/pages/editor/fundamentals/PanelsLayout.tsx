@@ -55,11 +55,11 @@ export default function PanelsLayout() {
           <Section id="showing-and-hiding-panels" title="Showing and Hiding Panels">
             <p>Access panel visibility controls via the Window menu:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Layers</strong>,Toggle layer panel</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Properties</strong>,Toggle properties panel</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Timeline</strong>,Toggle timeline</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Swatches</strong>,Open swatches panel</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Navigator</strong>,Open navigator panel</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Layers</strong> — Toggle layer panel</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Properties</strong> — Toggle properties panel</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Timeline</strong> — Toggle timeline</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Swatches</strong> — Open swatches panel</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Window → Navigator</strong> — Open navigator panel</li>
             </ul>
             <p className="mt-4">
               Checked items in the Window menu indicate visible panels. Click to toggle.
@@ -84,10 +84,10 @@ export default function PanelsLayout() {
               Secondary panels (Swatches, Navigator, Assets, History) can float as separate windows:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Detach</strong>,Click the panel's detach icon (top-right corner)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reattach</strong>,Drag panel back to a dock zone (edges or corners)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Move</strong>,Drag panel by its title bar</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Resize</strong>,Drag panel edges or corners</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Detach</strong> — Click the panel's detach icon (top-right corner)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reattach</strong> — Drag panel back to a dock zone (edges or corners)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Move</strong> — Drag panel by its title bar</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Resize</strong> — Drag panel edges or corners</li>
             </ul>
             <p className="mt-4">
               Floating panels stay on top of the main window and can be positioned on secondary monitors.
@@ -99,9 +99,9 @@ export default function PanelsLayout() {
               When dragging a floating panel, docking zones appear as highlighted areas:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Left dock</strong>,Attaches below the toolbar/layer panel</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Right dock</strong>,Attaches below the properties panel</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Bottom dock</strong>,Attaches next to the timeline (Advanced mode only)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Left dock</strong> — Attaches below the toolbar/layer panel</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Right dock</strong> — Attaches below the properties panel</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Bottom dock</strong> — Attaches next to the timeline (Advanced mode only)</li>
             </ul>
             <p className="mt-4">
               Drop the panel when the desired zone is highlighted to dock it there.
@@ -113,19 +113,19 @@ export default function PanelsLayout() {
               Save and recall custom panel layouts:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Save workspace</strong>,Window → Workspace → New Workspace, enter a name</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Load workspace</strong>,Window → Workspace → [Workspace Name]</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reset workspace</strong>,Window → Workspace → Reset to Default</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete workspace</strong>,Window → Workspace → Manage → Delete</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Save workspace</strong> — Window → Workspace → New Workspace, enter a name</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Load workspace</strong> — Window → Workspace → [Workspace Name]</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reset workspace</strong> — Window → Workspace → Reset to Default</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete workspace</strong> — Window → Workspace → Manage → Delete</li>
             </ul>
             <p className="mt-4">
               Built-in workspaces:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Default</strong>,Standard layout for general work</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Animation Focus</strong>,Maximized timeline, minimal properties panel</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Design Focus</strong>,Maximized canvas, hidden timeline</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Compact</strong>,Optimized for small screens (laptops)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Default</strong> — Standard layout for general work</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Animation Focus</strong> — Maximized timeline, minimal properties panel</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Design Focus</strong> — Maximized canvas, hidden timeline</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Compact</strong> — Optimized for small screens (laptops)</li>
             </ul>
           </Section>
 
@@ -134,7 +134,7 @@ export default function PanelsLayout() {
               Maximize canvas space by entering full-screen mode:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle full-screen</strong>,View → Full Screen (F11)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle full-screen</strong> — View → Full Screen (F11)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Menu bar and browser chrome are hidden</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Panels remain visible but maximize available space</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Press F11 or Escape to exit</li>
@@ -146,7 +146,7 @@ export default function PanelsLayout() {
               Hide all panels except the canvas:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle</strong>,View → Distraction-Free Mode (Shift + F11)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle</strong> — View → Distraction-Free Mode (Shift + F11)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>All panels collapse; only canvas and menu bar remain</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Ideal for presentations and final reviews</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Press Shift + F11 to restore panels</li>
@@ -156,10 +156,10 @@ export default function PanelsLayout() {
           <Section id="panel-preferences" title="Panel Preferences">
             <p>Customize panel behavior in Edit → Preferences → Interface:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Auto-collapse panels</strong>,Panels shrink when inactive (saves space)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Panel transition speed</strong>,Animation duration for show/hide</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Remember panel states</strong>,Restore visibility on next session</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Floating panel opacity</strong>,Transparency when not focused (20-100%)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Auto-collapse panels</strong> — Panels shrink when inactive (saves space)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Panel transition speed</strong> — Animation duration for show/hide</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Remember panel states</strong> — Restore visibility on next session</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Floating panel opacity</strong> — Transparency when not focused (20-100%)</li>
             </ul>
           </Section>
 

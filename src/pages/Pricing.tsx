@@ -149,7 +149,7 @@ export default function Pricing() {
     <Layout wide>
       <SEO
         title="Pricing"
-        description="Compare FlashFX plans,Free, Ultra, and Teams. Find the right plan for your creative workflow."
+        description="Compare FlashFX plans — Free, Ultra, and Teams. Find the right plan for your creative workflow."
         keywords="FlashFX, pricing, plans, Free, Ultra, Teams, comparison"
       />
 
@@ -323,7 +323,7 @@ export default function Pricing() {
                 },
                 {
                   q: 'Is there a free trial?',
-                  a: 'The Free plan is available forever,no credit card required. Upgrade to Ultra or Teams at any time.',
+                  a: 'The Free plan is available forever — no credit card required. Upgrade to Ultra or Teams at any time.',
                 },
                 {
                   q: 'What payment methods are accepted?',

@@ -22,7 +22,7 @@ export default function ImageFillMode() {
         </div>
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
           <p className="text-base leading-relaxed">
-            Images can be used as fill content for vector shapes,instead of displaying as their own rectangular frame, the image data fills the interior of any shape.
+            Images can be used as fill content for vector shapes — instead of displaying as their own rectangular frame, the image data fills the interior of any shape.
           </p>
 
           <Section id="setting-an-image-as-shape-fill" title="Setting an Image as Shape Fill">
@@ -51,8 +51,8 @@ export default function ImageFillMode() {
           <Section id="image-fill-position" title="Image Fill Position">
             <p>When the sizing mode leaves control over position (Fill, Fit, Original, Tile), the image can be positioned within the shape:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Alignment grid</strong>,nine-position grid (3x3 anchor positions: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Custom offset</strong>,manual X/Y offset from the shape center</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Alignment grid</strong> — nine-position grid (3x3 anchor positions: top-left, top-center, top-right, middle-left, center, middle-right, bottom-left, bottom-center, bottom-right)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Custom offset</strong> — manual X/Y offset from the shape center</li>
             </ul>
           </Section>
 

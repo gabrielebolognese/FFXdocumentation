@@ -34,14 +34,14 @@ export default function Looping() {
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">I</code>
-                  {',set the In Point at the current playhead position'}
+                  {' — set the In Point at the current playhead position'}
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">O</code>
-                  {',set the Out Point at the current playhead position'}
+                  {' — set the Out Point at the current playhead position'}
                 </span>
               </li>
             </ul>
@@ -57,7 +57,7 @@ export default function Looping() {
             <div className="bg-white/5 rounded-lg p-4 font-mono text-xs text-yellow-accent">
               loopOut("pingpong")
             </div>
-            <p>Plays the animation forward then backward, then forward again,bouncing back and forth.</p>
+            <p>Plays the animation forward then backward, then forward again — bouncing back and forth.</p>
             <div className="bg-white/5 rounded-lg p-4 font-mono text-xs text-yellow-accent">
               loopIn("cycle")
             </div>

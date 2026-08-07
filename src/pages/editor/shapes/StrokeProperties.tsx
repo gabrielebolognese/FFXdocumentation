@@ -16,7 +16,7 @@ export default function StrokeProperties() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Stroke Properties | FlashFX Documentation"
-        description="Learn about stroke properties in FlashFX,color, weight, alignment, caps, joins, dashes, and gradient strokes."
+        description="Learn about stroke properties in FlashFX — color, weight, alignment, caps, joins, dashes, and gradient strokes."
         keywords="FlashFX, stroke, outline, dash, cap, join, gradient stroke"
       />
 
@@ -51,7 +51,7 @@ export default function StrokeProperties() {
             <Table
               headers={['Alignment', 'Description']}
               rows={[
-                ['Center (default)', 'The stroke is centered on the path,half inside, half outside the shape boundary'],
+                ['Center (default)', 'The stroke is centered on the path — half inside, half outside the shape boundary'],
                 ['Inside', 'The entire stroke width is inside the shape boundary'],
                 ['Outside', 'The entire stroke width is outside the shape boundary'],
               ]}
@@ -64,18 +64,18 @@ export default function StrokeProperties() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5">
               <h4 className="text-base font-semibold text-white mb-3">Cap Style (for open paths and line segments)</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Butt</strong>,flat ends at the exact path endpoint</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Round</strong>,semicircular ends extending beyond the endpoint</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Square</strong>,flat square ends extending beyond the endpoint by half the stroke width</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Butt</strong> — flat ends at the exact path endpoint</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Round</strong> — semicircular ends extending beyond the endpoint</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Square</strong> — flat square ends extending beyond the endpoint by half the stroke width</li>
               </ul>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Join Style (at corners where two segments meet)</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Miter</strong>,sharp pointed corner; a Miter Limit controls how far the point can extend before it is auto-converted to a Bevel</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Round</strong>,rounded corner at the junction</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Bevel</strong>,a flat cut across the outer corner</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Miter</strong> — sharp pointed corner; a Miter Limit controls how far the point can extend before it is auto-converted to a Bevel</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Round</strong> — rounded corner at the junction</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Bevel</strong> — a flat cut across the outer corner</li>
               </ul>
             </div>
           </Section>
@@ -84,11 +84,11 @@ export default function StrokeProperties() {
             <p>Converts the stroke to a dashed line:</p>
 
             <ul className="space-y-2 text-sm mt-4">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Length</strong>,length of dash segments in pixels</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Gap Length</strong>,length of gaps between dashes in pixels</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Additional Dash/Gap pairs</strong>,up to three dash/gap pairs can be defined for complex dash patterns (e.g., long-dash short-dash)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Offset</strong>,shifts the pattern along the stroke. Animating this value creates a "marching ants\" animation effect.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Cap</strong>,independently sets the cap style for the ends of each dash segment</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Length</strong> — length of dash segments in pixels</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Gap Length</strong> — length of gaps between dashes in pixels</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Additional Dash/Gap pairs</strong> — up to three dash/gap pairs can be defined for complex dash patterns (e.g., long-dash short-dash)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Offset</strong> — shifts the pattern along the stroke. Animating this value creates a "marching ants\" animation effect.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Cap</strong> — independently sets the cap style for the ends of each dash segment</li>
             </ul>
           </Section>
 
@@ -96,8 +96,8 @@ export default function StrokeProperties() {
             <p>A stroke can be filled with a gradient rather than a solid color. When enabled:</p>
 
             <ul className="space-y-2 text-sm mt-4">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Along Stroke</strong>,the gradient runs from the start of the path to the end (start point = first color stop, end point = last color stop)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Across Stroke</strong>,the gradient runs perpendicular to the stroke direction (inner edge = first color stop, outer edge = last color stop)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Along Stroke</strong> — the gradient runs from the start of the path to the end (start point = first color stop, end point = last color stop)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Across Stroke</strong> — the gradient runs perpendicular to the stroke direction (inner edge = first color stop, outer edge = last color stop)</li>
             </ul>
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-4 mt-4">

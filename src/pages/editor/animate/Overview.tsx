@@ -89,10 +89,10 @@ export default function AnimateOverview() {
           <Section id="what-is-a-keyframe" title="What is a Keyframe">
             <p>A keyframe is defined by:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Time</strong>,which frame it is on</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Property</strong>,which property it controls (X position, opacity, blur radius, etc.)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Value</strong>,the property value at this moment</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Easing</strong>,the interpolation curve on the way out of this keyframe toward the next</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Time</strong> — which frame it is on</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Property</strong> — which property it controls (X position, opacity, blur radius, etc.)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Value</strong> — the property value at this moment</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Easing</strong> — the interpolation curve on the way out of this keyframe toward the next</li>
             </ul>
           </Section>
 

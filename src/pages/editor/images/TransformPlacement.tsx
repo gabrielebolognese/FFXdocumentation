@@ -49,7 +49,7 @@ export default function TransformPlacement() {
                   <strong className="text-white">Flip Horizontal</strong>
                   {' ('}
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+H</code>
-                  {'),mirrors the image along the vertical axis'}
+                  {') — mirrors the image along the vertical axis'}
                 </span>
               </li>
               <li className="flex gap-3">
@@ -58,7 +58,7 @@ export default function TransformPlacement() {
                   <strong className="text-white">Flip Vertical</strong>
                   {' ('}
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+V</code>
-                  {'),mirrors the image along the horizontal axis'}
+                  {') — mirrors the image along the horizontal axis'}
                 </span>
               </li>
             </ul>
@@ -69,10 +69,10 @@ export default function TransformPlacement() {
             <p>Images support the full blend mode library (all 27 modes). Blend mode is set in the Properties Panel under "Compositing."</p>
             <p>Blend modes on images are particularly useful for:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Multiply</strong> on texture overlays,the texture darkens the content below it</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Screen</strong> on light-colored effects (sparkles, glows),the dark background of the image disappears, leaving only the bright effect</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Overlay</strong> on grunge or texture maps,increases contrast and texture simultaneously</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Luminosity</strong> on color grading images,applies the brightness structure of an image without affecting the hue below</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Multiply</strong> on texture overlays — the texture darkens the content below it</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Screen</strong> on light-colored effects (sparkles, glows) — the dark background of the image disappears, leaving only the bright effect</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Overlay</strong> on grunge or texture maps — increases contrast and texture simultaneously</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Luminosity</strong> on color grading images — applies the brightness structure of an image without affecting the hue below</li>
             </ul>
           </Section>
         </div>

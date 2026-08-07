@@ -55,7 +55,7 @@ export default function RulerTimeDisplay() {
                   <strong className="text-white">Fit to Work Area:</strong>
                   {' '}
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Shift+F</code>
-                  {',adjusts zoom to show the full work area.'}
+                  {' — adjusts zoom to show the full work area.'}
                 </span>
               </li>
               <li className="flex gap-3">
@@ -64,7 +64,7 @@ export default function RulerTimeDisplay() {
                   <strong className="text-white">Fit All:</strong>
                   {' '}
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">Ctrl+Alt+F</code>
-                  {',adjusts zoom to show the full project duration.'}
+                  {' — adjusts zoom to show the full project duration.'}
                 </span>
               </li>
               <li className="flex gap-3">

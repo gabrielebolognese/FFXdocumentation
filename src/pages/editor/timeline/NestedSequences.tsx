@@ -25,7 +25,7 @@ export default function NestedSequences() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="what-is-nesting" title="What is Nesting">
-            <p>Nesting means placing one sequence inside another as a single element. The inner sequence (the <strong className="text-white">pre-composition</strong>) renders as a flat image frame-by-frame, and that rendered output is treated as a single element in the outer composition,transformable, maskable, filterable, and animatable like any other element.</p>
+            <p>Nesting means placing one sequence inside another as a single element. The inner sequence (the <strong className="text-white">pre-composition</strong>) renders as a flat image frame-by-frame, and that rendered output is treated as a single element in the outer composition — transformable, maskable, filterable, and animatable like any other element.</p>
           </Section>
 
           <Section id="creating-a-nested-sequence-pre-compose" title="Creating a Nested Sequence (Pre-compose)">
@@ -35,10 +35,10 @@ export default function NestedSequences() {
 
           <Section id="why-nest" title="Why Nest?">
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Simplify complex layer stacks</strong>,group a multi-element sub-composition into one manageable nested entity</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Apply effects to multiple elements as a unit</strong>,add a blur or blend mode to the pre-comp and it affects all its contents as a composited whole</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Reuse sub-compositions</strong>,the same pre-comp can be placed multiple times in different contexts</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Apply time remap to a group</strong>,time remapping can be applied to the nested sequence as a whole</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Simplify complex layer stacks</strong> — group a multi-element sub-composition into one manageable nested entity</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Apply effects to multiple elements as a unit</strong> — add a blur or blend mode to the pre-comp and it affects all its contents as a composited whole</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Reuse sub-compositions</strong> — the same pre-comp can be placed multiple times in different contexts</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Apply time remap to a group</strong> — time remapping can be applied to the nested sequence as a whole</li>
             </ul>
           </Section>
 

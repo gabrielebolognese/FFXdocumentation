@@ -65,7 +65,7 @@ export default function Tutorials() {
     <Layout>
       <SEO
         title="Tutorials"
-        description="Step-by-step video tutorials for FlashFX,from getting started to advanced animation techniques."
+        description="Step-by-step video tutorials for FlashFX — from getting started to advanced animation techniques."
         keywords="FlashFX, tutorials, learning, animation, video guides"
       />
       <div className="space-y-8">
@@ -75,7 +75,7 @@ export default function Tutorials() {
           <p className="text-sm text-white/70 leading-relaxed max-w-2xl">
             Tutorials are short, focused video guides designed to help you get productive with FlashFX as fast as
             possible. Whether you're opening the editor for the first time or trying to nail a specific animation
-            technique, each tutorial walks you through one topic step by step,no prior experience required.
+            technique, each tutorial walks you through one topic step by step — no prior experience required.
           </p>
           <p className="text-sm text-white/70 leading-relaxed max-w-2xl">
             The library covers <span className="text-white font-medium">60 videos</span> across 6 topic areas, from

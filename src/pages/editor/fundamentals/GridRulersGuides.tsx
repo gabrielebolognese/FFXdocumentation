@@ -41,10 +41,10 @@ export default function GridRulersGuides() {
             </p>
             <p className="mt-4">Grid controls:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle visibility</strong>,View → Show Grid (Ctrl/Cmd + ')</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grid size</strong>,Adjust spacing in Edit → Preferences → Canvas</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grid color</strong>,Customize in preferences (default: semi-transparent white)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Subdivisions</strong>,Minor grid lines at fractional intervals</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle visibility</strong> — View → Show Grid (Ctrl/Cmd + ')</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grid size</strong> — Adjust spacing in Edit → Preferences → Canvas</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grid color</strong> — Customize in preferences (default: semi-transparent white)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Subdivisions</strong> — Minor grid lines at fractional intervals</li>
             </ul>
           </Section>
 
@@ -63,10 +63,10 @@ export default function GridRulersGuides() {
             </p>
             <p className="mt-4">Ruler controls:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle visibility</strong>,View → Show Rulers (Ctrl/Cmd + R)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Unit</strong>,Pixels (default), Percentage, or Inches</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reset origin</strong>,Right-click ruler intersection, choose "Reset Origin"</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Set custom origin</strong>,Drag from ruler intersection to reposition zero point</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Toggle visibility</strong> — View → Show Rulers (Ctrl/Cmd + R)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Unit</strong> — Pixels (default), Percentage, or Inches</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Reset origin</strong> — Right-click ruler intersection, choose "Reset Origin"</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Set custom origin</strong> — Drag from ruler intersection to reposition zero point</li>
             </ul>
           </Section>
 
@@ -76,19 +76,19 @@ export default function GridRulersGuides() {
             </p>
             <p className="mt-4">Creating guides:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">From rulers</strong>,Click and drag from the horizontal or vertical ruler onto the canvas</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Manual placement</strong>,View → New Guide, enter pixel position</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">From selection</strong>,Select an element, then View → Add Guides at Edges</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">From rulers</strong> — Click and drag from the horizontal or vertical ruler onto the canvas</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Manual placement</strong> — View → New Guide, enter pixel position</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">From selection</strong> — Select an element, then View → Add Guides at Edges</li>
             </ul>
           </Section>
 
           <Section id="guide-operations" title="Guide Operations">
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Move guide</strong>,Click and drag the guide line</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete guide</strong>,Drag guide off the canvas, or right-click → Delete</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Clear all guides</strong>,View → Clear Guides</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Lock guides</strong>,View → Lock Guides (prevents accidental movement)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Show/hide guides</strong>,View → Show Guides (Ctrl/Cmd + ;)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Move guide</strong> — Click and drag the guide line</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete guide</strong> — Drag guide off the canvas, or right-click → Delete</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Clear all guides</strong> — View → Clear Guides</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Lock guides</strong> — View → Lock Guides (prevents accidental movement)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Show/hide guides</strong> — View → Show Guides (Ctrl/Cmd + ;)</li>
             </ul>
           </Section>
 
@@ -109,9 +109,9 @@ export default function GridRulersGuides() {
           <Section id="guide-color-and-visibility" title="Guide Color and Visibility">
             <p>Customize guide appearance in Edit → Preferences → Canvas:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Guide color</strong>,Default: cyan</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Smart guide color</strong>,Default: magenta</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Guide opacity</strong>,10-100%</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Guide color</strong> — Default: cyan</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Smart guide color</strong> — Default: magenta</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Guide opacity</strong> — 10-100%</li>
             </ul>
           </Section>
 

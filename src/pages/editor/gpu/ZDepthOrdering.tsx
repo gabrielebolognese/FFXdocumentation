@@ -23,7 +23,7 @@ export default function ZDepthOrdering() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="the-z-ordering-problem" title="The Z-Ordering Problem">
-            <p>In a standard 2D composition, Z-order (draw order) is explicit,elements are drawn in the order they appear in the layer stack, with higher layers appearing in front.</p>
+            <p>In a standard 2D composition, Z-order (draw order) is explicit — elements are drawn in the order they appear in the layer stack, with higher layers appearing in front.</p>
             <p>In a 3D composition, elements at different Z-depth positions may need to be drawn in a different order than the layer stack to appear correctly. An element at Z = -100 (far from viewer) should appear behind an element at Z = +100 (close to viewer), regardless of their layer stack position.</p>
           </Section>
 
@@ -33,7 +33,7 @@ export default function ZDepthOrdering() {
             <p><strong className="text-white">Depth Sort Limitations:</strong></p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Incompatible with most blend modes (breaks batching)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Cannot correctly handle two transparent, overlapping elements at different depths simultaneously (classic painters algorithm problem,there is no mathematically correct solution for overlapping translucent geometry without hardware depth buffering)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Cannot correctly handle two transparent, overlapping elements at different depths simultaneously (classic painters algorithm problem — there is no mathematically correct solution for overlapping translucent geometry without hardware depth buffering)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>FlashFX does not use WebGL's depth buffer for compositing because it cannot accommodate transparency</li>
             </ul>
           </Section>

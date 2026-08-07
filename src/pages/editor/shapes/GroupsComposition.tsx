@@ -34,11 +34,11 @@ export default function GroupsComposition() {
           </Section>
 
           <Section id="group-properties" title="Group Properties">
-            <p>Groups have their own transform properties (position, rotation, scale, opacity) that operate on all members as a unit. Individual member properties are preserved and operate independently of the group transform,they compose.</p>
+            <p>Groups have their own transform properties (position, rotation, scale, opacity) that operate on all members as a unit. Individual member properties are preserved and operate independently of the group transform — they compose.</p>
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Transform Composition Example</h4>
-              <p className="text-sm">A group containing a circle at position (100, 50) is moved to position (200, 0) at the group level. The circle's actual rendered position is (300, 50),the sum of group and member transforms.</p>
+              <p className="text-sm">A group containing a circle at position (100, 50) is moved to position (200, 0) at the group level. The circle's actual rendered position is (300, 50) — the sum of group and member transforms.</p>
             </div>
           </Section>
 
@@ -51,13 +51,13 @@ export default function GroupsComposition() {
                 <li className="flex gap-3">
                   <span className="text-yellow-accent mt-1">•</span>
                   <div>
-                    <strong className="text-white">Pass-through mode:</strong> When a group's blend mode is set to "Pass-through," the group does not composite internally,each member blends directly with the layers below the group as if the group didn't exist. This is the <strong className="text-white">default for groups</strong>.
+                    <strong className="text-white">Pass-through mode:</strong> When a group's blend mode is set to "Pass-through," the group does not composite internally — each member blends directly with the layers below the group as if the group didn't exist. This is the <strong className="text-white">default for groups</strong>.
                   </div>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-yellow-accent mt-1">•</span>
                   <div>
-                    <strong className="text-white">Isolated mode:</strong> When a group has any blend mode other than Pass-through (including Normal), it is <strong className="text-white">isolated</strong>,members blend only with each other inside the group, not with layers below. The flattened result of the group then blends with lower layers.
+                    <strong className="text-white">Isolated mode:</strong> When a group has any blend mode other than Pass-through (including Normal), it is <strong className="text-white">isolated</strong> — members blend only with each other inside the group, not with layers below. The flattened result of the group then blends with lower layers.
                   </div>
                 </li>
               </ul>
@@ -74,7 +74,7 @@ export default function GroupsComposition() {
           </Section>
 
           <Section id="nested-groups" title="Nested Groups">
-            <p>Groups can be nested inside other groups to any depth. This is useful for hierarchical animations,animating a "shoulder" group that contains an "upper arm" group that contains a "forearm" group, each with its own rotation pivot.</p>
+            <p>Groups can be nested inside other groups to any depth. This is useful for hierarchical animations — animating a "shoulder" group that contains an "upper arm" group that contains a "forearm" group, each with its own rotation pivot.</p>
           </Section>
 
           <Section id="ungrouping" title="Ungrouping">

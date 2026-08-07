@@ -229,18 +229,28 @@ They are not confined to 3D. By area:
 
 Shortest is 12 characters. Descriptions don't rank, but they drive click-through, and CTR is a ranking input over time. 218 of 231 pages leave SERP snippet space unused.
 
-### P2-2 — Content corruption: em-dashes replaced by commas
+### P2-2 — Content corruption: em-dashes replaced by commas *(fixed)*
 
-A search-and-replace has damaged prose sitewide: **593 occurrences of `</strong>,` across 73 files**, plus 24 `word,Word` instances across 15 files.
+> ## ✅ **Repaired — 2026-08-07.** 812 fixes across 107 files. Zero residual in source or built HTML.
 
-```tsx
-<strong className="text-white">Toggle snapping</strong>,View → Snap to Grid/Guides
-```
-(`src/pages/editor/fundamentals/SnappingSystem.tsx:40`)
+A find-and-replace had turned every ` — ` into a bare `,` with no following space, sitewide. It reached user-visible headings and SEO titles — `EasingPresets.tsx` rendered an `<h1>` of "Easing Presets,Full Reference", and the sidebar label in `navigation.ts` matched.
 
-It reaches user-visible headings and SEO titles — e.g. `EasingPresets.tsx:15,22` renders "Easing Presets,Full Reference", and `SuggestionPortal.tsx:98` reads "Let us know,every suggestion helps".
+Repaired by `scripts/fix-punctuation.mjs` (committed, re-runnable, dry-run by default). **Three** distinct signatures, not the one originally reported:
 
-**Impact:** direct quality signal. Google's helpful-content systems assess readability and editorial care; comma-spliced definition lists read as machine-generated. It also degrades the snippets Google extracts.
+| Signature | Fixes | Notes |
+|---|---|---|
+| `</strong>,text` | 572 | The bulk. Definition-list style throughout the editor docs. |
+| `word,Word` in prose | 226 | Includes string literals — sidebar labels, ToC labels, `Table` row arrays. |
+| `{',text'}` | 14 | Comma is the *first* character inside a JSX expression string, so it has a quote before it, not a word character. **Missed by the first two passes**; found only by re-scanning the built HTML after applying them. |
+
+**What made this risky, and how it was contained.** A naive `word,Word` replacement corrupts code: `count: 10,label: 'x'` in an object literal matches `digit,letter` and would be rewritten into a syntax error. The script therefore classifies every character position as prose or code — tracking tag depth, brace depth and string context — and only rewrites prose. Attributes holding code (`className`, `href`, `d`, `style`, CSS-in-JS props) are denied outright.
+
+**Two categories deliberately left alone:**
+
+- **Comma followed by a space is never touched.** That is ordinary English; 21 such cases exist after `</strong>` alone, e.g. "…</strong>, not interleaved with them."
+- **`{', '}`** — a real inline separator, distinguished from the corrupt `{',text'}` purely by the space.
+
+Verified: 0 residual occurrences in source *and* in all 336 prerendered HTML files; build green; typecheck unchanged at its 139-error pre-existing baseline; the two ESLint errors that remain were confirmed present in `HEAD` before this change.
 
 ### P2-3 — Performance / Core Web Vitals
 
@@ -341,13 +351,28 @@ Fixes P0-1, P0-2, P0-3, P1-1, P1-2, P1-4.
 
 ---
 
-### M2 — Fix the content that shouldn't be indexed *(2–3 days)*
+### M2 — Fix the content that shouldn't be indexed
+
+> ### ⛔ Standing constraint — the placeholder pages are **never** to be deleted
+>
+> Stated by the project owner on 2026-08-07: the 86 "Content will appear here" pages are a
+> **queue of pages waiting to be written**, not abandoned scaffolding. The only acceptable
+> actions are (a) write the content, or (b) keep the page out of the sitemap until it is written.
+> Never remove the file, never remove its `<Route>`.
+>
+> Option (b) is already implemented and automatic: `scripts/lib/routes.mjs` detects the
+> placeholder marker, so these pages are still prerendered (their URLs return real HTML) but stay
+> out of the sitemap — and they re-enter it on their own the moment the marker is gone.
+> Nothing needs to be un-done as pages get written.
+>
+> **Progress: 1 of 3 sub-tasks complete.** Punctuation repaired; the 86 placeholder pages and
+> 57 empty tutorials remain.
 
 Fixes P1-5, P1-6, P2-2. Do this **before** M3 — pushing crawlers at 79 empty pages actively hurts.
 
 - [ ] **Decide the 22 3D stubs**: fill them in, or `noindex` + exclude from the sitemap until they have content. Given the 3D feature is genuinely differentiating (and the blog announces GLB support), filling them is the better investment — but shipping them empty is worse than either.
 - [ ] **Decide the 57 tutorial placeholders**: at minimum add a written step-by-step to each — the text is the ranking asset, the video is the conversion asset. Every one of these targets a real long-tail query ("how to animate rotation in FlashFX"). If they can't be written now, `noindex` them and keep only the 3 with videos in the sitemap.
-- [ ] **Repair the em-dash corruption** — 593 `</strong>,` across 73 files, plus 24 `word,Word` cases. Scripted find-and-replace back to `—`, then spot-check the 15 files with in-heading damage (`EasingPresets.tsx:15,22`, `MorphDeform.tsx:15,22`, `KeyboardShortcuts.tsx:36`, `SuggestionPortal.tsx:98`).
+- [x] **Em-dash corruption repaired** — 812 fixes across 107 files via `scripts/fix-punctuation.mjs`, more than the 617 first estimated because a third signature (`{',text'}`) only surfaced when the built HTML was re-scanned. Zero residual in source or in all 336 prerendered files. See P2-2.
 - [ ] Give the 60 tutorial pages individual meta descriptions instead of the `Learn ${title} in FlashFX` template.
 - [ ] Remove or scope the "work in progress" header banner (`Header.tsx:55`).
 
@@ -477,7 +502,7 @@ Ranking is won here once M1–M5 remove the obstacles.
 |---|---|---|---|
 | M0 Baseline & verification | 0.5 d | **Do first** | ⬜ Blocked on deploy + GSC access |
 | M1 Indexability | 1 d | **Critical** | ✅ **Complete — 2026-08-07** |
-| M2 Content cleanup | 5–8 d | **Critical** | ⬜ **Now the critical path** — gates M3 |
+| M2 Content cleanup | 5–8 d | **Critical** | 🟡 **In progress** — punctuation done; 86 pages to write |
 | M3 Orphan recovery | 1 d | High | ⬜ Gated on M2 |
 | M4 Structured data | 1–2 d | High | ✅ **Complete — 2026-08-07** |
 | M5 Performance & prerender | 3–5 d | High | ✅ **Complete — 2026-08-07** (images deferred) |

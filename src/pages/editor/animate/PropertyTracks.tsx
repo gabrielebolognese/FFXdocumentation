@@ -23,7 +23,7 @@ export default function PropertyTracks() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="track-organization" title="Track Organization">
-            <p>Each animated element in the timeline has a row with an expand button. Expanding the row reveals individual property tracks,one track per animated property.</p>
+            <p>Each animated element in the timeline has a row with an expand button. Expanding the row reveals individual property tracks — one track per animated property.</p>
             <p><strong className="text-white">Track hierarchy:</strong></p>
             <div className="bg-white/5 rounded-lg p-4 font-mono text-xs text-white/70 leading-relaxed">
               <p>Element Name</p>
@@ -45,7 +45,7 @@ export default function PropertyTracks() {
             </div>
           </Section>
 
-          <Section id="animatable-properties" title="Animatable Properties,Complete List">
+          <Section id="animatable-properties" title="Animatable Properties — Complete List">
             <p><strong className="text-white">Transform:</strong></p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Position X, Position Y</li>
@@ -97,13 +97,13 @@ export default function PropertyTracks() {
           <Section id="track-visibility-and-solo" title="Track Visibility and Solo">
             <p>Each property track has:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Eye toggle</strong>,hides the track without deleting keyframes. The property returns to its default state visually, but keyframes are preserved.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Eye toggle</strong> — hides the track without deleting keyframes. The property returns to its default state visually, but keyframes are preserved.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>
                 <span>
                   <strong className="text-white">Solo (</strong>
                   <code className="text-yellow-accent bg-white/5 px-1.5 py-0.5 rounded">S</code>
                   <strong className="text-white">)</strong>
-                  {',when any track is soloed, only that track\'s animation is active; all others are suspended. Useful for isolating a specific property\'s animation for review.'}
+                  {' — when any track is soloed, only that track\'s animation is active; all others are suspended. Useful for isolating a specific property\'s animation for review.'}
                 </span>
               </li>
             </ul>

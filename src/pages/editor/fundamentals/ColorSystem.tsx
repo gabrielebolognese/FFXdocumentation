@@ -43,13 +43,13 @@ export default function ColorSystem() {
             </p>
             <p className="mt-4">Color picker components:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">2D hue/saturation gradient</strong>,Click and drag to select color</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Value slider</strong>,Adjust brightness</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Alpha slider</strong>,Adjust opacity (0-100%)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Hex input</strong>,Enter 6-digit hex codes (#RRGGBB)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">RGB sliders</strong>,Individual red, green, blue channels (0-255)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">HSL sliders</strong>,Hue (0-360°), Saturation (0-100%), Lightness (0-100%)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Eyedropper</strong>,Sample color from canvas or screen</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">2D hue/saturation gradient</strong> — Click and drag to select color</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Value slider</strong> — Adjust brightness</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Alpha slider</strong> — Adjust opacity (0-100%)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Hex input</strong> — Enter 6-digit hex codes (#RRGGBB)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">RGB sliders</strong> — Individual red, green, blue channels (0-255)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">HSL sliders</strong> — Hue (0-360°), Saturation (0-100%), Lightness (0-100%)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Eyedropper</strong> — Sample color from canvas or screen</li>
             </ul>
           </Section>
 
@@ -90,11 +90,11 @@ export default function ColorSystem() {
               Swatches are saved colors you can reuse throughout a project. Access via Window → Swatches.
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Add swatch</strong>,Click the + button with a color selected</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Apply swatch</strong>,Click a swatch to set the active fill/stroke color</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Edit swatch</strong>,Double-click to open color picker</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete swatch</strong>,Right-click → Delete</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Rename swatch</strong>,Right-click → Rename (e.g., "Brand Blue")</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Add swatch</strong> — Click the + button with a color selected</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Apply swatch</strong> — Click a swatch to set the active fill/stroke color</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Edit swatch</strong> — Double-click to open color picker</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delete swatch</strong> — Right-click → Delete</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Rename swatch</strong> — Right-click → Rename (e.g., "Brand Blue")</li>
             </ul>
             <p className="mt-4">
               Swatches are saved per-project. To share swatches across projects, export and import swatch palettes.
@@ -117,16 +117,16 @@ export default function ColorSystem() {
           <Section id="importing-exporting-palettes" title="Importing and Exporting Palettes">
             <p>Share color palettes across projects or with team members:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Export palette</strong>,Swatches panel menu → Export → Save as .ase (Adobe Swatch Exchange) or .gpl (GIMP Palette)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Import palette</strong>,Swatches panel menu → Import → Select .ase or .gpl file</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Export palette</strong> — Swatches panel menu → Export → Save as .ase (Adobe Swatch Exchange) or .gpl (GIMP Palette)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Import palette</strong> — Swatches panel menu → Import → Select .ase or .gpl file</li>
             </ul>
             <p className="mt-4">
               Supported formats:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>.ase,Adobe Swatch Exchange (Photoshop, Illustrator compatible)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>.gpl,GIMP Palette</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>.txt,Plain text hex list (one color per line)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>.ase — Adobe Swatch Exchange (Photoshop, Illustrator compatible)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>.gpl — GIMP Palette</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>.txt — Plain text hex list (one color per line)</li>
             </ul>
           </Section>
 
@@ -145,9 +145,9 @@ export default function ColorSystem() {
               Every color in FlashFX has an alpha channel controlling transparency:
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">0% alpha</strong>,Fully transparent (invisible)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">50% alpha</strong>,Semi-transparent</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">100% alpha</strong>,Fully opaque</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">0% alpha</strong> — Fully transparent (invisible)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">50% alpha</strong> — Semi-transparent</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">100% alpha</strong> — Fully opaque</li>
             </ul>
             <p className="mt-4">
               Note: Alpha affects color blending. A semi-transparent red over blue produces a purple result.

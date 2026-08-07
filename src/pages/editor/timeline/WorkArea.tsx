@@ -25,8 +25,8 @@ export default function WorkArea() {
           <Section id="setting-the-work-area" title="Setting the Work Area">
             <p>The Work Area is a time range defined by an <strong className="text-white">In Point</strong> (start) and <strong className="text-white">Out Point</strong> (end). It serves two purposes:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">1.</span>Preview looping,Loop playback plays only within the work area</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span>Export scope,The default export range</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">1.</span>Preview looping — Loop playback plays only within the work area</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span>Export scope — The default export range</li>
             </ul>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3">
@@ -79,9 +79,9 @@ export default function WorkArea() {
           <Section id="export-range-override" title="Export Range Override">
             <p>In the export dialog, the "Export Range" selector offers:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Work Area (default)</strong>,exports only within the In-Out range</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Full Project</strong>,ignores work area; exports from frame 0 to project end</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Custom</strong>,type specific start and end values</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Work Area (default)</strong> — exports only within the In-Out range</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Full Project</strong> — ignores work area; exports from frame 0 to project end</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Custom</strong> — type specific start and end values</li>
             </ul>
           </Section>
 

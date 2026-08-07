@@ -33,7 +33,7 @@ export default function TextBoxModes() {
             <p>The width is adjustable by dragging the right edge of the bounding box in selection mode.</p>
           </Section>
           <Section title="Fixed Frame">
-            <p>Both width and height are fixed. If text overflows the defined frame, it is clipped. An overflow indicator (a small plus symbol at the bottom-right of the frame) appears when the text content is larger than the frame. Text is not automatically scaled down,content that overflows is hidden.</p>
+            <p>Both width and height are fixed. If text overflows the defined frame, it is clipped. An overflow indicator (a small plus symbol at the bottom-right of the frame) appears when the text content is larger than the frame. Text is not automatically scaled down — content that overflows is hidden.</p>
           </Section>
           <Section title="Converting Between Modes">
             <p>Right-click a text element and select "Text Box Type" to switch between modes at any time. Content is preserved across conversions.</p>

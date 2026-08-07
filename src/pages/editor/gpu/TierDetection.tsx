@@ -33,11 +33,11 @@ export default function TierDetection() {
             <Table
               headers={['Tier', 'Description', 'Typical Hardware']}
               rows={[
-                ['Tier 0', 'Minimal,software rendering only', 'No GPU, or GPU not accessible via WebGL'],
-                ['Tier 1', 'Low,basic GPU capability', 'Intel HD integrated graphics (older), mobile basic'],
-                ['Tier 2', 'Medium,capable for most FlashFX use', 'Intel Iris / AMD Radeon integrated, mid-range mobile'],
-                ['Tier 3', 'High,suitable for complex compositions', 'Dedicated GPU (GTX 1060+, RX 580+, M1 integrated)'],
-                ['Tier 4', 'Ultra,suitable for 4K complex compositions', 'High-end dedicated GPU (RTX 3070+, RX 6800+, M2 Pro+)'],
+                ['Tier 0', 'Minimal — software rendering only', 'No GPU, or GPU not accessible via WebGL'],
+                ['Tier 1', 'Low — basic GPU capability', 'Intel HD integrated graphics (older), mobile basic'],
+                ['Tier 2', 'Medium — capable for most FlashFX use', 'Intel Iris / AMD Radeon integrated, mid-range mobile'],
+                ['Tier 3', 'High — suitable for complex compositions', 'Dedicated GPU (GTX 1060+, RX 580+, M1 integrated)'],
+                ['Tier 4', 'Ultra — suitable for 4K complex compositions', 'High-end dedicated GPU (RTX 3070+, RX 6800+, M2 Pro+)'],
               ]}
             />
           </Section>

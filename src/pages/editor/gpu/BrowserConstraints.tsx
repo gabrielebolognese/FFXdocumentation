@@ -45,16 +45,16 @@ export default function BrowserConstraints() {
           <Section id="safari" title="Safari">
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>WebGL 2.0 support from Safari 15 and later</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Metal GPU backend (not OpenGL),generally excellent GPU performance on Apple hardware</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Metal GPU backend (not OpenGL) — generally excellent GPU performance on Apple hardware</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Canvas drawImage performance (used in certain compositing paths) is slower than Chrome in some versions</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Advanced video export (VideoEncoder API) available from Safari 16.4 and later; older versions fall back to a slower export method</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Known limitation:</strong> EXT_disjoint_timer_query (used by the performance profiler) is disabled in Safari for security reasons,GPU timing data may be unavailable</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Known limitation:</strong> EXT_disjoint_timer_query (used by the performance profiler) is disabled in Safari for security reasons — GPU timing data may be unavailable</li>
             </ul>
           </Section>
 
           <Section id="edge" title="Edge">
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Chromium-based,essentially identical behavior to Chrome</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Chromium-based — essentially identical behavior to Chrome</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Some enterprise security policies may restrict WebGL; check with IT if FlashFX fails to initialize the GPU context</li>
             </ul>
           </Section>

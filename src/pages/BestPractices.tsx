@@ -56,7 +56,7 @@ export default function BestPractices() {
         <div className="prose prose-invert max-w-none space-y-16">
           <Section id="01-canvas-composition" title="01, Canvas & Composition">
             <SubSection title="Working Resolution Strategy">
-              <p>Work at <strong>1080p during the creation phase</strong> and scale up to 4K only at export time. The canvas renderer processes every pixel on every frame preview,a 4K canvas during editing quadruples the rendering load compared to 1080p with no perceptible benefit while animating.</p>
+              <p>Work at <strong>1080p during the creation phase</strong> and scale up to 4K only at export time. The canvas renderer processes every pixel on every frame preview — a 4K canvas during editing quadruples the rendering load compared to 1080p with no perceptible benefit while animating.</p>
               <ul>
                 <li>Use <strong>1920×1080</strong> as your standard working canvas</li>
                 <li>Switch to <strong>3840×2160</strong> only in the final export dialog</li>

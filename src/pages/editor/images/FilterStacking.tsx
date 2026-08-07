@@ -42,7 +42,7 @@ export default function FilterStacking() {
           </Section>
 
           <Section id="filter-opacity" title="Filter Opacity">
-            <p>Each filter has its own opacity control (0% to 100%). At less than 100%, the filter effect blends with the unfiltered result beneath it. This provides a "softened" version of any filter effect,equivalent to reducing a layer's opacity in a compositing application.</p>
+            <p>Each filter has its own opacity control (0% to 100%). At less than 100%, the filter effect blends with the unfiltered result beneath it. This provides a "softened" version of any filter effect — equivalent to reducing a layer's opacity in a compositing application.</p>
             <p>Example uses:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Film grain at 40% opacity for a subtle, tasteful grain</li>

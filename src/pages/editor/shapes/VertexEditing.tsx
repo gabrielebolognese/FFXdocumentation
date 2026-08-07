@@ -15,7 +15,7 @@ export default function VertexEditing() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Vertex & Path Editing | FlashFX Documentation"
-        description="Learn how to edit vertices and paths in FlashFX,selecting, moving, adding and removing vertices, and editing bezier handles."
+        description="Learn how to edit vertices and paths in FlashFX — selecting, moving, adding and removing vertices, and editing bezier handles."
         keywords="FlashFX, vertex editing, path editing, bezier handles, anchor points"
       />
 
@@ -33,7 +33,7 @@ export default function VertexEditing() {
             <p>Double-click any vector shape (rectangle, ellipse, star, or custom path) to enter Vertex Edit mode. The selection changes from a bounding box to a point-level view showing all vertices.</p>
 
             <div className="bg-yellow-accent/10 border border-yellow-accent/20 rounded-lg p-4 mt-4">
-              <p className="text-sm text-yellow-accent/90"><strong className="text-yellow-accent">Warning:</strong> For primitives (rectangle, ellipse, star), entering Vertex Edit mode converts the parametric shape into a raw path. This is a <strong className="text-yellow-accent">destructive operation</strong>,corner radius, arc angles, and star parameters are lost and replaced by explicit anchor points. A confirmation dialog warns before the conversion.</p>
+              <p className="text-sm text-yellow-accent/90"><strong className="text-yellow-accent">Warning:</strong> For primitives (rectangle, ellipse, star), entering Vertex Edit mode converts the parametric shape into a raw path. This is a <strong className="text-yellow-accent">destructive operation</strong> — corner radius, arc angles, and star parameters are lost and replaced by explicit anchor points. A confirmation dialog warns before the conversion.</p>
             </div>
           </Section>
 
@@ -58,7 +58,7 @@ export default function VertexEditing() {
           <Section id="adding-removing" title="Adding & Removing Vertices">
             <div className="bg-white/5 border border-white/10 rounded-lg p-5">
               <h4 className="text-base font-semibold text-white mb-3">Adding Vertices</h4>
-              <p>Click anywhere on a path segment (between two existing vertices) to insert a new vertex at that point. The new vertex is a smooth point that does not alter the shape,it preserves the existing curve.</p>
+              <p>Click anywhere on a path segment (between two existing vertices) to insert a new vertex at that point. The new vertex is a smooth point that does not alter the shape — it preserves the existing curve.</p>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">

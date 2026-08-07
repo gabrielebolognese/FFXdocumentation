@@ -12,23 +12,23 @@ export default function MorphDeform() {
   return (
     <Layout tableOfContents={tableOfContents}>
       <SEO
-        title="Animating Shapes,Morph and Deform | FlashFX Documentation"
+        title="Animating Shapes — Morph and Deform | FlashFX Documentation"
         description="Reference for vertex animation, shape morphing, corner radius animation, and arc animation in FlashFX."
         keywords="FlashFX, shape morphing, vertex animation, corner radius animation, arc animation, deformation"
       />
       <div className="max-w-4xl space-y-8">
         <div>
           <span className="inline-block text-yellow-accent text-[10px] font-medium mb-2 uppercase tracking-wider">Animate Mode</span>
-          <h1 className="text-4xl font-bold text-white mb-6">Animating Shapes,Morph and Deform</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Animating Shapes — Morph and Deform</h1>
         </div>
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="vertex-animation" title="Vertex Animation">
             <p>In Vertex Edit mode, individual path vertices can be keyframed. This enables:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shape morphing</strong>,a circle's vertices can be animated to positions that form a square, a star, an irregular blob</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Organic deformation</strong>,soft, living, breathing shape effects</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Character animation</strong>,animating limb and body shapes for simple 2D character rigs</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shape morphing</strong> — a circle's vertices can be animated to positions that form a square, a star, an irregular blob</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Organic deformation</strong> — soft, living, breathing shape effects</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Character animation</strong> — animating limb and body shapes for simple 2D character rigs</li>
             </ul>
             <p><strong className="text-white">How to keyframe vertices:</strong></p>
             <ol className="space-y-1 text-sm list-none">

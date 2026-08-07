@@ -25,7 +25,7 @@ export default function PathAnimation() {
 
           <Section id="path-motion-vs-keyframed-position" title="Path Motion vs. Keyframed Position">
             <p>Standard position animation moves elements in straight lines between position keyframes. The path between keyframes is controlled by spatial bezier handles.</p>
-            <p>For more complex curved motion, an element can be assigned to <strong className="text-white">follow a path</strong>,a vector path that defines its trajectory.</p>
+            <p>For more complex curved motion, an element can be assigned to <strong className="text-white">follow a path</strong> — a vector path that defines its trajectory.</p>
           </Section>
 
           <Section id="creating-a-motion-path" title="Creating a Motion Path">
@@ -40,10 +40,10 @@ export default function PathAnimation() {
 
           <Section id="path-animation-properties" title="Path Animation Properties">
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Progress</strong>,the primary animatable value. Keyframe it from 0 to 1 (or any range) to drive the element from start to end along the path.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Offset</strong>,shifts the starting position along the path without affecting progress values.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Auto-Orient</strong>,when enabled, the element's rotation is automatically set to match the direction it is moving along the path. Turn off for elements that should maintain a fixed orientation while following a curved route.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Orient Offset</strong>,adds a fixed rotation to the auto-orient direction. Useful when the "front\" of an element is not aligned with the default orientation.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Progress</strong> — the primary animatable value. Keyframe it from 0 to 1 (or any range) to drive the element from start to end along the path.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Offset</strong> — shifts the starting position along the path without affecting progress values.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Auto-Orient</strong> — when enabled, the element's rotation is automatically set to match the direction it is moving along the path. Turn off for elements that should maintain a fixed orientation while following a curved route.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Orient Offset</strong> — adds a fixed rotation to the auto-orient direction. Useful when the "front\" of an element is not aligned with the default orientation.</li>
             </ul>
           </Section>
 

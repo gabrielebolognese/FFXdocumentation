@@ -16,7 +16,7 @@ export default function TransformOperations() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Transform Operations | FlashFX Documentation"
-        description="Learn how to use transform operations in FlashFX,position, rotation, scale, skew, and opacity."
+        description="Learn how to use transform operations in FlashFX — position, rotation, scale, skew, and opacity."
         keywords="FlashFX, transform, position, rotation, scale, skew, opacity"
       />
 
@@ -54,8 +54,8 @@ export default function TransformOperations() {
             <p>Position is the X/Y coordinate of the element's anchor point relative to the canvas origin (top-left = 0,0).</p>
 
             <ul className="space-y-2 text-sm mt-4">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">X</strong>,horizontal position (positive = right)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Y</strong>,vertical position (positive = down, following screen coordinate convention)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">X</strong> — horizontal position (positive = right)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Y</strong> — vertical position (positive = down, following screen coordinate convention)</li>
             </ul>
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
@@ -93,7 +93,7 @@ export default function TransformOperations() {
 
             <ul className="space-y-2 text-sm mt-4">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Scale X / Scale Y:</strong> Independent horizontal and vertical scale values, expressed as percentages (100% = original size).</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Non-Uniform Scale:</strong> Changing X and Y scale independently stretches or compresses the element along one axis,useful for squash-and-stretch animation effects.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Non-Uniform Scale:</strong> Changing X and Y scale independently stretches or compresses the element along one axis — useful for squash-and-stretch animation effects.</li>
             </ul>
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
@@ -110,15 +110,15 @@ export default function TransformOperations() {
             <p>Skew applies a shear transformation along the X or Y axis, creating a parallelogram-like distortion.</p>
 
             <ul className="space-y-2 text-sm mt-4">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Skew X</strong>,shears horizontally. Positive values lean the element to the right at the top.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Skew Y</strong>,shears vertically. Positive values lean the element downward on the left side.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Skew X</strong> — shears horizontally. Positive values lean the element to the right at the top.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Skew Y</strong> — shears vertically. Positive values lean the element downward on the left side.</li>
             </ul>
 
             <p className="mt-3 text-sm">Skew is expressed in degrees. Range: -85° to 85°.</p>
           </Section>
 
           <Section id="opacity" title="Opacity">
-            <p>The element-level opacity setting controls the overall transparency of the entire element,all fill layers, stroke, and shadow composited together,before the element is blended with the layers below.</p>
+            <p>The element-level opacity setting controls the overall transparency of the entire element — all fill layers, stroke, and shadow composited together — before the element is blended with the layers below.</p>
 
             <p className="mt-3">Range: 0% (completely transparent) to 100% (fully opaque).</p>
 

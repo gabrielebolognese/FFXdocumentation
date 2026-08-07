@@ -55,10 +55,10 @@ export default function EasingGraph() {
           <Section id="editing-the-curve" title="Editing the Curve">
             <p>The bezier curve has two control handles (one near the start, one near the end). Drag these handles to reshape the curve:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pulling the start handle upward</strong>,the property value changes quickly at the start (ease out)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pulling the end handle downward</strong>,the property value changes quickly near the end and slows for arrival (ease in)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Both handles pulled toward center</strong>,slow start and slow end (classic ease in-out)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">S-curve</strong>,anticipation effect: the value briefly overshoots in the reverse direction before proceeding forward</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pulling the start handle upward</strong> — the property value changes quickly at the start (ease out)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Pulling the end handle downward</strong> — the property value changes quickly near the end and slows for arrival (ease in)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Both handles pulled toward center</strong> — slow start and slow end (classic ease in-out)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">S-curve</strong> — anticipation effect: the value briefly overshoots in the reverse direction before proceeding forward</li>
             </ul>
           </Section>
 
@@ -69,8 +69,8 @@ export default function EasingGraph() {
 
           <Section id="graph-editor-display-options" title="Graph Editor Display Options">
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Show velocity curve</strong>,switches the display from value-over-time to velocity-over-time (the derivative of the value curve). Useful for understanding how fast the property is changing at any moment.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Show reference frame</strong>,overlays a small canvas preview at the current time position for spatial context.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Show velocity curve</strong> — switches the display from value-over-time to velocity-over-time (the derivative of the value curve). Useful for understanding how fast the property is changing at any moment.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Show reference frame</strong> — overlays a small canvas preview at the current time position for spatial context.</li>
             </ul>
           </Section>
 

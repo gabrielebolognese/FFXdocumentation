@@ -59,7 +59,7 @@ export default function TrackOrganization() {
           </Section>
 
           <Section id="layer-bars" title="Layer Bars">
-            <p>Each layer in the timeline shows a <strong className="text-white">layer bar</strong>,a horizontal colored rectangle spanning the layer's active duration.</p>
+            <p>Each layer in the timeline shows a <strong className="text-white">layer bar</strong> — a horizontal colored rectangle spanning the layer's active duration.</p>
             <p><strong className="text-white">Layer bar anatomy:</strong></p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Bar color corresponds to element type (shapes = blue-gray, text = orange-gray, images = purple-gray, groups = neutral)</li>

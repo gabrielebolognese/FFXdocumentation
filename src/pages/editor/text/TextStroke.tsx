@@ -26,13 +26,13 @@ export default function TextStroke() {
             </ul>
           </Section>
           <Section title="Multiple Strokes">
-            <p>Like shapes, text can have multiple stroke layers applied. A common technique is applying two strokes,a thin bright inner stroke and a thick dark outer stroke,to achieve a hand-lettered outlined effect.</p>
+            <p>Like shapes, text can have multiple stroke layers applied. A common technique is applying two strokes — a thin bright inner stroke and a thick dark outer stroke — to achieve a hand-lettered outlined effect.</p>
           </Section>
           <Section title="Stroke Alignment Options">
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Outside</strong>,stroke extends outward from the character edge (default)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Inside</strong>,stroke extends inward, overlapping the fill</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Center</strong>,stroke straddles the character edge equally</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Outside</strong> — stroke extends outward from the character edge (default)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Inside</strong> — stroke extends inward, overlapping the fill</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Center</strong> — stroke straddles the character edge equally</li>
             </ul>
           </Section>
         </div>

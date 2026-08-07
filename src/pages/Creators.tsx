@@ -39,7 +39,7 @@ export default function Creators() {
             FlashFX Creator Program
           </h1>
           <p className="text-white/60 text-sm leading-relaxed max-w-2xl">
-            The FlashFX Creator Program (FCPA) is a performance-based partnership that lets independent content creators earn money by making content about FlashFX. You create, you post, you earn. No upfront cost, no exclusivity, no employment relationship,just a straightforward deal: if your content performs, you get paid.
+            The FlashFX Creator Program (FCPA) is a performance-based partnership that lets independent content creators earn money by making content about FlashFX. You create, you post, you earn. No upfront cost, no exclusivity, no employment relationship — just a straightforward deal: if your content performs, you get paid.
           </p>
 
           <a
@@ -61,7 +61,7 @@ export default function Creators() {
               <tbody>
                 {[
                   ['Program type', 'Independent contractor, performance-based'],
-                  ['Exclusivity', 'Non-exclusive,you can work with other brands'],
+                  ['Exclusivity', 'Non-exclusive — you can work with other brands'],
                   ['Approved platforms', 'X (Twitter), Instagram Reels, YouTube'],
                   ['Referral commission rate', '30% of first subscription payment'],
                   ['Minimum posting requirement', '1 qualifying post per week'],
@@ -128,7 +128,7 @@ export default function Creators() {
         {/* View Thresholds */}
         <div className="space-y-4">
           <h2 id="view-thresholds" className="text-xl font-semibold text-white">View Thresholds</h2>
-          <p className="text-white/50 text-sm">Content must reach the minimum view count within 30 days of publication. If the threshold is not met, no views count. If it is met, every view counts,including those before the threshold.</p>
+          <p className="text-white/50 text-sm">Content must reach the minimum view count within 30 days of publication. If the threshold is not met, no views count. If it is met, every view counts — including those before the threshold.</p>
           <div className="border border-white/10 rounded-lg overflow-hidden">
             <table className="w-full text-sm">
               <thead>

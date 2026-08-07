@@ -36,16 +36,16 @@ export default function ColorFilters() {
             <p><strong className="text-white">5.2 Exposure</strong></p>
             <p>Simulates adjusting the camera exposure.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Exposure</strong>,increases or decreases overall brightness with a more photographic response curve than Brightness (uses a multiplicative model rather than additive)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Gamma Correction</strong>,adjusts midtone brightness while leaving pure blacks and whites unchanged</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Exposure</strong> — increases or decreases overall brightness with a more photographic response curve than Brightness (uses a multiplicative model rather than additive)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Gamma Correction</strong> — adjusts midtone brightness while leaving pure blacks and whites unchanged</li>
             </ul>
 
             <p><strong className="text-white">5.3 Highlights, Shadows & Midtones</strong></p>
             <p>Three-band tonal correction. Positive values brighten, negative values darken each respective range.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Highlights</strong>,adjusts only the bright areas of the image (above ~75% luminosity)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Shadows</strong>,adjusts only the dark areas of the image (below ~25% luminosity)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Midtones</strong>,adjusts the middle tonal range (approximately 25%–75% luminosity)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Highlights</strong> — adjusts only the bright areas of the image (above ~75% luminosity)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Shadows</strong> — adjusts only the dark areas of the image (below ~25% luminosity)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Midtones</strong> — adjusts the middle tonal range (approximately 25%–75% luminosity)</li>
             </ul>
 
             <p><strong className="text-white">5.4 Color Curves</strong></p>
@@ -73,13 +73,13 @@ export default function ColorFilters() {
             <p>Adjusts the CMYK component distribution within specific color ranges in the image. Allows targeting and modifying only the reds, yellows, greens, cyans, blues, magenta, whites, neutrals, or blacks independently. For each selected range, Cyan / Magenta / Yellow / Black sliders shift the distribution of CMYK components within that tonal range. This is an advanced color grading tool typically used for matching footage colors or creating stylized color treatments.</p>
 
             <p><strong className="text-white">5.10 Levels</strong></p>
-            <p>Input/Output level control,a simplified version of Curves for straightforward tonal range adjustment:</p>
+            <p>Input/Output level control — a simplified version of Curves for straightforward tonal range adjustment:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Input Black Point</strong>,sets the darkest input level that maps to black in the output</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Input White Point</strong>,sets the brightest input level that maps to white</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Input Midpoint (Gamma)</strong>,shifts the midtone bias</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Output Black Point</strong>,determines how dark the darkest output value will be</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Output White Point</strong>,determines how bright the brightest output value will be</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Input Black Point</strong> — sets the darkest input level that maps to black in the output</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Input White Point</strong> — sets the brightest input level that maps to white</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Input Midpoint (Gamma)</strong> — shifts the midtone bias</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Output Black Point</strong> — determines how dark the darkest output value will be</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Output White Point</strong> — determines how bright the brightest output value will be</li>
             </ul>
             <p>An eyedropper can be used to sample the darkest and brightest points from the image and auto-set the black and white input levels accordingly.</p>
 
@@ -95,10 +95,10 @@ export default function ColorFilters() {
             <p><strong className="text-white">5.14 Duotone</strong></p>
             <p>Maps the image to a two-color gradient:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color 1</strong>,assigned to the darkest values (shadows)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color 2</strong>,assigned to the brightest values (highlights)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color 1</strong> — assigned to the darkest values (shadows)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color 2</strong> — assigned to the brightest values (highlights)</li>
             </ul>
-            <p>Produces the classic editorial duotone appearance. The two colors are freely configurable,not limited to the traditional black + one color.</p>
+            <p>Produces the classic editorial duotone appearance. The two colors are freely configurable — not limited to the traditional black + one color.</p>
 
             <p><strong className="text-white">5.15 Color Lookup (LUT)</strong></p>
             <p>Applies a color lookup table for cinematic color grading. Built-in LUTs include Kodak Emulation, Fuji Emulation, Cinematic Cool, Teal & Orange, Matte, Faded Film, and others. An Intensity slider (0%–100%) controls how strongly the LUT is applied.</p>
@@ -108,36 +108,36 @@ export default function ColorFilters() {
             <p><strong className="text-white">6.1 Gaussian Blur</strong></p>
             <p>Applies a uniform soft defocus to the entire image.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong>,the blur strength in pixels. Higher = more blur. Practical range: 0–200px.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Quality</strong>,Low / Medium / High. Higher quality reduces banding artifacts in the blur but increases computation time.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong> — the blur strength in pixels. Higher = more blur. Practical range: 0–200px.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Quality</strong> — Low / Medium / High. Higher quality reduces banding artifacts in the blur but increases computation time.</li>
             </ul>
 
             <p><strong className="text-white">6.2 Directional (Motion) Blur</strong></p>
             <p>Applies blur in a single linear direction, simulating motion along that axis.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong>,the direction of blur (0° = horizontal)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Distance</strong>,how far the blur extends along the angle direction (in pixels)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong> — the direction of blur (0° = horizontal)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Distance</strong> — how far the blur extends along the angle direction (in pixels)</li>
             </ul>
 
             <p><strong className="text-white">6.3 Radial Blur</strong></p>
             <p>Applies blur rotating around a center point. Simulates a spinning or rotating subject.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong>,the pivot point of the rotation blur</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong>,how much the blur rotates (expressed in degrees)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong> — the pivot point of the rotation blur</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong> — how much the blur rotates (expressed in degrees)</li>
             </ul>
 
             <p><strong className="text-white">6.4 Zoom Blur</strong></p>
             <p>Applies blur radiating outward from a center point, simulating a fast zoom movement.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong>,the origin point of the zoom</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong>,how far the blur extends radially (as a percentage of image size)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong> — the origin point of the zoom</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong> — how far the blur extends radially (as a percentage of image size)</li>
             </ul>
 
             <p><strong className="text-white">6.5 Lens Blur (Tilt-Shift)</strong></p>
-            <p>Simulates shallow depth of field,sharp in one region, blurred toward the edges.</p>
+            <p>Simulates shallow depth of field — sharp in one region, blurred toward the edges.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Linear</strong>,a horizontal band is sharp; blur increases above and below (classic tilt-shift miniature effect)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radial</strong>,a circular region is sharp; blur increases toward the edges (simulating a large-aperture lens)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Linear</strong> — a horizontal band is sharp; blur increases above and below (classic tilt-shift miniature effect)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radial</strong> — a circular region is sharp; blur increases toward the edges (simulating a large-aperture lens)</li>
             </ul>
             <p>Parameters: Focus Position, Focus Width, Max Blur, Falloff (linear, quadratic, or smooth).</p>
           </Section>
@@ -146,9 +146,9 @@ export default function ColorFilters() {
             <p><strong className="text-white">7.1 Sharpen</strong></p>
             <p>Increases edge contrast to give an apparent sharpness boost.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Amount</strong>,strength of sharpening</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong>,how wide the sharpening halo is around detected edges</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Threshold</strong>,minimum edge contrast required to trigger sharpening (prevents sharpening noise)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Amount</strong> — strength of sharpening</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong> — how wide the sharpening halo is around detected edges</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Threshold</strong> — minimum edge contrast required to trigger sharpening (prevents sharpening noise)</li>
             </ul>
 
             <p><strong className="text-white">7.2 Edge Detection</strong></p>
@@ -166,10 +166,10 @@ export default function ColorFilters() {
             <p><strong className="text-white">7.6 Halftone</strong></p>
             <p>Converts the image to a simulated halftone dot pattern.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dot Size</strong>,radius of each dot</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong>,rotation of the dot grid (traditional printing uses ~45° to reduce moire)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Mode</strong>,Round Dots, Lines, Crosses, Diamonds</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Mode</strong>,Monochrome, CMYK (separate screens for each channel)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dot Size</strong> — radius of each dot</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong> — rotation of the dot grid (traditional printing uses ~45° to reduce moire)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Mode</strong> — Round Dots, Lines, Crosses, Diamonds</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Mode</strong> — Monochrome, CMYK (separate screens for each channel)</li>
             </ul>
 
             <p><strong className="text-white">7.7 Pencil Sketch</strong></p>
@@ -184,17 +184,17 @@ export default function ColorFilters() {
             <p><strong className="text-white">7.10 Glitch / Chromatic Aberration</strong></p>
             <p>Separates RGB channels and offsets them to simulate lens chromatic aberration or digital glitch artifacts.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Offset X / Y</strong>,horizontal and vertical separation of channels</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Mode</strong>,Chromatic Aberration (smooth lens distortion), RGB Shift (angular separation), Scan Lines (horizontal line displacement artifacts)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Offset X / Y</strong> — horizontal and vertical separation of channels</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Mode</strong> — Chromatic Aberration (smooth lens distortion), RGB Shift (angular separation), Scan Lines (horizontal line displacement artifacts)</li>
             </ul>
 
             <p><strong className="text-white">7.11 Noise / Film Grain</strong></p>
             <p>Adds random pixel variation to simulate film grain or digital sensor noise.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Amount</strong>,intensity of the noise</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grain Size</strong>,size of individual noise particles</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Mode</strong>,Monochrome Grain (brightness variation only), Color Grain (independent RGB channel variation)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Luminance Weighting</strong>,concentration of grain in shadows, midtones, or highlights</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Amount</strong> — intensity of the noise</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grain Size</strong> — size of individual noise particles</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color Mode</strong> — Monochrome Grain (brightness variation only), Color Grain (independent RGB channel variation)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Luminance Weighting</strong> — concentration of grain in shadows, midtones, or highlights</li>
             </ul>
           </Section>
 

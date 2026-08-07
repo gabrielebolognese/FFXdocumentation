@@ -12,14 +12,14 @@ export default function EasingPresets() {
   return (
     <Layout tableOfContents={tableOfContents}>
       <SEO
-        title="Easing Presets,Full Reference | FlashFX Documentation"
+        title="Easing Presets — Full Reference | FlashFX Documentation"
         description="Complete reference for all easing presets including standard, dramatic, physical, and stepped presets in FlashFX."
         keywords="FlashFX, easing presets, ease in, ease out, bounce, elastic, stepped, animation presets"
       />
       <div className="max-w-4xl space-y-8">
         <div>
           <span className="inline-block text-yellow-accent text-[10px] font-medium mb-2 uppercase tracking-wider">Animate Mode</span>
-          <h1 className="text-4xl font-bold text-white mb-6">Easing Presets,Full Reference</h1>
+          <h1 className="text-4xl font-bold text-white mb-6">Easing Presets — Full Reference</h1>
         </div>
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
@@ -57,7 +57,7 @@ export default function EasingPresets() {
                 ['Bounce Strong', 'More pronounced bounce with additional oscillation'],
                 ['Elastic', 'Overshoots and oscillates like a spring before settling'],
                 ['Elastic In', 'Elastic movement into the end value'],
-                ['Anticipate', 'Briefly moves backward (opposite direction) before moving forward,common in cartoon animation'],
+                ['Anticipate', 'Briefly moves backward (opposite direction) before moving forward — common in cartoon animation'],
                 ['Anticipate + Overshoot', 'Both anticipation at start and overshoot at end'],
                 ['Back In', 'Pulls back slightly before launching forward'],
                 ['Back Out', 'Overshoots and pulls back to settle'],

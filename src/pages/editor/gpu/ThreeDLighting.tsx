@@ -25,11 +25,11 @@ export default function ThreeDLighting() {
 
           <Section id="ambient-light" title="Ambient Light">
             <p>FlashFX provides a simple ambient light system that shades 3D-enabled elements based on their surface normal direction relative to a virtual light source.</p>
-            <p><strong className="text-white">This is a flat-face shading model:</strong> Each element is treated as a single flat plane. The shading is uniform across the element based on the angle of the plane relative to the light,there is no sub-surface variation, no self-shadowing, and no cast shadows.</p>
+            <p><strong className="text-white">This is a flat-face shading model:</strong> Each element is treated as a single flat plane. The shading is uniform across the element based on the angle of the plane relative to the light — there is no sub-surface variation, no self-shadowing, and no cast shadows.</p>
             <p><strong className="text-white">Ambient Light Settings:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Intensity</strong>,overall brightness of the ambient fill (prevents elements facing away from the light from going completely black)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color</strong>,tint of the ambient light</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Intensity</strong> — overall brightness of the ambient fill (prevents elements facing away from the light from going completely black)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color</strong> — tint of the ambient light</li>
             </ul>
           </Section>
 
@@ -37,9 +37,9 @@ export default function ThreeDLighting() {
             <p>A single directional light source is available per composition.</p>
             <p><strong className="text-white">Properties:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Light Direction X / Y / Z</strong>,the direction vector the light is pointing from</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Intensity</strong>,brightness of the directional light</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color</strong>,tint of the directional light</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Light Direction X / Y / Z</strong> — the direction vector the light is pointing from</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Intensity</strong> — brightness of the directional light</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color</strong> — tint of the directional light</li>
             </ul>
             <p><strong className="text-white">Shading calculation:</strong> The shading amount is the dot product of the element's surface normal and the light direction. Elements facing the light directly are at full brightness; elements at a glancing angle are shaded; elements facing away from the light show only ambient.</p>
           </Section>
@@ -47,9 +47,9 @@ export default function ThreeDLighting() {
           <Section id="specular-highlight" title="Specular Highlight">
             <p>A specular highlight term adds a glossy bright spot on 3D-rotated elements that face both the light and the virtual camera.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Specular Power</strong>,controls the tightness of the highlight (higher = smaller, sharper highlight)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Specular Intensity</strong>,brightness of the highlight</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Specular Color</strong>,color of the highlight (usually white or slightly warm)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Specular Power</strong> — controls the tightness of the highlight (higher = smaller, sharper highlight)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Specular Intensity</strong> — brightness of the highlight</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Specular Color</strong> — color of the highlight (usually white or slightly warm)</li>
             </ul>
           </Section>
 
@@ -57,7 +57,7 @@ export default function ThreeDLighting() {
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>No cast shadows between elements</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>No ambient occlusion</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>No area lights,only a single directional light and ambient</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>No area lights — only a single directional light and ambient</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>No subsurface scattering</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>No image-based lighting</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Lighting applies only to elements with 3D enabled,2D elements are unaffected by the scene light</li>

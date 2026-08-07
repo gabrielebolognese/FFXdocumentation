@@ -79,11 +79,11 @@ export default function ZoomNavigation() {
           <Section id="zoom-levels" title="Zoom Levels">
             <p>Available zoom range: 1% to 6400%</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">1-10%</strong>,Extreme wide view, useful for large compositions</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">25-50%</strong>,Comfortable overview for general work</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">100%</strong>,Actual pixels, true output preview</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">200-400%</strong>,Detail work, path editing</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">800%+</strong>,Pixel-level precision</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">1-10%</strong> — Extreme wide view, useful for large compositions</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">25-50%</strong> — Comfortable overview for general work</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">100%</strong> — Actual pixels, true output preview</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">200-400%</strong> — Detail work, path editing</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">800%+</strong> — Pixel-level precision</li>
             </ul>
           </Section>
 
@@ -107,10 +107,10 @@ export default function ZoomNavigation() {
               The Navigator panel shows a thumbnail of the entire canvas with a viewport rectangle indicating the current view. Access via Window → Navigator.
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Red rectangle</strong>,Shows the visible area at current zoom</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Drag rectangle</strong>,Instantly pan to a different area</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Click thumbnail</strong>,Center view on that location</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Thumbnail zoom</strong>,Adjust navigator thumbnail size with slider</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Red rectangle</strong> — Shows the visible area at current zoom</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Drag rectangle</strong> — Instantly pan to a different area</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Click thumbnail</strong> — Center view on that location</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Thumbnail zoom</strong> — Adjust navigator thumbnail size with slider</li>
             </ul>
           </Section>
 

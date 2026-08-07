@@ -36,7 +36,7 @@ export default function AnimatingImagesPage() {
                 ['Opacity', 'Fade in/out'],
                 ['Crop Frame', 'Animate the crop position or size (reveal/conceal without moving the image)'],
                 ['Blend Mode', 'Switches are discrete (jump cuts); not smoothly interpolated'],
-                ['Filter Parameters', 'Any filter value,blur radius, color grade, distortion strength'],
+                ['Filter Parameters', 'Any filter value — blur radius, color grade, distortion strength'],
                 ['Warp Control Points', 'Individual mesh points of the Warp filter'],
               ]}
             />
@@ -45,9 +45,9 @@ export default function AnimatingImagesPage() {
           <Section id="position-and-scale-animation" title="Position and Scale Animation">
             <p>Common image animation techniques:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Ken Burns Effect</strong>,slow pan and zoom, achieved by animating position and scale simultaneously with slow ease in/out over many seconds</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Impact Zoom</strong>,sudden scale increase on a beat, using a short strong Ease Out keyframe followed by a slight scale-back</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Parallax</strong>,layered images with different scale/position animation speeds create a depth illusion as the composition moves</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Ken Burns Effect</strong> — slow pan and zoom, achieved by animating position and scale simultaneously with slow ease in/out over many seconds</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Impact Zoom</strong> — sudden scale increase on a beat, using a short strong Ease Out keyframe followed by a slight scale-back</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Parallax</strong> — layered images with different scale/position animation speeds create a depth illusion as the composition moves</li>
             </ul>
           </Section>
 
@@ -58,7 +58,7 @@ export default function AnimatingImagesPage() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">2.</span>Create a keyframe with Opacity = 100% at the desired reveal frame</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">3.</span>Set easing to Ease In-Out for a natural feel</li>
             </ol>
-            <p><strong className="text-white">Blend mode transitions</strong> are not smoothly interpolated,the mode switches instantaneously at the keyframe. To simulate a blend mode fade, animate the image opacity from 0 to 100% while the blend mode is already set to the target mode.</p>
+            <p><strong className="text-white">Blend mode transitions</strong> are not smoothly interpolated — the mode switches instantaneously at the keyframe. To simulate a blend mode fade, animate the image opacity from 0 to 100% while the blend mode is already set to the target mode.</p>
           </Section>
 
         </div>

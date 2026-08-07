@@ -37,11 +37,11 @@ export default function CanvasProjectSetup() {
           <Section id="creating-a-new-project" title="Creating a New Project">
             <p>When you create a new project, you're prompted to configure:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Project name</strong>,A descriptive title for organization</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Canvas dimensions</strong>,Width and height in pixels</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Frame rate</strong>,Frames per second (FPS) for animation timing</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background color</strong>,Canvas fill color or transparent</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Duration</strong>,Default timeline length in seconds</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Project name</strong> — A descriptive title for organization</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Canvas dimensions</strong> — Width and height in pixels</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Frame rate</strong> — Frames per second (FPS) for animation timing</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background color</strong> — Canvas fill color or transparent</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Duration</strong> — Default timeline length in seconds</li>
             </ul>
           </Section>
 
@@ -63,11 +63,11 @@ export default function CanvasProjectSetup() {
           <Section id="canvas-properties" title="Canvas Properties">
             <p>Access canvas properties by clicking anywhere on the empty canvas background. The properties panel shows:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Width</strong>,Canvas width in pixels (minimum 1, maximum 8192)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Height</strong>,Canvas height in pixels (minimum 1, maximum 8192)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Aspect Ratio Lock</strong>,Maintains proportions when resizing</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background Color</strong>,Hex color or transparent</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background Opacity</strong>,0-100% (only for color backgrounds)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Width</strong> — Canvas width in pixels (minimum 1, maximum 8192)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Height</strong> — Canvas height in pixels (minimum 1, maximum 8192)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Aspect Ratio Lock</strong> — Maintains proportions when resizing</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background Color</strong> — Hex color or transparent</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Background Opacity</strong> — 0-100% (only for color backgrounds)</li>
             </ul>
           </Section>
 
@@ -93,9 +93,9 @@ export default function CanvasProjectSetup() {
               Default timeline duration sets the initial length of the project. You can extend or shorten this at any time during production.
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Minimum</strong>,1 frame</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Maximum</strong>,300 seconds (5 minutes)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Typical</strong>,5-10 seconds for social media, 30-60 seconds for explainers</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Minimum</strong> — 1 frame</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Maximum</strong> — 300 seconds (5 minutes)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Typical</strong> — 5-10 seconds for social media, 30-60 seconds for explainers</li>
             </ul>
             <p className="mt-4">
               Longer timelines consume more memory and may reduce editor performance on lower-end devices.
@@ -132,10 +132,10 @@ export default function CanvasProjectSetup() {
           <Section id="project-metadata" title="Project Metadata">
             <p>Additional project settings accessible from File → Project Settings:</p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Project Name</strong>,Displayed in the project dashboard</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Description</strong>,Optional notes for organization</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Tags</strong>,Searchable keywords for filtering</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Visibility</strong>,Private or public (for sharing)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Project Name</strong> — Displayed in the project dashboard</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Description</strong> — Optional notes for organization</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Tags</strong> — Searchable keywords for filtering</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Visibility</strong> — Private or public (for sharing)</li>
             </ul>
           </Section>
         </div>

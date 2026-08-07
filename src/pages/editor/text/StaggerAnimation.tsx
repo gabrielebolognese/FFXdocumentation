@@ -19,9 +19,9 @@ export default function StaggerAnimation() {
             <p>Rather than manually keyframing each character, word, or line individually, the stagger system applies a time offset to each successive unit, creating a sequential animation cascade automatically.</p>
             <p><strong className="text-white">Stagger Settings:</strong></p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Delay per Unit</strong>,time in milliseconds between the start of each successive unit's animation. Default: 50ms.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Stagger Direction</strong>,Forward (first character first), Backward (last character first), From Center (outward from center), From Edges (inward toward center), Random (each unit starts at a random delay within a configurable range)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Easing Override</strong>,an easing curve applied to the stagger timing envelope itself, separate from the easing applied to each unit's individual animation</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Delay per Unit</strong> — time in milliseconds between the start of each successive unit's animation. Default: 50ms.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Stagger Direction</strong> — Forward (first character first), Backward (last character first), From Center (outward from center), From Edges (inward toward center), Random (each unit starts at a random delay within a configurable range)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Easing Override</strong> — an easing curve applied to the stagger timing envelope itself, separate from the easing applied to each unit's individual animation</li>
             </ul>
           </Section>
           <Section title="Per-Unit Properties">

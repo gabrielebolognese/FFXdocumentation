@@ -27,7 +27,7 @@ export default function ShapePrimitives() {
 
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
           <p className="text-base leading-relaxed">
-            FlashFX provides a complete set of vector primitive tools. Every shape drawn with these tools is fully editable,vertices, curves, and all properties remain accessible after creation.
+            FlashFX provides a complete set of vector primitive tools. Every shape drawn with these tools is fully editable — vertices, curves, and all properties remain accessible after creation.
           </p>
 
           <Section id="rectangle-tool" title="Rectangle Tool (R)">
@@ -46,10 +46,10 @@ export default function ShapePrimitives() {
               <h4 className="text-base font-semibold text-white mb-3">Corner Radius</h4>
               <p className="mb-3">Each corner of a rectangle can have an independent radius applied, creating rounded corners. Values are set in pixels.</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Uniform radius</strong>,a single value applies equally to all four corners</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Independent corners</strong>,click the chain-link icon to unlink corners and set each individually: top-left, top-right, bottom-right, bottom-left</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Uniform radius</strong> — a single value applies equally to all four corners</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Independent corners</strong> — click the chain-link icon to unlink corners and set each individually: top-left, top-right, bottom-right, bottom-left</li>
                 <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Radius range: 0px (sharp corner) to half the shortest side (maximum circle, produces a "stadium" or "pill" shape)</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Corner radius is animatable,it can be keyframed to change over time (e.g., morphing from sharp to rounded)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Corner radius is animatable — it can be keyframed to change over time (e.g., morphing from sharp to rounded)</li>
               </ul>
             </div>
 
@@ -60,7 +60,7 @@ export default function ShapePrimitives() {
                 headers={['Style', 'Description']}
                 rows={[
                   ['Round', 'Standard circular arc (default)'],
-                  ['Smooth', 'iOS-style continuous curvature,a "squircle" curve that flows more naturally from the straight edge into the curve'],
+                  ['Smooth', 'iOS-style continuous curvature — a "squircle" curve that flows more naturally from the straight edge into the curve'],
                   ['Bevel', 'A straight angled cut rather than a curve'],
                 ]}
               />
@@ -68,7 +68,7 @@ export default function ShapePrimitives() {
 
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Dimensions</h4>
-              <p>Width and height are editable numerically in the Properties Panel at any time. Changing dimensions by typing values does not require the Rectangle tool to be active,use the Selection tool and edit in the Properties Panel.</p>
+              <p>Width and height are editable numerically in the Properties Panel at any time. Changing dimensions by typing values does not require the Rectangle tool to be active — use the Selection tool and edit in the Properties Panel.</p>
             </div>
           </Section>
 
@@ -86,13 +86,13 @@ export default function ShapePrimitives() {
               <h4 className="text-base font-semibold text-white mb-3">Arc and Sweep Properties</h4>
               <p className="mb-3">A circle/ellipse can be configured as a partial arc rather than a complete ring:</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start Angle</strong>,the angle at which the arc begins (0° = 3 o'clock, clockwise)</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">End Angle</strong>,the angle at which the arc ends</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start Angle</strong> — the angle at which the arc begins (0° = 3 o'clock, clockwise)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">End Angle</strong> — the angle at which the arc ends</li>
                 <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Arc Mode:</strong>
                   <ul className="ml-6 mt-2 space-y-1.5">
-                    <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Open</strong>,an open arc (like a Pac-Man mouth shape at certain angles)</li>
-                    <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Chord</strong>,the two ends of the arc are connected by a straight line</li>
-                    <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Pie</strong>,the two ends connect back to the center, like a pie slice</li>
+                    <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Open</strong> — an open arc (like a Pac-Man mouth shape at certain angles)</li>
+                    <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Chord</strong> — the two ends of the arc are connected by a straight line</li>
+                    <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Pie</strong> — the two ends connect back to the center, like a pie slice</li>
                   </ul>
                 </li>
               </ul>
@@ -111,7 +111,7 @@ export default function ShapePrimitives() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Polygon Mode:</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Sides</strong>,the number of sides (3 = triangle, 4 = square, 6 = hexagon, etc.)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Sides</strong> — the number of sides (3 = triangle, 4 = square, 6 = hexagon, etc.)</li>
                 <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Minimum: 3 sides. No enforced maximum.</li>
                 <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>The polygon is always regular (all sides equal, all angles equal)</li>
               </ul>
@@ -120,9 +120,9 @@ export default function ShapePrimitives() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Star Mode:</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Points</strong>,the number of star points (minimum: 3)</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Outer Radius</strong>,the distance from the center to the outer points</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Inner Radius</strong>,the distance from the center to the inner indentations between points. This controls the "sharpness\" of the star:
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Points</strong> — the number of star points (minimum: 3)</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Outer Radius</strong> — the distance from the center to the outer points</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Inner Radius</strong> — the distance from the center to the inner indentations between points. This controls the "sharpness\" of the star:
                   <ul className="ml-6 mt-2 space-y-1.5">
                     <li className="flex gap-2"><span className="text-yellow-accent">–</span>Inner radius close to outer radius = shallow, fat star</li>
                     <li className="flex gap-2"><span className="text-yellow-accent">–</span>Inner radius very small relative to outer radius = sharp, spike-like star</li>
@@ -143,13 +143,13 @@ export default function ShapePrimitives() {
 
             <h3 className="text-lg font-semibold text-white mt-6 mb-3">Properties:</h3>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start and End points</strong>,absolute X/Y coordinates</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Stroke Weight</strong>,the visual width of the line in pixels (lines have no fill by default)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start and End points</strong> — absolute X/Y coordinates</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Stroke Weight</strong> — the visual width of the line in pixels (lines have no fill by default)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Cap Style:</strong>
                 <ul className="ml-6 mt-2 space-y-1.5">
-                  <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Butt</strong>,the line ends exactly at the endpoint coordinate, with no extension</li>
-                  <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Round</strong>,the line ends with a semicircular cap extending beyond the endpoint</li>
-                  <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Square</strong>,the line ends with a flat square cap extending beyond the endpoint by half the stroke width</li>
+                  <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Butt</strong> — the line ends exactly at the endpoint coordinate, with no extension</li>
+                  <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Round</strong> — the line ends with a semicircular cap extending beyond the endpoint</li>
+                  <li className="flex gap-2"><span className="text-yellow-accent">–</span><strong className="text-white">Square</strong> — the line ends with a flat square cap extending beyond the endpoint by half the stroke width</li>
                 </ul>
               </li>
             </ul>
@@ -159,8 +159,8 @@ export default function ShapePrimitives() {
             <div className="bg-white/5 border border-white/10 rounded-lg p-5 mt-4">
               <h4 className="text-base font-semibold text-white mb-3">Arrow Heads:</h4>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start Cap</strong>,adds an arrowhead or decorative cap to the start point</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">End Cap</strong>,adds an arrowhead or decorative cap to the end point</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Start Cap</strong> — adds an arrowhead or decorative cap to the start point</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">End Cap</strong> — adds an arrowhead or decorative cap to the end point</li>
                 <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Cap styles: Arrow, Filled Arrow, Circle, Square, Diamond</li>
               </ul>
             </div>
@@ -169,9 +169,9 @@ export default function ShapePrimitives() {
               <h4 className="text-base font-semibold text-white mb-3">Dashed Lines:</h4>
               <p className="mb-3">Lines can be converted to dashed strokes:</p>
               <ul className="space-y-2 text-sm">
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Length</strong>,the length of each dash segment in pixels</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Gap Length</strong>,the space between dashes in pixels</li>
-                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Offset</strong>,shifts the dash pattern along the stroke, useful for animated "marching ants\" effects when keyframed</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Length</strong> — the length of each dash segment in pixels</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Gap Length</strong> — the space between dashes in pixels</li>
+                <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Dash Offset</strong> — shifts the dash pattern along the stroke, useful for animated "marching ants\" effects when keyframed</li>
               </ul>
             </div>
           </Section>

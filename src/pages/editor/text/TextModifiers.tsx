@@ -21,7 +21,7 @@ export default function TextModifiers() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section title="10. Text Transform Properties">
-            <p>Text elements participate fully in the transform system (position, rotation, scale, skew, opacity, anchor point,all as described in Document 02, Section 3).</p>
+            <p>Text elements participate fully in the transform system (position, rotation, scale, skew, opacity, anchor point — all as described in Document 02, Section 3).</p>
             <p>Additionally, text has several transform properties that are exclusive to it:</p>
 
             <p><strong className="text-white">10.1 Character Rotation</strong></p>
@@ -36,9 +36,9 @@ export default function TextModifiers() {
             <p><strong className="text-white">10.4 Text Path Alignment</strong></p>
             <p>When text is placed on a path (see Section 13), the following alignment properties become available:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Path Offset</strong>,how far along the path the text starts (0 = path start)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Character Spacing on Path</strong>,adjusts letter spacing specifically for curved path placement</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Flip on Path</strong>,mirrors the text to the opposite side of the path</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Path Offset</strong> — how far along the path the text starts (0 = path start)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Character Spacing on Path</strong> — adjusts letter spacing specifically for curved path placement</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Flip on Path</strong> — mirrors the text to the opposite side of the path</li>
             </ul>
           </Section>
 
@@ -52,10 +52,10 @@ export default function TextModifiers() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Position, rotation, scale, opacity, and all fill properties can be keyframed</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Any animation applied affects the entire text block simultaneously</li>
             </ul>
-            <p><strong className="text-white">Use for:</strong> Most basic text animations,fades, slides, scale entries and exits.</p>
+            <p><strong className="text-white">Use for:</strong> Most basic text animations — fades, slides, scale entries and exits.</p>
 
             <p><strong className="text-white">11.2 Line Mode</strong></p>
-            <p>The text is divided into individual lines (determined by line breaks,both hard returns and soft wraps). Each line is an independently animatable unit.</p>
+            <p>The text is divided into individual lines (determined by line breaks — both hard returns and soft wraps). Each line is an independently animatable unit.</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>The timeline shows a track for each line</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Properties animatable per line: position, rotation, scale, opacity, fill color, blur</li>
@@ -95,8 +95,8 @@ export default function TextModifiers() {
             <p>Rather than manually keyframing each character, word, or line individually, the stagger system applies a time offset to each successive unit, creating a sequential animation cascade automatically.</p>
             <p><strong className="text-white">Stagger Settings:</strong></p>
             <ul className="space-y-2 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delay per Unit</strong>,time in milliseconds between the start of each successive unit's animation. Default: 50ms.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Stagger Direction</strong>,Forward (first character first), Backward (last character first), From Center (outward from center), From Edges (inward toward center), Random (each unit starts at a random delay within a configurable range)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Delay per Unit</strong> — time in milliseconds between the start of each successive unit's animation. Default: 50ms.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Stagger Direction</strong> — Forward (first character first), Backward (last character first), From Center (outward from center), From Edges (inward toward center), Random (each unit starts at a random delay within a configurable range)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Easing Override:</strong> An easing curve applied to the stagger timing envelope itself (controls the acceleration of the stagger sequence), separate from the easing applied to each unit's individual animation</li>
             </ul>
 

@@ -24,7 +24,7 @@ export default function TimeRemapping() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="what-is-time-remapping" title="What is Time Remapping">
-            <p>Time remapping allows the playback speed of an entire sequence,or of a nested sequence,to be dynamically changed over time via keyframes. It decouples the "real" time from the sequence's internal time.</p>
+            <p>Time remapping allows the playback speed of an entire sequence — or of a nested sequence — to be dynamically changed over time via keyframes. It decouples the "real" time from the sequence's internal time.</p>
             <p>A time remap keyframe says: "At real time T, show the sequence at internal time V."</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Two keyframes at (0 to 0) and (60f to 30f) play the sequence at half speed for the first 60 frames</li>
@@ -55,7 +55,7 @@ export default function TimeRemapping() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shallower slope</strong> = slower playback (slow motion)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Slope = 45 degrees</strong> = normal speed</li>
             </ul>
-            <p>Use the Graph Editor on the Time Remap property to apply easing to the speed change itself,eased transitions between normal speed and slow motion feel much more natural than linear speed changes.</p>
+            <p>Use the Graph Editor on the Time Remap property to apply easing to the speed change itself — eased transitions between normal speed and slow motion feel much more natural than linear speed changes.</p>
           </Section>
 
         </div>

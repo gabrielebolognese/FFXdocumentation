@@ -15,7 +15,7 @@ export default function BlendModes() {
     <Layout tableOfContents={tableOfContents}>
       <SEO
         title="Blend Modes | FlashFX Documentation"
-        description="Complete reference for all blend modes in FlashFX,normal, darken, lighten, contrast, inversion, and component groups."
+        description="Complete reference for all blend modes in FlashFX — normal, darken, lighten, contrast, inversion, and component groups."
         keywords="FlashFX, blend modes, multiply, screen, overlay, compositing"
       />
 

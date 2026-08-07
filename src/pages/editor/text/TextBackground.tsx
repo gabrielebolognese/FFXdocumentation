@@ -23,16 +23,16 @@ export default function TextBackground() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Background corner radius can be set to round the per-character backgrounds</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>Background color, opacity, and blend mode are configurable</li>
             </ul>
-            <p>This feature enables highlight text effects,colored boxes behind individual words or characters,which are common in social media caption animations and subtitle styling.</p>
+            <p>This feature enables highlight text effects — colored boxes behind individual words or characters — which are common in social media caption animations and subtitle styling.</p>
           </Section>
           <Section title="Full Text Block Background">
             <p>An alternative mode applies a single background rectangle behind the entire text block (the combined bounding box of all text). Configured via the Text Background toggle in the Properties Panel.</p>
           </Section>
           <Section title="Background Padding and Rounding">
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Horizontal Padding</strong>,expands the background left and right beyond character bounds</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Vertical Padding</strong>,expands the background above and below character bounds</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Corner Radius</strong>,rounds the corners of the background rectangle</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Horizontal Padding</strong> — expands the background left and right beyond character bounds</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Vertical Padding</strong> — expands the background above and below character bounds</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Corner Radius</strong> — rounds the corners of the background rectangle</li>
             </ul>
           </Section>
         </div>

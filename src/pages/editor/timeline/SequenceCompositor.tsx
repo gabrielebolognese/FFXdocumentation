@@ -28,20 +28,20 @@ export default function SequenceCompositor() {
 
           <Section id="overview" title="Overview">
             <p>The Sequence Compositor is accessed via the "Compositor" tab at the top of the timeline panel. It provides a linear, track-based view of all sequences in the project, arranged along a shared time axis. Each sequence is represented as a block in the compositor that can be repositioned, trimmed, and re-ordered.</p>
-            <p>This is conceptually similar to a video editor's timeline,sequences are "clips" that are assembled into a final output.</p>
+            <p>This is conceptually similar to a video editor's timeline — sequences are "clips" that are assembled into a final output.</p>
           </Section>
 
           <Section id="sequences-vs-clips" title="Sequences vs. Clips">
-            <p>A <strong className="text-white">Sequence</strong> is a complete FlashFX project context,its own canvas contents, layer stack, keyframe animation, and duration.</p>
-            <p>A <strong className="text-white">Compositor Clip</strong> is an instance of a sequence placed in the compositor timeline. The same sequence can be placed multiple times as different clips,useful for creating a sequence once and using it in multiple positions in the final output (e.g., a recurring intro sting used between sections).</p>
+            <p>A <strong className="text-white">Sequence</strong> is a complete FlashFX project context — its own canvas contents, layer stack, keyframe animation, and duration.</p>
+            <p>A <strong className="text-white">Compositor Clip</strong> is an instance of a sequence placed in the compositor timeline. The same sequence can be placed multiple times as different clips — useful for creating a sequence once and using it in multiple positions in the final output (e.g., a recurring intro sting used between sections).</p>
           </Section>
 
           <Section id="compositor-timeline-layout" title="Compositor Timeline Layout">
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Sequence tracks</strong>,horizontal rows, each potentially holding one or more sequence clips</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Clip blocks</strong>,colored rectangles representing sequence instances</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Global timeline ruler</strong>,the time axis for the overall output, independent of any individual sequence's internal timeline</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Global playhead</strong>,controls the composite output preview</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Sequence tracks</strong> — horizontal rows, each potentially holding one or more sequence clips</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Clip blocks</strong> — colored rectangles representing sequence instances</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Global timeline ruler</strong> — the time axis for the overall output, independent of any individual sequence's internal timeline</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Global playhead</strong> — controls the composite output preview</li>
             </ul>
           </Section>
 
@@ -53,7 +53,7 @@ export default function SequenceCompositor() {
           <Section id="clip-operations" title="Clip Operations">
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Move:</strong> Drag the clip block to a different time position or a different track.</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Trim In/Out:</strong> Drag the clip edges to trim. Trimming does not change the sequence's internal animation,it controls which portion of the sequence is shown in the output.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Trim In/Out:</strong> Drag the clip edges to trim. Trimming does not change the sequence's internal animation — it controls which portion of the sequence is shown in the output.</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Time Remap on Clip:</strong> Each compositor clip can have time remapping applied independently. Right-click the clip -&gt; "Enable Time Remap."</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Clip Speed:</strong> Right-click any clip -&gt; "Set Speed\" to enter a playback speed multiplier (0.5 = half speed, 2.0 = double speed).</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Duplicate Clip:</strong> Right-click -&gt; "Duplicate.\" Creates a new independent clip instance of the same sequence.</li>

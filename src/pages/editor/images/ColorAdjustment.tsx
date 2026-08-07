@@ -55,17 +55,17 @@ export default function ColorAdjustment() {
           <Section id="exposure" title="Exposure">
             <p>Simulates adjusting the camera exposure.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Exposure</strong>,increases or decreases overall brightness with a more photographic response curve than Brightness (uses a multiplicative model rather than additive)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Gamma Correction</strong>,adjusts midtone brightness while leaving pure blacks and whites unchanged</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Exposure</strong> — increases or decreases overall brightness with a more photographic response curve than Brightness (uses a multiplicative model rather than additive)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Gamma Correction</strong> — adjusts midtone brightness while leaving pure blacks and whites unchanged</li>
             </ul>
           </Section>
 
           <Section id="highlights-shadows-and-midtones" title="Highlights, Shadows, and Midtones">
             <p>Three-band tonal correction:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Highlights</strong>,adjusts only the bright areas of the image (above approximately 75% luminosity)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shadows</strong>,adjusts only the dark areas of the image (below approximately 25% luminosity)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Midtones</strong>,adjusts the middle tonal range (approximately 25% to 75% luminosity)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Highlights</strong> — adjusts only the bright areas of the image (above approximately 75% luminosity)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Shadows</strong> — adjusts only the dark areas of the image (below approximately 25% luminosity)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Midtones</strong> — adjusts the middle tonal range (approximately 25% to 75% luminosity)</li>
             </ul>
             <p>Positive values brighten, negative values darken each respective range.</p>
           </Section>
@@ -74,8 +74,8 @@ export default function ColorAdjustment() {
             <p>Full tonal and color correction via adjustable bezier curves, comparable to Curves in Photoshop or DaVinci Resolve.</p>
             <p><strong className="text-white">Channels:</strong></p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Composite (RGB)</strong>,adjusts all three color channels simultaneously</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Red, Green, Blue</strong>,adjusts only the selected channel independently</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Composite (RGB)</strong> — adjusts all three color channels simultaneously</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Red, Green, Blue</strong> — adjusts only the selected channel independently</li>
             </ul>
             <p>The curve is a graph with input values on the X axis (0 = black, 1 = white) and output values on the Y axis. A point on the curve can be clicked and dragged to reshape the tonal response.</p>
             <ul className="space-y-1 text-sm">
@@ -124,13 +124,13 @@ export default function ColorAdjustment() {
           </Section>
 
           <Section id="levels" title="Levels">
-            <p>Input/Output level control,a simplified version of Curves for straightforward tonal range adjustment:</p>
+            <p>Input/Output level control — a simplified version of Curves for straightforward tonal range adjustment:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Input Black Point</strong>,sets the darkest input level that maps to black in the output</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Input White Point</strong>,sets the brightest input level that maps to white</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Input Midpoint (Gamma)</strong>,shifts the midtone bias</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Output Black Point</strong>,determines how dark the darkest output value will be</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Output White Point</strong>,determines how bright the brightest output value will be</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Input Black Point</strong> — sets the darkest input level that maps to black in the output</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Input White Point</strong> — sets the brightest input level that maps to white</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Input Midpoint (Gamma)</strong> — shifts the midtone bias</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Output Black Point</strong> — determines how dark the darkest output value will be</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Output White Point</strong> — determines how bright the brightest output value will be</li>
             </ul>
             <p>An eyedropper can be used to sample the darkest and brightest points from the image and auto-set the black and white input levels accordingly.</p>
           </Section>
@@ -143,9 +143,9 @@ export default function ColorAdjustment() {
           <Section id="grayscale-conversion" title="Grayscale Conversion">
             <p>Converts the image to grayscale with control over how each color channel contributes to the output luminosity:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Red contribution</strong>,how much red channel detail maps to the grayscale output</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Green contribution</strong>,same for green</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Blue contribution</strong>,same for blue</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Red contribution</strong> — how much red channel detail maps to the grayscale output</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Green contribution</strong> — same for green</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Blue contribution</strong> — same for blue</li>
             </ul>
             <p>Standard luminosity-weighted conversion: R 21%, G 72%, B 7%. Custom values allow creative grayscale treatments that emphasize different tonal ranges.</p>
           </Section>
@@ -157,11 +157,11 @@ export default function ColorAdjustment() {
           <Section id="duotone" title="Duotone">
             <p>Maps the image to a two-color gradient:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color 1</strong>,assigned to the darkest values (shadows)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color 2</strong>,assigned to the brightest values (highlights)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color 1</strong> — assigned to the darkest values (shadows)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Color 2</strong> — assigned to the brightest values (highlights)</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>All tones are mapped to the gradient between these two colors</li>
             </ul>
-            <p>Produces the classic editorial duotone appearance. The two colors are freely configurable,not limited to the traditional black plus one color.</p>
+            <p>Produces the classic editorial duotone appearance. The two colors are freely configurable — not limited to the traditional black plus one color.</p>
           </Section>
 
           <Section id="color-lookup-lut" title="Color Lookup (LUT)">

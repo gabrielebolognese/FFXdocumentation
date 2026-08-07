@@ -33,25 +33,25 @@ export default function DistortionFilters() {
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>A grid of control points appears over the image</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Drag any control point to pull the image in that direction</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>The warp is smooth and continuous between control points</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grid Density</strong>,number of rows and columns in the warp mesh (more points = finer control)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Grid Density</strong> — number of rows and columns in the warp mesh (more points = finer control)</li>
             </ul>
             <p>All warp control point positions are animatable, enabling fluid morphing and organic wave distortions.</p>
 
             <p><strong className="text-white">8.2 Ripple</strong></p>
             <p>Applies a sinusoidal wave distortion.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Amplitude</strong>,height of the wave (how much pixels are displaced)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Frequency</strong>,how many waves appear across the image</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Direction</strong>,Horizontal, Vertical, or Radial</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Phase</strong>,shifts the wave position. Animating phase creates a water ripple animation.</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Amplitude</strong> — height of the wave (how much pixels are displaced)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Frequency</strong> — how many waves appear across the image</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Direction</strong> — Horizontal, Vertical, or Radial</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Phase</strong> — shifts the wave position. Animating phase creates a water ripple animation.</li>
             </ul>
 
             <p><strong className="text-white">8.3 Twirl</strong></p>
             <p>Rotates the image around a center point, with stronger rotation near the center and weaker rotation at the edges.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong>,pivot of the twirl</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong>,total rotation at the center point</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong>,distance from the center over which the effect extends</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong> — pivot of the twirl</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Angle</strong> — total rotation at the center point</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong> — distance from the center over which the effect extends</li>
             </ul>
 
             <p><strong className="text-white">8.4 Bulge / Pinch</strong></p>
@@ -59,8 +59,8 @@ export default function DistortionFilters() {
             <p><strong className="text-white">Pinch:</strong> Pulls pixels inward toward a center point, creating a concave pinch effect.</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Center X / Y</strong></li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong>,magnitude of the displacement</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong>,area of influence</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong> — magnitude of the displacement</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong> — area of influence</li>
             </ul>
 
             <p><strong className="text-white">8.5 Perspective Warp</strong></p>
@@ -69,9 +69,9 @@ export default function DistortionFilters() {
             <p><strong className="text-white">8.6 Displacement Map</strong></p>
             <p>Uses the luminosity of a second image to drive the distortion of the target image. Pixels in the target image are displaced in proportion to the brightness of the corresponding pixel in the displacement map.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Map Source</strong>,the image used as the displacement reference (can be any image in the project asset library)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Scale X / Y</strong>,the strength of displacement along each axis</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Map Channel</strong>,which channel of the map image drives the displacement: Luminance, Red, Green, or Blue</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Map Source</strong> — the image used as the displacement reference (can be any image in the project asset library)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Scale X / Y</strong> — the strength of displacement along each axis</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Map Channel</strong> — which channel of the map image drives the displacement: Luminance, Red, Green, or Blue</li>
             </ul>
           </Section>
 
@@ -79,47 +79,47 @@ export default function DistortionFilters() {
             <p><strong className="text-white">9.1 Vignette</strong></p>
             <p>Darkens the edges of the image, drawing attention to the center. A classic photographic effect.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong>,darkness of the vignette at maximum (0% = none)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong>,how far the vignette extends toward the center</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Shape</strong>,Circular, Oval, or Rectangular</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Feather</strong>,softness of the vignette edge</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Strength</strong> — darkness of the vignette at maximum (0% = none)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Radius</strong> — how far the vignette extends toward the center</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Shape</strong> — Circular, Oval, or Rectangular</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Feather</strong> — softness of the vignette edge</li>
             </ul>
 
             <p><strong className="text-white">9.2 Lens Flare</strong></p>
             <p>Adds a synthetic lens flare artifact, simulating bright light hitting a camera lens.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Source X / Y</strong>,position of the virtual light source</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Brightness</strong>,intensity of the flare</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Lens Type</strong>,simulates different lens characteristics (anamorphic, spherical, vintage)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Halo Color</strong>,the color tint of the main flare element</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Streak Length</strong>,length of light streak artifacts</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Source X / Y</strong> — position of the virtual light source</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Brightness</strong> — intensity of the flare</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Lens Type</strong> — simulates different lens characteristics (anamorphic, spherical, vintage)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Halo Color</strong> — the color tint of the main flare element</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Streak Length</strong> — length of light streak artifacts</li>
             </ul>
             <p>All parameters are animatable. Animating the source position creates a moving flare effect.</p>
 
             <p><strong className="text-white">9.3 God Rays (Volumetric Light)</strong></p>
             <p>Simulates atmospheric light scattering, creating visible ray-like beams.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Source X / Y</strong>,origin of the light</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Exposure</strong>,overall brightness of the rays</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Decay</strong>,how quickly the rays fade as they extend from the source</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Weight</strong>,density/intensity of the rays</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Samples</strong>,quality of the ray calculation (higher = smoother, more expensive)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Source X / Y</strong> — origin of the light</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Exposure</strong> — overall brightness of the rays</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Decay</strong> — how quickly the rays fade as they extend from the source</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Weight</strong> — density/intensity of the rays</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Samples</strong> — quality of the ray calculation (higher = smoother, more expensive)</li>
             </ul>
 
             <p><strong className="text-white">9.4 Bloom</strong></p>
             <p>Creates a soft halo glow around the brightest regions of the image, simulating lens overexposure.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Threshold</strong>,the minimum brightness level above which bloom is applied</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Spread</strong>,how far the bloom halo extends</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Intensity</strong>,brightness multiplier for the bloom</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Threshold</strong> — the minimum brightness level above which bloom is applied</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Spread</strong> — how far the bloom halo extends</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Intensity</strong> — brightness multiplier for the bloom</li>
             </ul>
 
             <p><strong className="text-white">9.5 Fog / Haze</strong></p>
             <p>Adds an atmospheric depth haze overlay.</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Density</strong>,thickness of the haze</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color</strong>,haze color (white for natural fog, warm for desert heat, cool for winter)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Near / Far</strong>,controls where the haze starts and how strong it becomes at distance (uses approximate linear depth from element Z-position when 3D features are active)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Density</strong> — thickness of the haze</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Color</strong> — haze color (white for natural fog, warm for desert heat, cool for winter)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span><strong className="text-white">Near / Far</strong> — controls where the haze starts and how strong it becomes at distance (uses approximate linear depth from element Z-position when 3D features are active)</li>
             </ul>
           </Section>
 
@@ -140,7 +140,7 @@ export default function DistortionFilters() {
             <p>Each filter has a toggle eye icon to temporarily disable it without deleting it. Useful for comparing the effect of individual filters.</p>
 
             <p><strong className="text-white">10.3 Filter Opacity</strong></p>
-            <p>Each filter has its own opacity control (0%–100%). At less than 100%, the filter effect blends with the unfiltered result beneath it. This is the equivalent of reducing a layer's opacity in a compositing application,it provides a "softened" version of any filter effect.</p>
+            <p>Each filter has its own opacity control (0%–100%). At less than 100%, the filter effect blends with the unfiltered result beneath it. This is the equivalent of reducing a layer's opacity in a compositing application — it provides a "softened" version of any filter effect.</p>
 
             <p><strong className="text-white">10.4 Animating Filter Intensity</strong></p>
             <p>Nearly all filter parameters are animatable. To animate a filter: switch to Animate mode, navigate to a keyframe position, then adjust the filter parameter. A keyframe is created on the filter property track in the timeline. The parameter interpolates between keyframe values over time.</p>

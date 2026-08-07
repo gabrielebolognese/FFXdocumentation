@@ -24,7 +24,7 @@ export default function EasingInterpolation() {
 
           <Section id="what-easing-does" title="What Easing Does">
             <p>Easing controls the velocity profile of the animation between two keyframes. Without easing, motion has constant speed (Linear interpolation). With easing, motion accelerates and decelerates in ways that feel natural, physical, or expressive.</p>
-            <p>The easing is applied per keyframe transition,the transition from Keyframe A to Keyframe B can have different easing than the transition from B to C.</p>
+            <p>The easing is applied per keyframe transition — the transition from Keyframe A to Keyframe B can have different easing than the transition from B to C.</p>
           </Section>
 
           <Section id="applying-easing" title="Applying Easing">
@@ -34,7 +34,7 @@ export default function EasingInterpolation() {
           </Section>
 
           <Section id="easing-direction" title="Easing Direction">
-            <p>Easing on a keyframe applies to the outgoing transition,from this keyframe to the next one. The easing of the incoming transition is controlled by the previous keyframe.</p>
+            <p>Easing on a keyframe applies to the outgoing transition — from this keyframe to the next one. The easing of the incoming transition is controlled by the previous keyframe.</p>
             <p>For natural motion:</p>
             <ul className="space-y-1 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span>The keyframe where motion <strong className="text-white">starts</strong> controls the "ease out" (acceleration away)</li>

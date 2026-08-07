@@ -24,15 +24,15 @@ export default function MotionPaths() {
         <div className="prose prose-invert max-w-none space-y-8 text-white/80">
 
           <Section id="the-motion-path-display" title="The Motion Path Display">
-            <p>When a position-animated element is selected in Animate mode, its motion path appears overlaid on the canvas,a dotted curve showing the trajectory the element travels.</p>
+            <p>When a position-animated element is selected in Animate mode, its motion path appears overlaid on the canvas — a dotted curve showing the trajectory the element travels.</p>
             <p>Each keyframe appears as a dot on the path. The dots between keyframes show the interpolated positions at regular time intervals. Widely spaced dots indicate fast movement; closely spaced dots indicate slow movement.</p>
           </Section>
 
           <Section id="spatial-bezier-handles" title="Spatial Bezier Handles">
             <p>Each keyframe position on the motion path has <strong className="text-white">spatial bezier handles</strong> that control the curvature of the path at that point. These are distinct from the temporal easing handles in the graph editor:</p>
             <ul className="space-y-1 text-sm">
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Spatial handles</strong>,control the shape of the trajectory (the curve of the path)</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Temporal handles</strong>,control how fast the element travels along the trajectory</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Spatial handles</strong> — control the shape of the trajectory (the curve of the path)</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">-</span><strong className="text-white">Temporal handles</strong> — control how fast the element travels along the trajectory</li>
             </ul>
             <p><strong className="text-white">Editing spatial handles:</strong></p>
             <ul className="space-y-1 text-sm">
@@ -52,7 +52,7 @@ export default function MotionPaths() {
           <Section id="constant-velocity" title="Constant Velocity (Roving Keyframes)">
             <p>By default, keyframes are "pinned" at specific time positions. The motion path may pass through them at varying speeds.</p>
             <p>Converting keyframes to <strong className="text-white">Roving</strong> type removes their time-pinning. The animation engine redistributes the timing automatically so the element travels at constant speed along the path.</p>
-            <p>This is particularly useful for path animation where the curve has varying tightness,without roving, tight curves are traversed quickly and loose curves slowly (because the path distance per frame differs between curve shapes).</p>
+            <p>This is particularly useful for path animation where the curve has varying tightness — without roving, tight curves are traversed quickly and loose curves slowly (because the path distance per frame differs between curve shapes).</p>
           </Section>
 
         </div>
