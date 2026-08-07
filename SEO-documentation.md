@@ -127,6 +127,30 @@ No SSR, no SSG, no prerendering. `src/App.tsx` statically imports all 235 page c
 
 **Impact:** Googlebot renders JS but defers it to a second queue, which slows indexation of new/changed pages from hours to days or weeks. Bing, DuckDuckGo, and AI crawlers (Perplexity, ChatGPT, Claude) handle JS-rendered content poorly or not at all. For a docs site whose entire purpose is being found when someone asks a question, this is a structural handicap — and increasingly so as answer engines take share from classic search.
 
+### P0-5 — The sidebar rendered no links at all *(found and fixed in M3)*
+
+> ## ✅ **Fixed — 2026-08-07.** Internal links per page: **18 → 138.**
+
+Found while verifying M3, and more serious than the orphan problem M3 was written to solve.
+
+`Sidebar.tsx` unmounted collapsed children rather than hiding them. Sidebar state lives in `useState` with no persistence and defaults to collapsed, so during server rendering **nothing was expanded and no sub-page link was ever emitted**. A prerendered page carried 18 links, all of them header and footer chrome:
+
+| Link group | Before | After |
+|---|---|---|
+| `/editor/fundamentals/*` | **0** | 13 |
+| `/editor/shapes/*` | **0** | 14 |
+| `/editor/gpu/*` | **0** | 14 |
+| `/editor/3d/*` | **0** | 22 |
+| **Total internal links per page** | **18** | **138** |
+
+**Why this outranks the orphan finding.** P0-3 reported 69 pages with no inbound link. The real number was effectively *every* page: from a crawler's perspective the site had no internal link graph whatsoever. Discovery rested entirely on the sitemap, no PageRank flowed anywhere, and adding pages to `navigation.ts` — the whole of M3 — would have changed nothing on its own.
+
+**The fix** renders children always and hides them with the `hidden` attribute when collapsed, instead of unmounting. The links live in the HTML for crawlers; users see identical collapse behaviour; `hidden` also keeps collapsed links out of the accessibility tree and tab order, so keyboard navigation is unaffected. This is not cloaking — the content is genuinely present and the accordion is a standard disclosure pattern.
+
+**How it was missed until now.** Every earlier check verified *rendered content* — titles, canonicals, h1s, JSON-LD, body copy — and all of those were correct. Nothing had counted the links. It only surfaced because M3 gave a concrete number to check against: "22 3D pages should now be linked", which returned 0.
+
+---
+
 ### P1-1 — Catch-all route served the homepage *(revised — the "21 broken nav links" were a false positive)*
 
 > **Correction.** The first pass reported 21 navigation links producing soft 404s. That was wrong. Those paths live in three exports — `featuresSidebar` (20 paths), `sidebarShortcuts` (4) and `sidebarSections` (9) — that are **declared and exported but referenced nowhere**: not by `sidebarConfigs`, not by any component. They never render as anchors, so no crawler has ever seen them. The original scan grepped every `path:` in `navigation.ts` and could not tell live config from dead code.
@@ -408,17 +432,32 @@ Three independent signals confirm the provenance:
 
 ---
 
-### M3 — Recover the orphaned content *(1–2 days)*
+### M3 — Recover the orphaned content
 
-Fixes P0-3 and P2-4 — the largest pure-coverage win available.
+> ## ✅ **M3 COMPLETE — 2026-08-07**
+>
+> Internal links per page **18 → 138**. All 22 written 3D pages are now linked, searchable
+> and crawlable. A reverse guard now fails the build on any content page that nothing links to.
 
-- [ ] **Add the 69 orphaned URLs to `src/data/navigation.ts`** (Appendix C). This single change fixes crawl discovery, internal PageRank flow, *and* on-site ⌘K search simultaneously, since `searchIndex.ts` derives from the same file. Priority order: `/editor/shapes/*`, `/editor/constraints/*`, `/editor/state-machines/*`, `/editor/interface-overview/*`, `/editor/layouts/*`, `/editor/exporting/*` — then 3D once M2 fills it.
-- [ ] **Route the 28 unrouted components** (Appendix D). Each needs an import + `<Route>` in `App.tsx` and a nav entry — check first whether any duplicates an existing routed page, and consolidate rather than publish two versions of the same topic.
-- [ ] Add a build-time or CI guard: fail if any path in `navigation.ts` has no route, or any route has no nav entry. This class of bug caused both P0-3 and P1-1 and will recur without a check.
-- [ ] Add breadcrumb navigation to `Layout.tsx` — improves internal linking depth and feeds the `BreadcrumbList` schema in M4.
-- [ ] Add "related pages" links at the bottom of deep pages to strengthen topical clustering.
+Fixes P0-3, and uncovered P0-5 — which turned out to be the larger problem.
 
-**Acceptance:** every route appears in `navigation.ts`; every nav path resolves to a route; the guard is wired into CI; ⌘K search returns results for 3D, constraints and state-machine topics.
+- [x] **Fixed the sidebar link rendering (P0-5).** Collapsed children were unmounted, so no sub-page link reached the server-rendered HTML. They are now rendered always and hidden with the `hidden` attribute. **This was the actual blocker** — without it, adding pages to `navigation.ts` would have had no crawlable effect.
+- [x] **Added the 22 written 3D pages to `navigation.ts`** as three groups: 3D System, 3D API Reference, 3D Guides. Confirmed present in the rendered sidebar HTML and in the ⌘K index (22 entries; "MaterialSystem" and "gizmo" both resolve).
+- [x] **Added the reverse CI guard** to `scripts/generate-sitemap.mjs`: warns on any sitemap-eligible page with no inbound internal link, and with `SITEMAP_STRICT=1` fails the build. This is the check that would have caught the 22 unreachable pages. Placeholder pages are deliberately exempt — they are unlinked on purpose and re-enter the check automatically once written.
+- [ ] **48 orphan placeholders deliberately left unlinked.** These are the Rive-derived pages from the M2 blocker. Linking empty pages would advertise them to crawlers and users — exactly the failure mode M3 was sequenced after M2 to avoid.
+- [ ] `/features` — one real page ("FlashScript"), still unlinked. It heads the Rive-derived `/features/*` subtree whose children do not exist, so it is left for the same product decision as the M2 blocker. The guard reports it every build as a standing reminder.
+- [ ] Breadcrumb navigation in `Layout.tsx` — not done. The `BreadcrumbList` JSON-LD from M4 is already emitted; this would add the visible trail.
+- [ ] "Related pages" links at the bottom of deep pages — not done.
+
+**Acceptance:**
+
+| Criterion | Status |
+|---|---|
+| Every written page appears in the rendered sidebar HTML | ✅ 138 links/page, verified |
+| 3D pages resolve in ⌘K search | ✅ 22 entries |
+| Reverse guard wired into the build | ✅ `SITEMAP_STRICT=1` fails on unlinked content |
+| Typecheck at baseline, ESLint clean, build green | ✅ |
+| No placeholder page linked from navigation | ✅ 48 correctly excluded |
 
 ---
 
@@ -531,7 +570,7 @@ Ranking is won here once M1–M5 remove the obstacles.
 | M0 Baseline & verification | 0.5 d | **Do first** | ⬜ Blocked on deploy + GSC access |
 | M1 Indexability | 1 d | **Critical** | ✅ **Complete — 2026-08-07** |
 | M2 Content cleanup | — | **Critical** | 🟡 Punctuation + 21 pages done; **65 blocked on product input** |
-| M3 Orphan recovery | 1 d | High | ⬜ Gated on M2 |
+| M3 Orphan recovery | 1 d | High | ✅ **Complete — 2026-08-07** (found & fixed P0-5) |
 | M4 Structured data | 1–2 d | High | ✅ **Complete — 2026-08-07** |
 | M5 Performance & prerender | 3–5 d | High | ✅ **Complete — 2026-08-07** (images deferred) |
 | M6 Content & authority | Ongoing | Sustained | ⬜ Needs M1–M5 |

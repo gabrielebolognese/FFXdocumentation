@@ -201,6 +201,43 @@ export const editorSidebar: SidebarConfig = {
       ],
     },
     {
+      label: '3D System',
+      children: [
+        { label: 'Overview', path: '/editor/3d/overview' },
+        { label: 'Technology Stack', path: '/editor/3d/technology-stack' },
+        { label: 'File Structure', path: '/editor/3d/file-structure' },
+        { label: 'Per-Shape Renderer Model', path: '/editor/3d/architecture/per-shape-renderer' },
+        { label: 'Canvas Integration', path: '/editor/3d/architecture/canvas-integration' },
+        { label: 'Dirty Flag Render Loop', path: '/editor/3d/architecture/dirty-flag-render-loop' },
+        { label: 'Mode System', path: '/editor/3d/architecture/mode-system' },
+        { label: 'Scene Serialization', path: '/editor/3d/architecture/scene-serialization' },
+      ],
+    },
+    {
+      label: '3D API Reference',
+      children: [
+        { label: 'ThreeDShapeElement', path: '/editor/3d/api/threedshapeelement' },
+        { label: 'ThreeDEngine', path: '/editor/3d/api/threedengine' },
+        { label: 'SceneManager', path: '/editor/3d/api/scenemanager' },
+        { label: 'GizmoController', path: '/editor/3d/api/gizmocontroller' },
+        { label: 'GeometryFactory', path: '/editor/3d/api/geometryfactory' },
+        { label: 'MaterialSystem', path: '/editor/3d/api/materialsystem' },
+        { label: '3D Properties Panel', path: '/editor/3d/api/properties-panel' },
+        { label: 'Texture System', path: '/editor/3d/api/texture-system' },
+        { label: 'Model Import System', path: '/editor/3d/api/model-import' },
+        { label: '3D Shape Library', path: '/editor/3d/api/shape-library' },
+      ],
+    },
+    {
+      label: '3D Guides',
+      children: [
+        { label: '3D Performance Guide', path: '/editor/3d/guides/performance' },
+        { label: '3D Keyboard Shortcuts', path: '/editor/3d/guides/keyboard-shortcuts' },
+        { label: '3D Troubleshooting', path: '/editor/3d/guides/troubleshooting' },
+        { label: 'Extending the 3D System', path: '/editor/3d/guides/extending' },
+      ],
+    },
+    {
       label: 'Timeline & Composition',
       children: [
         { label: 'Timeline Architecture', path: '/editor/timeline/architecture' },

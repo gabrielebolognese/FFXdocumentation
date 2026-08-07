@@ -168,8 +168,38 @@ const dangling = [...navPaths].filter((p) => !routePaths.has(p)).sort();
 
 if (dangling.length > 0) {
   console.error(`  WARNING  ${dangling.length} navigation links have no matching route.`);
-  console.error('           These render the homepage at HTTP 200 (soft 404):');
+  console.error('           These fall through to the 404 page:');
   for (const p of dangling) console.error(`             ${p}`);
   console.error('');
-  if (process.env.SITEMAP_STRICT === '1') process.exit(1);
+}
+
+// ---------------------------------------------------------------------------
+// The reverse guard: a page with real content that nothing links to.
+//
+// This is the check that would have caught the 22 written-but-unreachable 3D
+// pages. Sitemap presence alone is weak discovery — without an inbound link
+// there is no PageRank flow, and `searchIndex.ts` builds from the same nav
+// tree, so an unlinked page is missing from on-site ⌘K search too.
+//
+// Placeholder pages are deliberately NOT reported. They are unlinked on
+// purpose until someone writes them, and they re-enter this check
+// automatically once their marker is gone.
+// ---------------------------------------------------------------------------
+
+const unlinked = included
+  .map((e) => e.path)
+  .filter((p) => !navPaths.has(p))
+  // Blog posts are linked from the /blog listing, not from navigation.ts.
+  .filter((p) => !p.startsWith('/blog/'))
+  .sort();
+
+if (unlinked.length > 0) {
+  console.error(`  WARNING  ${unlinked.length} page(s) with real content have no inbound internal link.`);
+  console.error('           Sitemap-only discovery: no PageRank flow, absent from site search.');
+  for (const p of unlinked) console.error(`             ${p}`);
+  console.error('');
+}
+
+if ((dangling.length > 0 || unlinked.length > 0) && process.env.SITEMAP_STRICT === '1') {
+  process.exit(1);
 }

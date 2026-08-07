@@ -76,8 +76,13 @@ function SidebarItemComponent({ item, level = 0, tabKey, itemPath = '' }: { item
         </button>
       )}
 
-      {hasChildren && isExpanded && (
-        <div className="space-y-0.5">
+      {/* Children are always rendered and hidden with CSS when collapsed,
+          rather than unmounted. Unmounting kept every sub-page link out of the
+          server-rendered HTML, so crawlers saw a site with no internal link
+          graph at all — see SEO-documentation.md P0-5. `hidden` also keeps
+          collapsed links out of the accessibility tree and tab order. */}
+      {hasChildren && (
+        <div className="space-y-0.5" hidden={!isExpanded}>
           {item.children!.map((child, index) => (
             <SidebarItemComponent key={index} item={child} level={level + 1} tabKey={tabKey} itemPath={itemKey} />
           ))}
@@ -182,13 +187,13 @@ function SidebarSection({
           {label}
         </h3>
       </button>
-      {isExpanded && (
-        <div className="space-y-0.5">
-          {items.map((item, index) => (
-            <SidebarItemComponent key={index} item={item} tabKey={tabKey} />
-          ))}
-        </div>
-      )}
+      {/* Same reasoning as SidebarItemComponent: rendered always, hidden when
+          collapsed, so section links survive into the server-rendered HTML. */}
+      <div className="space-y-0.5" hidden={!isExpanded}>
+        {items.map((item, index) => (
+          <SidebarItemComponent key={index} item={item} tabKey={tabKey} />
+        ))}
+      </div>
     </div>
   );
 }
