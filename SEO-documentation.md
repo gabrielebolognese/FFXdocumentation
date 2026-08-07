@@ -549,17 +549,33 @@ Roughly 1.2 MB of that is browser logos displayed at 28 px. Say the word and I'l
 
 ---
 
-### M6 — Content strategy and authority *(ongoing)*
+### M6 — Content strategy and authority
+
+> ## 🟡 **M6 IN PROGRESS — the in-repo half is done**
+>
+> Five comparison pages shipped, targeting non-brand queries. The highest-value remaining
+> items are **outside this repository** and need you — see below.
 
 Ranking is won here once M1–M5 remove the obstacles.
 
-- [ ] **Secure internal links from `flashfx.app` and `editor.flashfx.app` to the docs subdomain.** Subdomains do not inherit authority automatically; a prominent "Docs" link in the main site's header and footer is the single highest-value link the docs site can get.
-- [ ] Add in-editor contextual help links from `editor.flashfx.app` to the matching doc page — high-relevance, high-intent, and they compound.
-- [ ] **Build the comparison pages the footer already advertises.** `src/components/Footer.tsx:67–73` lists "vs After Effects", "vs CapCut", "vs DaVinci Resolve", "Free Motion Graphics", "Lightweight Editor" — all currently `disabled: true`. These target high-volume, high-intent, non-brand queries and are the fastest route to traffic from people who have never heard of FlashFX.
-- [ ] Expand the 65 troubleshooting pages from bullet lists into full answers with causes, symptoms, and step-by-step resolutions. Error-message queries convert extremely well and have almost no competition.
-- [ ] Publish blog posts on a regular cadence — 11 posts exist and the section is well-built; it's the site's only natural link-earning surface.
-- [ ] Wire up the suggestion form (`SuggestionPortal.tsx` currently validates and discards — the Supabase migration exists but `@supabase/supabase-js` isn't installed). User-reported gaps are the best content roadmap available.
-- [ ] Quarterly: review GSC queries at positions 5–20 and improve those pages first — they're the closest to page-one.
+- [x] **Built the five comparison pages the footer already advertised.** `src/components/Footer.tsx` listed *vs After Effects*, *vs CapCut*, *vs DaVinci Resolve*, *Free Motion Graphics* and *Lightweight Editor* as `disabled: true` — five dead links in every page footer. All five now exist, are routed, are linked from the footer sitewide, and are in the sitemap.
+
+  | Page | URL | Targets |
+  |---|---|---|
+  | FlashFX vs After Effects | `/compare/after-effects` | "after effects alternative", "browser motion graphics" |
+  | FlashFX vs CapCut | `/compare/capcut` | "capcut alternative", "motion graphics vs video editing" |
+  | FlashFX vs DaVinci Resolve | `/compare/davinci-resolve` | "davinci resolve alternative", "fusion alternative" |
+  | Free Motion Graphics Software | `/free-motion-graphics` | "free motion graphics software", "free animation software" |
+  | Lightweight Motion Editor | `/lightweight-editor` | "lightweight animation software", "no install animation" |
+
+  **On factual accuracy:** every FlashFX claim is sourced from the feature table in `Pricing.tsx`. Competitor descriptions are limited to broad, stable, verifiable facts — category, platform, licensing model. No competitor pricing and no specific competitor feature claims, because those change and a wrong claim about another product is both a trust problem and a legal one. Each page states plainly where the competitor is the better tool; a comparison page that never concedes anything reads as marketing and converts worse.
+
+- [ ] **Secure internal links from `flashfx.app` and `editor.flashfx.app` to the docs subdomain.** ⚠️ **Outside this repo — needs you, and it is the single highest-value item left in the entire plan.** Subdomains do not inherit authority automatically. A prominent "Docs" link in the main site's header and footer is the most valuable link this documentation site can receive, and no amount of on-page work substitutes for it.
+- [ ] **In-editor contextual help links** from `editor.flashfx.app` to the matching doc page. Outside this repo. High relevance, high intent, and they compound.
+- [ ] Expand the 65 troubleshooting pages from bullet lists into full answers with causes, symptoms and step-by-step resolutions. In-repo and doable, but it needs product knowledge to state causes accurately rather than plausibly.
+- [ ] Publish blog posts on a cadence. The section is well-built and holds 10 posts; it is the site's only natural link-earning surface.
+- [ ] Wire up the suggestion form. `SuggestionPortal.tsx` validates then discards; the Supabase migration exists but `@supabase/supabase-js` is not installed and `.env` is empty, so this needs credentials before it can be finished.
+- [ ] Quarterly: review GSC queries at positions 5–20 and improve those pages first.
 
 ---
 
@@ -573,7 +589,7 @@ Ranking is won here once M1–M5 remove the obstacles.
 | M3 Orphan recovery | 1 d | High | ✅ **Complete — 2026-08-07** (found & fixed P0-5) |
 | M4 Structured data | 1–2 d | High | ✅ **Complete — 2026-08-07** |
 | M5 Performance & prerender | 3–5 d | High | ✅ **Complete — 2026-08-07** (images deferred) |
-| M6 Content & authority | Ongoing | Sustained | ⬜ Needs M1–M5 |
+| M6 Content & authority | Ongoing | Sustained | 🟡 5 comparison pages shipped; **rest needs off-repo links** |
 
 **Two revisions to the original sequencing, both from evidence found while building M1:**
 

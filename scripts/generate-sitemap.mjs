@@ -163,6 +163,12 @@ const navPaths = new Set(
     .flatMap((name) => pathsInExport(navSource, name))
     .filter((p) => !p.startsWith('//'))
 );
+
+// The footer is a second real source of internal links, so pages linked only
+// from there (the comparison pages) are genuinely reachable and must not be
+// reported as unlinked. The guard measures inbound links, not nav membership.
+const footerSource = readFileSync(join(ROOT, 'src', 'components', 'Footer.tsx'), 'utf8');
+for (const m of footerSource.matchAll(/to:\s*'(\/[^']*)'/g)) navPaths.add(m[1]);
 const routePaths = new Set(routes.map((r) => r.path));
 const dangling = [...navPaths].filter((p) => !routePaths.has(p)).sort();
 

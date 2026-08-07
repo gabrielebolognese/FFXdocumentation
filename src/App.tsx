@@ -3,6 +3,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import { SidebarStateProvider } from './contexts/SidebarStateContext';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import CompareAfterEffects from './pages/compare/AfterEffects';
+import CompareCapCut from './pages/compare/CapCut';
+import CompareDaVinciResolve from './pages/compare/DaVinciResolve';
+import FreeMotionGraphics from './pages/compare/FreeMotionGraphics';
+import LightweightEditor from './pages/compare/LightweightEditor';
 import Editor from './pages/Editor';
 import Features from './pages/Features';
 import Runtimes from './pages/Runtimes';
@@ -575,6 +580,12 @@ export function AppRoutes() {
           <Route path="/lite/limitations" element={<LiteLimitations />} />
           <Route path="/lite/troubleshooting" element={<LiteTroubleshooting />} />
           <Route path="/lite/upgrade" element={<LiteUpgrade />} />
+
+          <Route path="/compare/after-effects" element={<CompareAfterEffects />} />
+          <Route path="/compare/capcut" element={<CompareCapCut />} />
+          <Route path="/compare/davinci-resolve" element={<CompareDaVinciResolve />} />
+          <Route path="/free-motion-graphics" element={<FreeMotionGraphics />} />
+          <Route path="/lightweight-editor" element={<LightweightEditor />} />
 
           <Route path="*" element={<NotFound />} />
           </Routes>

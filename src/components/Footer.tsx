@@ -65,11 +65,11 @@ const resourcesLinks: FooterLink[] = [
 ];
 
 const compareLinks: FooterLink[] = [
-  { label: 'vs After Effects', disabled: true },
-  { label: 'vs CapCut', disabled: true },
-  { label: 'vs DaVinci Resolve', disabled: true },
-  { label: 'Free Motion Graphics', disabled: true },
-  { label: 'Lightweight Editor', disabled: true },
+  { label: 'vs After Effects', to: '/compare/after-effects' },
+  { label: 'vs CapCut', to: '/compare/capcut' },
+  { label: 'vs DaVinci Resolve', to: '/compare/davinci-resolve' },
+  { label: 'Free Motion Graphics', to: '/free-motion-graphics' },
+  { label: 'Lightweight Editor', to: '/lightweight-editor' },
 ];
 
 const companyLinks: FooterLink[] = [
