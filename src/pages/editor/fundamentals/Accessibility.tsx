@@ -196,7 +196,7 @@ export default function Accessibility() {
             </p>
             <ul className="space-y-2 text-sm">
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Help → Report Accessibility Issue</li>
-              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Email: accessibility@flashfx.com</li>
+              <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Email: accessibility@flashfx.app</li>
               <li className="flex gap-3"><span className="text-yellow-accent mt-1">•</span>Include browser, assistive technology, and steps to reproduce</li>
             </ul>
           </Section>
@@ -215,7 +215,7 @@ export default function Accessibility() {
               ]}
             />
             <p className="mt-4">
-              Known issues and roadmap available at: flashfx.com/accessibility
+              Known issues and roadmap available at: flashfx.app/accessibility
             </p>
           </Section>
         </div>

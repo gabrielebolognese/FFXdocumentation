@@ -1,0 +1,106 @@
+# robots.txt for documentation.flashfx.app
+# FlashFX product documentation — https://flashfx.app
+#
+# Policy: this is public documentation. Everything here exists to be found,
+# by search engines and by AI answer engines alike. Nothing is disallowed.
+#
+# Note on precedence: a crawler that finds a group naming its own user-agent
+# ignores the `User-agent: *` group entirely. Every named group below therefore
+# repeats `Allow: /` rather than relying on the wildcard group.
+
+# ---------------------------------------------------------------------------
+# All crawlers
+# ---------------------------------------------------------------------------
+
+User-agent: *
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI search and retrieval crawlers
+#
+# These are the bots that make documentation citable in AI-generated answers.
+# They are named explicitly so the permission is a recorded decision rather
+# than an accident of the wildcard rule. Blocking any of these removes FlashFX
+# documentation from that engine's answers — for a docs site, that is lost
+# traffic and lost support deflection, not protected IP.
+# ---------------------------------------------------------------------------
+
+# OpenAI — ChatGPT search index
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI — live fetch when a user asks about a page
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — Claude search index
+User-agent: Claude-SearchBot
+Allow: /
+
+# Anthropic — live fetch when a user asks about a page
+User-agent: Claude-User
+Allow: /
+
+# Perplexity — search index
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity — live fetch on a user request
+User-agent: Perplexity-User
+Allow: /
+
+# Apple — Siri and Spotlight suggestions
+User-agent: Applebot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI training crawlers
+#
+# Allowed deliberately. FlashFX is a new product competing against established
+# tools; having models learn the editor's actual vocabulary and workflows is a
+# distribution advantage, and this content is already public.
+#
+# To opt out of model training WITHOUT losing AI-answer citations, change the
+# `Allow: /` lines in this block to `Disallow: /`. The search and retrieval
+# bots above are separate user-agents and are unaffected — that separation is
+# the whole reason both blocks exist.
+# ---------------------------------------------------------------------------
+
+# OpenAI — foundation model training
+User-agent: GPTBot
+Allow: /
+
+# Anthropic — model training
+User-agent: ClaudeBot
+Allow: /
+
+# Google — Gemini / Vertex AI training.
+# Independent of Googlebot: this does not affect Google Search ranking.
+User-agent: Google-Extended
+Allow: /
+
+# Apple — Apple Intelligence training
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl — corpus used by many downstream models
+User-agent: CCBot
+Allow: /
+
+# Meta — Llama training
+User-agent: meta-externalagent
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Sitemaps
+#
+# `Sitemap` is a site-level directive: it is independent of the User-agent
+# groups above and applies to every crawler, wherever it appears in the file.
+# Only the index is listed — it points to the six section sitemaps, which are
+# generated from the route table by scripts/generate-sitemap.mjs.
+#
+# Search Console submission is still required; Google retired sitemap ping
+# endpoints in 2023, so referencing the file here is discovery, not a trigger.
+# ---------------------------------------------------------------------------
+
+Sitemap: https://documentation.flashfx.app/sitemap.xml

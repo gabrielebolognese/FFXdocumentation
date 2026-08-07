@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { SidebarStateProvider } from './contexts/SidebarStateContext';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 import Editor from './pages/Editor';
 import Features from './pages/Features';
 import Runtimes from './pages/Runtimes';
@@ -573,7 +574,7 @@ function App() {
           <Route path="/lite/troubleshooting" element={<LiteTroubleshooting />} />
           <Route path="/lite/upgrade" element={<LiteUpgrade />} />
 
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
           </Routes>
         </SidebarStateProvider>
       </BrowserRouter>

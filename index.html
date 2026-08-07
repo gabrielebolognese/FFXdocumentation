@@ -4,10 +4,37 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/android-chrome-512x512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentation</title>
-    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
+
+    <!--
+      Defaults only. react-helmet-async (src/components/SEO.tsx) overrides the
+      title, description, canonical and social tags per route once React mounts.
+      These values are what a non-rendering crawler sees, so they describe the
+      site rather than any one page.
+    -->
+    <title>FlashFX Documentation</title>
+    <meta
+      name="description"
+      content="Official documentation for FlashFX, the browser-based motion and animation editor. Guides, tutorials, and troubleshooting for the FlashFX editor and FlashFX Lite."
+    />
+    <link rel="canonical" href="https://documentation.flashfx.app/" />
+
+    <meta property="og:site_name" content="FlashFX Documentation" />
+    <meta property="og:title" content="FlashFX Documentation" />
+    <meta
+      property="og:description"
+      content="Official documentation for FlashFX, the browser-based motion and animation editor."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://documentation.flashfx.app/" />
+    <meta property="og:image" content="https://documentation.flashfx.app/android-chrome-512x512.png" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="FlashFX Documentation" />
+    <meta
+      name="twitter:description"
+      content="Official documentation for FlashFX, the browser-based motion and animation editor."
+    />
+    <meta name="twitter:image" content="https://documentation.flashfx.app/android-chrome-512x512.png" />
   </head>
   <body>
     <div id="root"></div>

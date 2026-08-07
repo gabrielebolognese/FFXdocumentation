@@ -3,6 +3,7 @@ import { Play } from 'lucide-react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import VideoEmbed from '../components/VideoEmbed';
+import { videoObjectEntity, SITE_URL } from '../utils/structuredData';
 
 const tutorialVideos: Record<string, { id: string; url: string }> = {
   '/tutorials/how-to-create-a-new-project': {
@@ -91,12 +92,26 @@ export default function TutorialDetail() {
     return null;
   }
 
+  const description = `Learn ${title.toLowerCase()} in FlashFX`;
+
   return (
     <Layout>
       <SEO
         title={title}
-        description={`Learn ${title.toLowerCase()} in FlashFX`}
+        description={description}
         keywords="FlashFX, tutorial, animation"
+        structuredData={
+          video
+            ? [
+                videoObjectEntity({
+                  name: title,
+                  description,
+                  videoId: video.id,
+                  canonical: `${SITE_URL}${location.pathname}`,
+                }),
+              ]
+            : undefined
+        }
       />
       <div className="space-y-8">
         <h1 className="text-4xl font-semibold text-white">{title}</h1>
