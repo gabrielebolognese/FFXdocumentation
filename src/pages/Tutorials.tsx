@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { BookOpen, Layers, Palette, Play, Sparkles, Video } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BookOpen, GraduationCap, Layers, Palette, Play, Sparkles, Video } from 'lucide-react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import VideoEmbed from '../components/VideoEmbed';
@@ -83,6 +84,26 @@ export default function Tutorials() {
             topic below and start wherever it makes sense for you.
           </p>
         </div>
+
+        {/* The course is the other way into this material: the library below is
+            organised by topic for dipping into, this is one ordered path. */}
+        <Link
+          to="/beginner-to-hero"
+          className="group flex items-start gap-4 bg-navy-elevated border border-navy-border hover:border-yellow-accent/40 rounded-lg px-5 py-4 transition-colors"
+        >
+          <GraduationCap className="w-5 h-5 text-yellow-accent shrink-0 mt-0.5" />
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-sm font-medium text-white">From Beginner to Hero</span>
+              <span className="text-xs text-white/30">45 steps</span>
+            </div>
+            <p className="text-xs text-white/60 leading-relaxed">
+              Prefer to learn in order? The course walks the whole editor front to back, from the
+              interface and your first shape through to motion paths, stagger and export.
+            </p>
+          </div>
+          <ArrowRight className="w-4 h-4 text-blue-muted group-hover:text-yellow-accent transition-colors shrink-0 mt-0.5" />
+        </Link>
 
         <div>
           <h2 className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-4">What's covered</h2>

@@ -36,7 +36,7 @@ export default function VideoEmbed({ videoId, youtubeUrl }: VideoEmbedProps) {
       <div className="flex gap-2 mt-3">
         <button
           onClick={toggleSound}
-          className="flex items-center justify-center gap-2 w-1/2 px-4 py-2.5 text-sm font-medium rounded-lg bg-navy-darker border border-white/10 text-white/70 hover:text-white hover:border-white/20 transition-colors"
+          className="flex items-center justify-center gap-2 w-1/2 px-4 py-2.5 text-sm font-medium rounded-lg bg-navy-elevated border border-white/10 text-white/70 hover:text-white hover:border-white/20 transition-colors"
         >
           {muted ? (
             <>
@@ -55,7 +55,7 @@ export default function VideoEmbed({ videoId, youtubeUrl }: VideoEmbedProps) {
           href={youtubeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-1/2 px-4 py-2.5 text-sm font-medium rounded-lg bg-navy-darker border border-white/10 text-white/70 hover:text-white hover:border-white/20 transition-colors"
+          className="flex items-center justify-center gap-2 w-1/2 px-4 py-2.5 text-sm font-medium rounded-lg bg-navy-elevated border border-white/10 text-white/70 hover:text-white hover:border-white/20 transition-colors"
         >
           <ExternalLink className="w-4 h-4 shrink-0" />
           Watch on YouTube

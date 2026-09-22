@@ -31,6 +31,8 @@ import S3Bucket from './pages/S3Bucket';
 import Terms from './pages/Terms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Support from './pages/Support';
+import BeginnerToHero from './pages/BeginnerToHero';
+import BeginnerToHeroStep from './pages/BeginnerToHeroStep';
 
 import ThreeDOverview from './pages/threed/Overview';
 import ThreeDTechnologyStack from './pages/threed/TechnologyStack';
@@ -586,6 +588,60 @@ export function AppRoutes() {
           <Route path="/compare/davinci-resolve" element={<CompareDaVinciResolve />} />
           <Route path="/free-motion-graphics" element={<FreeMotionGraphics />} />
           <Route path="/lightweight-editor" element={<LightweightEditor />} />
+
+
+          <Route path="/beginner-to-hero" element={<BeginnerToHero />} />
+          <Route path="/beginner-to-hero/01-what-is-flashfx" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/02-the-interface" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/03-workspace-modes" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/04-canvas-and-project-setup" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/05-zoom-and-navigation" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/06-grid-guides-and-snapping" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/07-your-first-rectangle" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/08-circles-arcs-and-rings" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/09-stars-and-polygons" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/10-lines-and-arrowheads" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/11-the-pen-tool" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/12-vertex-editing" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/13-boolean-operations" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/14-the-material-stack" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/15-color-and-the-picker" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/16-gradients" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/17-textures-and-patterns" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/18-strokes" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/19-shadows" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/20-glow" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/21-blend-modes" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/22-groups-and-nesting" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/23-alignment-and-distribution" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/24-z-order-and-layers" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/25-masks-and-clipping" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/26-placing-text" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/27-formatting-text" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/28-styling-text" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/29-text-on-a-path" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/30-importing-images" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/31-cropping-and-image-fills" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/32-color-adjustment" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/33-filters" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/34-entering-animate-mode" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/35-your-first-keyframes" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/36-property-tracks" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/37-easing" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/38-the-easing-graph" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/39-animating-transforms" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/40-animating-color" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/41-motion-paths" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/42-text-animation" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/43-parenting-and-nulls" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/44-looping-and-time" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/45-preview-and-export" element={<BeginnerToHeroStep />} />
+
+
+
+
+
+
 
           <Route path="*" element={<NotFound />} />
           </Routes>

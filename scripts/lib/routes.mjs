@@ -71,6 +71,29 @@ export function parseTutorialsWithContent() {
   return new Set([...videoBlock[1].matchAll(/'(\/tutorials\/[^']+)'/g)].map((m) => m[1]));
 }
 
+/**
+ * "From Beginner to Hero" steps that have a real video rather than a stand-in.
+ *
+ * A step object in src/data/beginnerToHero.ts carries `videoId` only once a
+ * real FlashFX recording exists for it. Until then the page renders a rotating
+ * placeholder video, and it is still prerendered — a URL a user can reach must
+ * return real HTML — but it stays out of the sitemap, exactly as the empty
+ * /tutorials/* pages do. Adding `videoId` lets the step into the sitemap on the
+ * next build with no other change.
+ *
+ * Step objects hold only string fields, so `[^}]*` safely bounds each one. The
+ * `BeginnerToHeroStep` interface declares `slug: string` without quotes, so it
+ * cannot match.
+ */
+export function parseCourseStepsWithVideo() {
+  const src = readFileSync(join(ROOT, 'src', 'data', 'beginnerToHero.ts'), 'utf8');
+  const withVideo = new Set();
+  for (const match of src.matchAll(/\{\s*slug: '([^']+)'[^}]*\}/g)) {
+    if (match[0].includes('videoId:')) withVideo.add(`/beginner-to-hero/${match[1]}`);
+  }
+  return withVideo;
+}
+
 const placeholderCache = new Map();
 export function isPlaceholder(file) {
   if (!file) return false;
@@ -94,6 +117,7 @@ export function collectUrls() {
   const routes = parseRoutes(appSource);
   const blogPosts = parseBlogPosts();
   const tutorialsWithContent = parseTutorialsWithContent();
+  const courseStepsWithVideo = parseCourseStepsWithVideo();
 
   const urls = [];
 
@@ -109,6 +133,13 @@ export function collectUrls() {
 
     if (path.startsWith('/tutorials/') && !tutorialsWithContent.has(path)) {
       urls.push({ path, lastmod: null, inSitemap: false, reason: 'tutorial placeholder (no video, no written steps)' });
+      continue;
+    }
+
+    // The course overview is real content and always belongs in the sitemap;
+    // only its individual steps wait on a video.
+    if (path.startsWith('/beginner-to-hero/') && !courseStepsWithVideo.has(path)) {
+      urls.push({ path, lastmod: null, inSitemap: false, reason: 'course step (placeholder video)' });
       continue;
     }
 

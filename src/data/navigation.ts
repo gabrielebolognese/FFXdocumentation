@@ -534,6 +534,99 @@ export const featureSupportSidebar: SidebarConfig = {
 export const tutorialsSidebar: SidebarConfig = {
   sections: [
     {
+      label: 'From Beginner to Hero',
+      defaultExpanded: true,
+      collapsible: true,
+      items: [
+        { label: 'Course overview', path: '/beginner-to-hero' },
+        {
+          label: '1. Getting oriented',
+          children: [
+            { label: '01. What FlashFX is', path: '/beginner-to-hero/01-what-is-flashfx' },
+            { label: '02. The interface', path: '/beginner-to-hero/02-the-interface' },
+            { label: '03. Design, Animate and Advanced modes', path: '/beginner-to-hero/03-workspace-modes' },
+            { label: '04. Setting up a project', path: '/beginner-to-hero/04-canvas-and-project-setup' },
+            { label: '05. Moving around the canvas', path: '/beginner-to-hero/05-zoom-and-navigation' },
+            { label: '06. Grid, guides and snapping', path: '/beginner-to-hero/06-grid-guides-and-snapping' },
+          ],
+        },
+        {
+          label: '2. Drawing shapes',
+          children: [
+            { label: '07. Your first shape', path: '/beginner-to-hero/07-your-first-rectangle' },
+            { label: '08. Circles, arcs and rings', path: '/beginner-to-hero/08-circles-arcs-and-rings' },
+            { label: '09. Stars and polygons', path: '/beginner-to-hero/09-stars-and-polygons' },
+            { label: '10. Lines and arrowheads', path: '/beginner-to-hero/10-lines-and-arrowheads' },
+            { label: '11. The Pen tool', path: '/beginner-to-hero/11-the-pen-tool' },
+            { label: '12. Editing vertices', path: '/beginner-to-hero/12-vertex-editing' },
+            { label: '13. Boolean operations', path: '/beginner-to-hero/13-boolean-operations' },
+          ],
+        },
+        {
+          label: '3. Surfaces and styling',
+          children: [
+            { label: '14. The material stack', path: '/beginner-to-hero/14-the-material-stack' },
+            { label: '15. Color and the picker', path: '/beginner-to-hero/15-color-and-the-picker' },
+            { label: '16. Gradients', path: '/beginner-to-hero/16-gradients' },
+            { label: '17. Textures and patterns', path: '/beginner-to-hero/17-textures-and-patterns' },
+            { label: '18. Strokes', path: '/beginner-to-hero/18-strokes' },
+            { label: '19. Drop and inner shadows', path: '/beginner-to-hero/19-shadows' },
+            { label: '20. Outer and inner glow', path: '/beginner-to-hero/20-glow' },
+            { label: '21. Blend modes', path: '/beginner-to-hero/21-blend-modes' },
+          ],
+        },
+        {
+          label: '4. Structure and composition',
+          children: [
+            { label: '22. Groups and nesting', path: '/beginner-to-hero/22-groups-and-nesting' },
+            { label: '23. Alignment and distribution', path: '/beginner-to-hero/23-alignment-and-distribution' },
+            { label: '24. Z-order and the Layer Panel', path: '/beginner-to-hero/24-z-order-and-layers' },
+            { label: '25. Masks and clipping', path: '/beginner-to-hero/25-masks-and-clipping' },
+          ],
+        },
+        {
+          label: '5. Type',
+          children: [
+            { label: '26. Placing text', path: '/beginner-to-hero/26-placing-text' },
+            { label: '27. Formatting text', path: '/beginner-to-hero/27-formatting-text' },
+            { label: '28. Styling text', path: '/beginner-to-hero/28-styling-text' },
+            { label: '29. Text on a path', path: '/beginner-to-hero/29-text-on-a-path' },
+          ],
+        },
+        {
+          label: '6. Images',
+          children: [
+            { label: '30. Importing images', path: '/beginner-to-hero/30-importing-images' },
+            { label: '31. Cropping and image fills', path: '/beginner-to-hero/31-cropping-and-image-fills' },
+            { label: '32. Color adjustment', path: '/beginner-to-hero/32-color-adjustment' },
+            { label: '33. Blur, stylization and distortion', path: '/beginner-to-hero/33-filters' },
+          ],
+        },
+        {
+          label: '7. Animation fundamentals',
+          children: [
+            { label: '34. Entering Animate mode', path: '/beginner-to-hero/34-entering-animate-mode' },
+            { label: '35. Your first keyframes', path: '/beginner-to-hero/35-your-first-keyframes' },
+            { label: '36. Property tracks', path: '/beginner-to-hero/36-property-tracks' },
+            { label: '37. Easing', path: '/beginner-to-hero/37-easing' },
+            { label: '38. The easing graph editor', path: '/beginner-to-hero/38-the-easing-graph' },
+            { label: '39. Animating transforms', path: '/beginner-to-hero/39-animating-transforms' },
+            { label: '40. Animating color', path: '/beginner-to-hero/40-animating-color' },
+          ],
+        },
+        {
+          label: '8. Going further',
+          children: [
+            { label: '41. Motion paths', path: '/beginner-to-hero/41-motion-paths' },
+            { label: '42. Text animation and stagger', path: '/beginner-to-hero/42-text-animation' },
+            { label: '43. Parenting and nulls', path: '/beginner-to-hero/43-parenting-and-nulls' },
+            { label: '44. Looping and time', path: '/beginner-to-hero/44-looping-and-time' },
+            { label: '45. Preview and export', path: '/beginner-to-hero/45-preview-and-export' },
+          ],
+        },
+      ],
+    },
+    {
       label: 'Basics / Interface',
       defaultExpanded: true,
       collapsible: true,
