@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, GraduationCap, Layers, Palette, Play, Sparkles, Video } from 'lucide-react';
+import { BookOpen, ChevronsRight, GraduationCap, Layers, Palette, Play, Sparkles, Video } from 'lucide-react';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import VideoEmbed from '../components/VideoEmbed';
+import { steps as courseSteps } from '../data/beginnerToHero';
+
+/** Read from the course itself so the card cannot drift out of date. */
+const TOTAL_COURSE_STEPS = courseSteps.length;
 
 interface Category {
   icon: React.ReactNode;
@@ -70,6 +74,37 @@ export default function Tutorials() {
         keywords="FlashFX, tutorials, learning, animation, video guides"
       />
       <div className="space-y-8">
+        {/* Sits above the h1 on purpose. The course is the other way into this
+            material — the library below is organised by topic for dipping into,
+            this is one ordered path — and it is the stronger entry point for
+            anyone arriving without a specific question, so it goes first rather
+            than being buried in the intro copy. */}
+        <Link
+          to="/beginner-to-hero"
+          className="group block w-full rounded-xl bg-gradient-to-r from-yellow-accent to-orange-500 px-6 py-5 sm:px-8 sm:py-7 shadow-lg shadow-orange-500/10 hover:shadow-orange-500/25 transition-shadow"
+        >
+          <div className="flex items-center gap-4 sm:gap-6">
+            <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-black shrink-0" />
+
+            <div className="flex-1 min-w-0">
+              <div className="flex items-baseline gap-3 flex-wrap">
+                <span className="text-lg sm:text-2xl font-semibold text-black leading-tight">
+                  From Beginner to Hero
+                </span>
+                <span className="text-xs font-semibold text-black/60 uppercase tracking-wider">
+                  {TOTAL_COURSE_STEPS} steps
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-black/75 leading-relaxed mt-1.5 max-w-3xl">
+                The complete course, in order — from the interface and your first shape through to
+                motion paths, stagger, the sequence compositor and export.
+              </p>
+            </div>
+
+            <ChevronsRight className="w-7 h-7 sm:w-9 sm:h-9 text-blue-primary shrink-0 group-hover:translate-x-1 transition-transform" />
+          </div>
+        </Link>
+
         <div className="space-y-4">
           <h1 className="text-4xl font-semibold text-white">Tutorials</h1>
           <p className="text-sm font-bold text-red-500">Tutorial videos are still work in progress and not available yet.</p>
@@ -84,26 +119,6 @@ export default function Tutorials() {
             topic below and start wherever it makes sense for you.
           </p>
         </div>
-
-        {/* The course is the other way into this material: the library below is
-            organised by topic for dipping into, this is one ordered path. */}
-        <Link
-          to="/beginner-to-hero"
-          className="group flex items-start gap-4 bg-navy-elevated border border-navy-border hover:border-yellow-accent/40 rounded-lg px-5 py-4 transition-colors"
-        >
-          <GraduationCap className="w-5 h-5 text-yellow-accent shrink-0 mt-0.5" />
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-sm font-medium text-white">From Beginner to Hero</span>
-              <span className="text-xs text-white/30">45 steps</span>
-            </div>
-            <p className="text-xs text-white/60 leading-relaxed">
-              Prefer to learn in order? The course walks the whole editor front to back, from the
-              interface and your first shape through to motion paths, stagger and export.
-            </p>
-          </div>
-          <ArrowRight className="w-4 h-4 text-blue-muted group-hover:text-yellow-accent transition-colors shrink-0 mt-0.5" />
-        </Link>
 
         <div>
           <h2 className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-4">What's covered</h2>

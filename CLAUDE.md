@@ -69,7 +69,7 @@ So **route and import formatting is functionally significant**. A route split ac
 
 ### Routing — everything is declared in `src/App.tsx`
 
-`App.tsx` is a single flat `<Routes>` list of 385 explicit routes with no lazy loading and no route params (except `/blog/:slug`). It exports both `App` (default) and `AppRoutes` (named) — `entry-server.tsx` imports `AppRoutes` so it can supply its own `StaticRouter`.
+`App.tsx` is a single flat `<Routes>` list of 413 explicit routes with no lazy loading and no route params (except `/blog/:slug`). It exports both `App` (default) and `AppRoutes` (named) — `entry-server.tsx` imports `AppRoutes` so it can supply its own `StaticRouter`.
 
 Adding a page means touching **three** places:
 
@@ -91,7 +91,7 @@ Three route families are content-table–driven rather than one-file-per-page. E
 
 Adding an entry to any of them means adding a row to the data **and** a `<Route>` in `App.tsx` **and** a nav entry. All three are parsed by the build — see below.
 
-`/beginner-to-hero` is an ordered 45-step course (the overview page is `BeginnerToHero.tsx`). It is deliberately one route per step rather than a client-side carousel: the previous/next arrows are real `<Link>`s, so each step is prerendered, deep-linkable, and carries an inbound link from both neighbours.
+`/beginner-to-hero` is an ordered 73-step course (the overview page is `BeginnerToHero.tsx`). It is deliberately one route per step rather than a client-side carousel: the previous/next arrows are real `<Link>`s, so each step is prerendered, deep-linkable, and carries an inbound link from both neighbours.
 
 ### Navigation is the single source of truth
 
@@ -174,7 +174,7 @@ There is effectively none. `supabase/migrations/` contains a `suggestions` table
   |---|---|
   | 55 routed `"Content will appear here"` pages (incl. the 6 under `/flashcc/*`) | the marker is removed |
   | 57 `"Video coming soon"` tutorials | the path gets a row in `tutorialVideos` |
-  | 45 `/beginner-to-hero/*` steps | the step object gets a `videoId` |
+  | 73 `/beginner-to-hero/*` steps | the step object gets a `videoId` |
 
   **`isPlaceholder()` is a naive `includes()` over the whole source file.** Writing the marker string anywhere in a page — including in a comment *about* placeholders — silently drops that page from the sitemap. Refer to it indirectly in prose instead.
 

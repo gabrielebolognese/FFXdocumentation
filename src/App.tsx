@@ -624,25 +624,53 @@ export function AppRoutes() {
           <Route path="/beginner-to-hero/24-z-order-and-layers" element={<BeginnerToHeroStep />} />
           <Route path="/beginner-to-hero/25-masks-and-clipping" element={<BeginnerToHeroStep />} />
           <Route path="/beginner-to-hero/26-placing-text" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/27-formatting-text" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/28-styling-text" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/29-text-on-a-path" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/30-importing-images" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/31-cropping-and-image-fills" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/32-color-adjustment" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/33-filters" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/34-entering-animate-mode" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/35-your-first-keyframes" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/36-property-tracks" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/37-easing" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/38-the-easing-graph" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/39-animating-transforms" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/40-animating-color" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/41-motion-paths" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/42-text-animation" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/43-parenting-and-nulls" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/44-looping-and-time" element={<BeginnerToHeroStep />} />
-          <Route path="/beginner-to-hero/45-preview-and-export" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/27-text-box-modes" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/28-character-formatting" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/29-paragraph-formatting" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/30-styling-text" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/31-text-on-a-path" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/32-importing-images" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/33-image-transform-and-placement" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/34-cropping-and-masking" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/35-image-fill-mode" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/36-color-adjustment" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/37-blur-and-stylization" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/38-distortion-and-atmosphere" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/39-entering-animate-mode" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/40-your-first-keyframes" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/41-keyframe-types" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/42-property-tracks" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/43-easing" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/44-the-easing-graph" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/45-animating-transforms" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/46-animating-color" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/47-animating-effects" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/48-motion-paths" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/49-spatial-interpolation" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/50-text-animation-modes" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/51-stagger-animation" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/52-morph-and-vertex-animation" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/53-parenting-and-nulls" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/54-expressions" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/55-looping-and-cycles" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/56-timeline-architecture" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/57-track-organization" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/58-advanced-keyframe-operations" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/59-the-graph-editor" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/60-the-work-area" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/61-time-remapping" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/62-layer-duration-and-trim" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/63-markers-and-sync" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/64-timeline-search" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/65-the-sequence-compositor" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/66-clip-operations-and-transitions" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/67-nested-sequences" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/68-adjustment-layers-and-rigs" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/69-3d-transforms" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/70-camera-and-lighting" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/71-the-rendering-environment" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/72-profiling-and-optimisation" element={<BeginnerToHeroStep />} />
+          <Route path="/beginner-to-hero/73-preview-and-export" element={<BeginnerToHeroStep />} />
 
 
           <Route path="/flashcc" element={<FlashCCOverview />} />

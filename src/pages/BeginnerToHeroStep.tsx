@@ -41,7 +41,10 @@ export default function BeginnerToHeroStep() {
   const position = index + 1;
 
   return (
-    <Layout>
+    // `extraWide` takes the content column from col-span-2 to col-span-4 —
+    // literally double the width, which is what gives the video its size. It
+    // also drops the table-of-contents rail, which a stepper has no use for.
+    <Layout extraWide>
       <SEO
         title={`${step.title} — Beginner to Hero step ${position}`}
         description={step.summary}
@@ -83,21 +86,26 @@ export default function BeginnerToHeroStep() {
           <p className="text-sm text-white/70 leading-relaxed">{step.summary}</p>
         </header>
 
-        {/* Arrows flank the video from `sm` up. On a phone they would eat ~90px
-            of a 320px viewport and squeeze the embed, so `order` + `basis-full`
-            drops the video onto its own line and puts the two arrows in a
-            centred row beneath it. Same markup and same links at both sizes —
-            no duplicated DOM, nothing hidden from a crawler.
-            `min-w-0` is what stops the 16:9 embed forcing the row wider than
-            the content column. */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        {/* The arrows are full-height bars flanking the video, not buttons
+            beside it — `items-stretch` is what makes them match the embed's
+            height whatever the column width works out to.
+
+            From `sm` up they sit either side. On a phone two 56px bars would
+            eat a third of the viewport, so `order` + `basis-full` drops the
+            video onto its own line and puts the arrows in a row beneath it.
+            Same markup and same links at both sizes: no duplicated DOM and
+            nothing hidden from a crawler.
+
+            `min-w-0` stops the 16:9 embed forcing the row wider than the
+            column. */}
+        <div className="flex flex-wrap items-stretch justify-center gap-3 sm:gap-4">
           <div className="order-1 sm:order-2 basis-full sm:basis-0 sm:flex-1 min-w-0">
             <VideoEmbed videoId={video.id} youtubeUrl={video.url} />
           </div>
-          <div className="order-2 sm:order-1">
+          <div className="order-2 sm:order-1 flex-1 sm:flex-none flex">
             <StepArrow direction="previous" step={previous} />
           </div>
-          <div className="order-3">
+          <div className="order-3 flex-1 sm:flex-none flex">
             <StepArrow direction="next" step={next} />
           </div>
         </div>
@@ -131,16 +139,18 @@ function StepArrow({
   const Icon = direction === 'previous' ? ChevronLeft : ChevronRight;
   const label = direction === 'previous' ? 'Previous step' : 'Next step';
 
+  // `self-stretch` + `h-auto` make the bar take the full height of the flex
+  // row, which the video defines.
   const shared =
-    'shrink-0 flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 rounded-full border transition-colors';
+    'self-stretch h-auto flex items-center justify-center w-full sm:w-14 min-h-[3rem] rounded-xl border transition-colors';
 
   if (!step) {
     return (
       <div
         aria-hidden="true"
-        className={`${shared} border-navy-border text-white/15 cursor-default`}
+        className={`${shared} border-navy-border/60 text-white/10 cursor-default`}
       >
-        <Icon className="w-5 h-5" />
+        <Icon className="w-7 h-7" />
       </div>
     );
   }
@@ -150,9 +160,9 @@ function StepArrow({
       to={pathForStep(step)}
       aria-label={`${label}: ${step.title}`}
       title={step.title}
-      className={`${shared} border-navy-border bg-navy-elevated text-blue-muted hover:text-yellow-accent hover:border-yellow-accent/40`}
+      className={`${shared} border-navy-border bg-navy-elevated text-blue-muted hover:text-yellow-accent hover:border-yellow-accent/40 hover:bg-navy-panel`}
     >
-      <Icon className="w-5 h-5" />
+      <Icon className="w-7 h-7" />
     </Link>
   );
 }

@@ -394,7 +394,7 @@ Fixes P0-1, P0-2, P0-3, P1-1, P1-2, P1-4.
 >
 > **The same rule now covers three sets**, which is what the build's exclusion breakdown counts:
 > 65 marker placeholders (enter the sitemap when the marker goes), 57 empty tutorials (when the
-> path gets a row in `tutorialVideos`), and the 45 `/beginner-to-hero/*` course steps added
+> path gets a row in `tutorialVideos`), and the 73 `/beginner-to-hero/*` course steps added
 > 2026-09-22 (when the step object gets a `videoId`). All three are prerendered, none are in the
 > sitemap, and all three re-enter it automatically. The course steps also withhold their
 > `VideoObject` JSON-LD while their video is a stand-in — see M4 on fabricated structured data.
