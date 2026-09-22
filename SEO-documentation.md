@@ -391,6 +391,13 @@ Fixes P0-1, P0-2, P0-3, P1-1, P1-2, P1-4.
 >
 > **Progress: punctuation repaired, 21 of 86 placeholder pages written.**
 > The remaining 65 are blocked on a product question, not on effort — see below.
+>
+> **The same rule now covers three sets**, which is what the build's exclusion breakdown counts:
+> 65 marker placeholders (enter the sitemap when the marker goes), 57 empty tutorials (when the
+> path gets a row in `tutorialVideos`), and the 45 `/beginner-to-hero/*` course steps added
+> 2026-09-22 (when the step object gets a `videoId`). All three are prerendered, none are in the
+> sitemap, and all three re-enter it automatically. The course steps also withhold their
+> `VideoObject` JSON-LD while their video is a stand-in — see M4 on fabricated structured data.
 
 Fixes P1-5, P1-6, P2-2. Do this **before** M3 — pushing crawlers at 79 empty pages actively hurts.
 
@@ -551,10 +558,11 @@ Roughly 1.2 MB of that is browser logos displayed at 28 px. Say the word and I'l
 
 ### M6 — Content strategy and authority
 
-> ## 🟡 **M6 IN PROGRESS — the in-repo half is done**
+> ## 🟡 **M6 — every in-repo item is done. What remains needs you.**
 >
-> Five comparison pages shipped, targeting non-brand queries. The highest-value remaining
-> items are **outside this repository** and need you — see below.
+> Five comparison pages shipped, and all 65 troubleshooting pages rewritten from bullet lists
+> into sourced answers with symptoms, causes and fixes. Every remaining item is either
+> **outside this repository** or **blocked on access you hold** — see below.
 
 Ranking is won here once M1–M5 remove the obstacles.
 
@@ -577,10 +585,33 @@ Ranking is won here once M1–M5 remove the obstacles.
   > **Why the link matters at all, given the shared root domain:** authority propagates along links, not along DNS. Google does treat subdomains as generally part of the same site, and the shared domain supplies entity association and site-level trust signals — reinforced by the `Organization` schema added in M4. But whatever links `flashfx.app` has earned accumulate on `flashfx.app`; they reach the docs subdomain only because `flashfx.app` points at it. Same street, different shop: the sign is what moves people, and here the sign is already up.
 
 - [ ] **Remaining off-repo linking — minor.** No footer link on `flashfx.app` (the nav link already does the heavy lifting), and no contextual deep links from inside the editor to specific doc pages. The second is still worth doing — high-intent and compounding — but it is an optimisation, not a blocker.
-- [ ] Expand the 65 troubleshooting pages from bullet lists into full answers with causes, symptoms and step-by-step resolutions. In-repo and doable, but it needs product knowledge to state causes accurately rather than plausibly.
+- [x] **All 65 troubleshooting pages rewritten.** They were previously a flat list of imperative bullets ("Clear your browser cache", "Try a different browser") under one templated meta description — `Solutions for: ${title}` — repeated 65 times. That is a thin-content and duplicate-description pattern, and it answers *what do I click* without ever answering *why is this happening*, which is the query people actually type.
+
+  Each page now carries a unique description written for the SERP snippet, a direct-answer summary, a symptom list so the reader can confirm they are in the right place, and causes paired with fixes ordered most-likely-first. Unique content per page went from a median of **45 words to 257** (mean 46 → 262; range 199–352).
+
+  **On the accuracy concern that held this item.** It was real, and it was resolved by sourcing rather than by writing carefully. Every cause is taken from the reference material at the repo root (`01_Fundamentals_and_Settings.md` … `07_Timeline_Features_for_Composition.md`), which covers these topics in menu-path detail. This is the same transcription situation the 3D pages were in for M2 — **not** the invention situation the Rive placeholders are in. The difference matters: a plausible-but-wrong cause is worse than a bullet list, because it sends the reader to a setting that will not fix their problem.
+
+  Concretely, the source material is what supplies the answers that actually resolve these tickets — Record Mode being off is why keyframes are not created; easing governing the *outgoing* transition is why easing "does nothing"; the anchor point is why rotation orbits instead of spinning; the three separate opacity controls are why fades fail; Guest mode's browser-storage quota is why work is lost.
+
+  - Content moved to `src/data/troubleshooting.ts`, matching the `blogPosts.ts` / `navigation.ts` convention and leaving `TroubleshootingDetail.tsx` as a renderer. Nothing in the build parses that component, so the move is safe.
+  - **Each page now emits 2–3 outbound internal links** to the relevant editor documentation (67 distinct targets, all verified against the written, in-sitemap page set — no placeholder is linked). These 65 pages were previously link leaves: crawlable, but passing no PageRank onward into the docs tree they sit above.
+  - A table of contents was added, so the pages match the rest of the site and scroll-spy correctly.
+  - Replaced the undefined `bg-navy-darker` class used in this component's markup with defined palette classes. It is not in `tailwind.config.js`, so those panels were rendering with no background at all.
+
+  > **Three pages name features that appear nowhere in the source material** — `auto-align-animation-is-not-working`, `animation-presets-are-not-applying` and `effect-presets-cannot-be-saved-or-reused`. Rather than invent behaviour, each is written strictly against documented adjacent mechanisms: alignment-at-the-playhead and null-object parenting; easing presets and the Default Easing setting; and duplication, keyframe copying and the Global Palette as the documented reuse paths. **Confirm these three match the real product**, or say the word and their routes come out of `navigation.ts` the same way the Rive set would.
 - [ ] Publish blog posts on a cadence. The section is well-built and holds 10 posts; it is the site's only natural link-earning surface.
 - [ ] Wire up the suggestion form. `SuggestionPortal.tsx` validates then discards; the Supabase migration exists but `@supabase/supabase-js` is not installed and `.env` is empty, so this needs credentials before it can be finished.
 - [ ] Quarterly: review GSC queries at positions 5–20 and improve those pages first.
+
+**What is actually left in M6, and who it needs.** Nothing here is blocked on effort:
+
+| Item | Blocked on | Why it cannot be done here |
+|---|---|---|
+| Footer link + editor deep links to the docs | **You** | A different repository. The high-value half — the nav link from `flashfx.app` — is already in place. |
+| Wire up the suggestion form | **You** | `@supabase/supabase-js` is not installed and `.env` is empty. Installing the dependency without credentials would produce a form that fails instead of one that silently discards — worse, not better. Needs the project URL and anon key. |
+| Quarterly GSC query review | **You** | Requires Search Console access, which is the M0 dependency. |
+| Blog cadence | **You** | Editorial, not a finishable task. The section is built and holds 11 posts; what to publish next is a content-strategy call. |
+| Confirm the 3 unsourced troubleshooting topics | **You** | See the note under the troubleshooting item above. |
 
 ---
 
@@ -594,7 +625,7 @@ Ranking is won here once M1–M5 remove the obstacles.
 | M3 Orphan recovery | 1 d | High | ✅ **Complete — 2026-08-07** (found & fixed P0-5) |
 | M4 Structured data | 1–2 d | High | ✅ **Complete — 2026-08-07** |
 | M5 Performance & prerender | 3–5 d | High | ✅ **Complete — 2026-08-07** (images deferred) |
-| M6 Content & authority | Ongoing | Sustained | 🟡 5 comparison pages shipped; **rest needs off-repo links** |
+| M6 Content & authority | Ongoing | Sustained | 🟡 Comparison pages + all 65 troubleshooting pages done; **rest is off-repo or needs your access** |
 
 **Two revisions to the original sequencing, both from evidence found while building M1:**
 
