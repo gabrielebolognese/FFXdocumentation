@@ -32,12 +32,7 @@ import Terms from './pages/Terms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Support from './pages/Support';
 import FlashCCOverview from './pages/flashcc/Overview';
-import FlashCCGettingStarted from './pages/flashcc/GettingStarted';
-import FlashCCInterface from './pages/flashcc/Interface';
-import FlashCCCreatingACarousel from './pages/flashcc/CreatingACarousel';
-import FlashCCSlidesAndLayout from './pages/flashcc/SlidesAndLayout';
-import FlashCCExporting from './pages/flashcc/Exporting';
-import FlashCCTroubleshooting from './pages/flashcc/Troubleshooting';
+import FlashCCSectionPage from './pages/flashcc/Section';
 import BeginnerToHero from './pages/BeginnerToHero';
 import BeginnerToHeroStep from './pages/BeginnerToHeroStep';
 
@@ -674,12 +669,35 @@ export function AppRoutes() {
 
 
           <Route path="/flashcc" element={<FlashCCOverview />} />
-          <Route path="/flashcc/getting-started" element={<FlashCCGettingStarted />} />
-          <Route path="/flashcc/interface" element={<FlashCCInterface />} />
-          <Route path="/flashcc/creating-a-carousel" element={<FlashCCCreatingACarousel />} />
-          <Route path="/flashcc/slides-and-layout" element={<FlashCCSlidesAndLayout />} />
-          <Route path="/flashcc/exporting" element={<FlashCCExporting />} />
-          <Route path="/flashcc/troubleshooting" element={<FlashCCTroubleshooting />} />
+          <Route path="/flashcc/what-it-is" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/running-it" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/the-invariants" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/the-data-model" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/the-canvas" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/text-measurement-and-fitting" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/colour-and-contrast" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/gradients" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/changing-format" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/the-four-frameworks" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/generation" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/styles-and-themes" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/onboarding" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/ai-drafting" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/bulk-create" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/media-and-fonts" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/screen-flow" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/the-pipeline" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/analytics" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/the-library" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/export" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/persistence" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/sync" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/auth" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/billing" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/database" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/design-tokens" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/testing" element={<FlashCCSectionPage />} />
+          <Route path="/flashcc/known-defects" element={<FlashCCSectionPage />} />
 
           <Route path="*" element={<NotFound />} />
           </Routes>

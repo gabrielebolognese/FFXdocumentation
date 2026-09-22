@@ -19,13 +19,13 @@ The active plan lives in `SEO-documentation.md` (milestones M0–M6). Keep its s
 
 The FlashFX product documentation site (documentation.flashfx.app) — a Vite + React 18 + TypeScript SPA styled with Tailwind, **prerendered to static HTML at build time**. Scaffolded from a Bolt template (`.bolt/`).
 
-It documents three products: **FlashFX** (a browser-based motion/animation editor at editor.flashfx.app — the bulk of the site), **FlashFX Lite** under `/lite/*`, and **FlashCC** (a companion carousel app) under `/flashcc/*`. FlashCC is new and almost entirely unwritten: only its overview page has content, the six section pages below it are scaffolding, and their names are placeholders to reshape rather than a settled structure. Nothing in the repo describes FlashCC's features — do not infer them from FlashFX.
+It documents three products: **FlashFX** (a browser-based motion/animation editor at editor.flashfx.app — the bulk of the site), **FlashFX Lite** under `/lite/*`, and **FlashCC** (a companion app that turns a written post into a social carousel and then tracks how it performed) under `/flashcc/*`. FlashCC's documentation is all 29 sections of `reference.md`, transcribed into `src/data/flashcc.ts`.
 
 Every documentation page is a hand-written `.tsx` component — there is no Markdown pipeline. The `.md` files at the repo root (`01_Fundamentals_and_Settings.md` … `07_Timeline_Features_for_Composition.md`, `3D_DOCUMENTATION.md`) and in `src/data/` are **source material only**; nothing imports them. They map 1:1 onto the sidebar sections and are the reference text pages are transcribed from.
 
 > ⛔ **`architecture.md`, `document-schema.md`, `role-layouts.md` and `template-system.md` are NOT usable source material.** They sit at the repo root next to the FlashFX references and look like FlashCC documentation, but every one of them opens with a banner reading *"Superseded … nothing in it matches the code."* Their own index, `README.md`, is titled "Superseded design documents" and says: **"None of them match the code. Do not use them to answer a question about how the app works."** They describe a document/template/role design that a later rewrite replaced with flat layers on an artboard. Transcribing them would document a product that was deliberately abandoned — the M2 Rive failure mode, with the source material warning you in its first line.
 >
-> The two files that *are* current — `reference.md` and `interaction-principles.md` (the latter explicitly **not** superseded) — are referenced by that README but are **not in this repo**. FlashCC cannot be documented until they are supplied.
+> **`reference.md` is the current one**, and it is what `/flashcc/*` is transcribed from. It opens by stating it supersedes those four. `interaction-principles.md` is also still current but is not in this repo.
 
 ## Commands
 
@@ -73,7 +73,7 @@ So **route and import formatting is functionally significant**. A route split ac
 
 ### Routing — everything is declared in `src/App.tsx`
 
-`App.tsx` is a single flat `<Routes>` list of 413 explicit routes with no lazy loading and no route params (except `/blog/:slug`). It exports both `App` (default) and `AppRoutes` (named) — `entry-server.tsx` imports `AppRoutes` so it can supply its own `StaticRouter`.
+`App.tsx` is a single flat `<Routes>` list of 436 explicit routes with no lazy loading and no route params (except `/blog/:slug`). It exports both `App` (default) and `AppRoutes` (named) — `entry-server.tsx` imports `AppRoutes` so it can supply its own `StaticRouter`.
 
 Adding a page means touching **three** places:
 
@@ -92,8 +92,11 @@ Three route families are content-table–driven rather than one-file-per-page. E
 | `/tutorials/*` | `TutorialDetail.tsx` | maps **inside** that file |
 | `/troubleshooting/*` | `TroubleshootingDetail.tsx` | `src/data/troubleshooting.ts` |
 | `/beginner-to-hero/*` | `BeginnerToHeroStep.tsx` | `src/data/beginnerToHero.ts` |
+| `/flashcc/*` | `flashcc/Section.tsx` | `src/data/flashcc.ts` |
 
-Adding an entry to any of them means adding a row to the data **and** a `<Route>` in `App.tsx` **and** a nav entry. All three are parsed by the build — see below.
+Adding an entry to any of them means adding a row to the data **and** a `<Route>` in `App.tsx` **and** a nav entry. The first three are parsed by the build — see below.
+
+`src/data/flashcc.ts` stores content as typed `Block`s (`p`, `h`, `list`, `table`, `code`, `note`) rather than JSX, and `flashcc/Section.tsx` paints them. Text fields support `**bold**`, `` `code` `` and `*italic*`; the renderer recurses, so code nested inside bold works.
 
 `/beginner-to-hero` is an ordered 73-step course (the overview page is `BeginnerToHero.tsx`). It is deliberately one route per step rather than a client-side carousel: the previous/next arrows are real `<Link>`s, so each step is prerendered, deep-linkable, and carries an inbound link from both neighbours.
 
@@ -176,7 +179,7 @@ There is effectively none. `supabase/migrations/` contains a `suggestions` table
 
   | Set | Enters the sitemap when |
   |---|---|
-  | 55 routed `"Content will appear here"` pages (incl. the 6 under `/flashcc/*`) | the marker is removed |
+  | 49 routed `"Content will appear here"` pages | the marker is removed |
   | 57 `"Video coming soon"` tutorials | the path gets a row in `tutorialVideos` |
   | 73 `/beginner-to-hero/*` steps | the step object gets a `videoId` |
 
