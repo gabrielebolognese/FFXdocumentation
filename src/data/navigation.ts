@@ -19,6 +19,7 @@ export const mainTabs: NavigationItem[] = [
   { label: 'Marketplace', path: 'https://marketplace.flashfx.app', external: true },
   { label: 'Roadmap', path: 'https://roadmap.flashfx.app', external: true, icon: 'square' },
   { label: 'FlashFX Lite', path: '/lite' },
+  { label: 'FlashCC', path: '/flashcc' },
 ];
 
 export const sidebarShortcuts: NavigationItem[] = [
@@ -755,6 +756,30 @@ export const liteSidebar: SidebarConfig = {
   ],
 };
 
+/**
+ * FlashCC — the carousel app. Scaffolding only: every page below the overview
+ * is a "Content will appear here" placeholder, so the section names are meant
+ * to be renamed and expanded once the real structure is known.
+ */
+export const flashccSidebar: SidebarConfig = {
+  sections: [
+    {
+      label: 'FlashCC',
+      defaultExpanded: true,
+      collapsible: true,
+      items: [
+        { label: 'Overview', path: '/flashcc' },
+        { label: 'Getting started', path: '/flashcc/getting-started' },
+        { label: 'The interface', path: '/flashcc/interface' },
+        { label: 'Creating a carousel', path: '/flashcc/creating-a-carousel' },
+        { label: 'Slides and layout', path: '/flashcc/slides-and-layout' },
+        { label: 'Exporting', path: '/flashcc/exporting' },
+        { label: 'Troubleshooting', path: '/flashcc/troubleshooting' },
+      ],
+    },
+  ],
+};
+
 export const sidebarConfigs: Record<string, SidebarConfig> = {
   '/': homeSidebar,
   '/editor': editorSidebar,
@@ -762,4 +787,5 @@ export const sidebarConfigs: Record<string, SidebarConfig> = {
   '/feature-support': featureSupportSidebar,
   '/tutorials': tutorialsSidebar,
   '/lite': liteSidebar,
+  '/flashcc': flashccSidebar,
 };

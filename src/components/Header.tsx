@@ -26,6 +26,10 @@ export default function Header() {
     if (path === '/runtimes' && location.pathname.startsWith('/troubleshooting')) {
       return true;
     }
+    // ...and the Beginner to Hero course as part of /tutorials
+    if (path === '/tutorials' && location.pathname.startsWith('/beginner-to-hero')) {
+      return true;
+    }
     return location.pathname.startsWith(path);
   };
 

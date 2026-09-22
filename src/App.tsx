@@ -31,6 +31,13 @@ import S3Bucket from './pages/S3Bucket';
 import Terms from './pages/Terms';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Support from './pages/Support';
+import FlashCCOverview from './pages/flashcc/Overview';
+import FlashCCGettingStarted from './pages/flashcc/GettingStarted';
+import FlashCCInterface from './pages/flashcc/Interface';
+import FlashCCCreatingACarousel from './pages/flashcc/CreatingACarousel';
+import FlashCCSlidesAndLayout from './pages/flashcc/SlidesAndLayout';
+import FlashCCExporting from './pages/flashcc/Exporting';
+import FlashCCTroubleshooting from './pages/flashcc/Troubleshooting';
 import BeginnerToHero from './pages/BeginnerToHero';
 import BeginnerToHeroStep from './pages/BeginnerToHeroStep';
 
@@ -638,10 +645,13 @@ export function AppRoutes() {
           <Route path="/beginner-to-hero/45-preview-and-export" element={<BeginnerToHeroStep />} />
 
 
-
-
-
-
+          <Route path="/flashcc" element={<FlashCCOverview />} />
+          <Route path="/flashcc/getting-started" element={<FlashCCGettingStarted />} />
+          <Route path="/flashcc/interface" element={<FlashCCInterface />} />
+          <Route path="/flashcc/creating-a-carousel" element={<FlashCCCreatingACarousel />} />
+          <Route path="/flashcc/slides-and-layout" element={<FlashCCSlidesAndLayout />} />
+          <Route path="/flashcc/exporting" element={<FlashCCExporting />} />
+          <Route path="/flashcc/troubleshooting" element={<FlashCCTroubleshooting />} />
 
           <Route path="*" element={<NotFound />} />
           </Routes>

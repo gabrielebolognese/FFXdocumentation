@@ -181,12 +181,14 @@ function humanize(segment: string): string {
 
 /**
  * Which header tab a path belongs to. Mirrors the resolution in Layout,
- * Sidebar and Header — note `/troubleshooting/*` belongs to the `/runtimes`
- * tab, which is why this can't be a plain prefix match.
+ * Sidebar and Header — note that `/troubleshooting/*` belongs to the
+ * `/runtimes` tab and `/beginner-to-hero/*` to `/tutorials`, which is why this
+ * can't be a plain prefix match.
  */
 function resolveTab(pathname: string): { label: string; path: string } | null {
   if (pathname === '/') return null;
   if (pathname.startsWith('/troubleshooting')) return { label: 'Troubleshooting', path: '/runtimes' };
+  if (pathname.startsWith('/beginner-to-hero')) return { label: 'Tutorials', path: '/tutorials' };
   const tab = mainTabs.find((t) => !t.external && t.path !== '/' && pathname.startsWith(t.path));
   return tab ? { label: tab.label, path: tab.path } : null;
 }

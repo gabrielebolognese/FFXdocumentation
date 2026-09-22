@@ -27,9 +27,11 @@ export default function Layout({ children, tableOfContents = [], wide = false, e
     if (path === '/') return '/';
     if (path.startsWith('/editor')) return '/editor';
     if (path.startsWith('/features')) return '/features';
-    if (path.startsWith('/runtimes')) return '/runtimes';
+    // Two sections live under a tab they are not named after.
+    if (path.startsWith('/runtimes') || path.startsWith('/troubleshooting')) return '/runtimes';
+    if (path.startsWith('/tutorials') || path.startsWith('/beginner-to-hero')) return '/tutorials';
     if (path.startsWith('/feature-support')) return '/feature-support';
-    if (path.startsWith('/tutorials')) return '/tutorials';
+    if (path.startsWith('/flashcc')) return '/flashcc';
     if (path.startsWith('/lite')) return '/lite';
 
     return '/';
