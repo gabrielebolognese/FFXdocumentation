@@ -23,6 +23,10 @@ It documents three products: **FlashFX** (a browser-based motion/animation edito
 
 Every documentation page is a hand-written `.tsx` component — there is no Markdown pipeline. The `.md` files at the repo root (`01_Fundamentals_and_Settings.md` … `07_Timeline_Features_for_Composition.md`, `3D_DOCUMENTATION.md`) and in `src/data/` are **source material only**; nothing imports them. They map 1:1 onto the sidebar sections and are the reference text pages are transcribed from.
 
+> ⛔ **`architecture.md`, `document-schema.md`, `role-layouts.md` and `template-system.md` are NOT usable source material.** They sit at the repo root next to the FlashFX references and look like FlashCC documentation, but every one of them opens with a banner reading *"Superseded … nothing in it matches the code."* Their own index, `README.md`, is titled "Superseded design documents" and says: **"None of them match the code. Do not use them to answer a question about how the app works."** They describe a document/template/role design that a later rewrite replaced with flat layers on an artboard. Transcribing them would document a product that was deliberately abandoned — the M2 Rive failure mode, with the source material warning you in its first line.
+>
+> The two files that *are* current — `reference.md` and `interaction-principles.md` (the latter explicitly **not** superseded) — are referenced by that README but are **not in this repo**. FlashCC cannot be documented until they are supplied.
+
 ## Commands
 
 ```bash
