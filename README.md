@@ -1,18 +1,37 @@
-# Superseded design documents
+# FlashFX Documentation
 
-These describe FlashCC before the rewrite that replaced the document/template/role model with flat
-layers on an artboard. They are kept because the reasoning in them is sometimes still interesting,
-and because deleting the record of a decision makes the decision harder to revisit.
+The source of the [FlashFX](https://flashfx.app) documentation site, live at **[documentation.flashfx.app](https://documentation.flashfx.app)**.
 
-**None of them match the code.** Do not use them to answer a question about how the app works —
-[`docs/reference.md`](../reference.md) is the current one.
+## What it covers
 
-| File | What it described | Replaced by |
-| --- | --- | --- |
-| `architecture.md` | A `computeLayout(role, blocks, brandKit, format)` renderer and a `src/doc/**` tree | The flat layer model; `reference.md` §3-§5 |
-| `document-schema.md` | A semantic document storing no pixel positions | `Doc`/`Slide`/`Layer` in artboard pixels; `reference.md` §4 |
-| `role-layouts.md` | Five roles determining layout completely, with no user positioning | The direct-manipulation canvas; `reference.md` §5 |
-| `template-system.md` | A ten-slot template engine, and an argument against shipping AI | Compositions that run once; `reference.md` §11. AI drafting shipped |
+- **Editor:** fundamentals and settings, shapes, text, images, animate mode, GPU effects, constraints, timeline, layouts, state machines and exporting
+- **3D:** guides, architecture and the API reference
+- **FlashFX Lite** and **FlashCC**
+- **Comparisons** with other tools, plus tutorials and troubleshooting
 
-`interaction-principles.md` was **not** superseded — its rules R1–R15 are design principles rather
-than architecture, they are still followed, and `index.css` still cites R3 and R4 by name.
+## Stack
+
+React 18, TypeScript, Vite and Tailwind CSS. Pages are prerendered to static HTML at build time, and the sitemaps are generated from the route list.
+
+## Running it
+
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # generate sitemaps, build, then prerender every route
+```
+
+## What is where
+
+| Path | What it holds |
+| --- | --- |
+| `src/pages/` | One component per documentation page, grouped by section |
+| `src/data/` | Navigation and page data |
+| `scripts/` | Sitemap generation and prerendering |
+| `public/` | `robots.txt` and the generated sitemaps |
+| `01_…` to `07_…` `.md` | Source notes the editor pages were written from |
+| `description.md` | The design system reference for the site |
+
+## Older design documents
+
+`architecture.md`, `document-schema.md`, `role-layouts.md` and `template-system.md` describe FlashCC before its rewrite to a flat layer model. They no longer match the code and are kept only as a record of the reasoning; `reference.md` is the current one.
